@@ -15,9 +15,9 @@ Im pom.xml werden folgende Informationen festgelegt:
 
 ## Maven built-in build lifecycle
 maven definiert 3 Lifecycle:<br>
-- **clean**: wird alle im letzten Mal gebuildet Dateien aufgeräumt.
+- **clean**: wird die im letzten Mal beim Build erstellten Dateien aufgeräumt.
 - **default**: wird erstelltes Projekt deployment ausgeführt.
-- **site**: wird der Erstellung der Webseite behandelt.
+- **site**: wird die Erstellung der Webseite des Projekts behandelt.
 
 Ein Lifecycle hat mehrere Phases. 
 ```sh
@@ -44,4 +44,4 @@ Man kann das local Repository auch in der settings.xml Datei unter dem Verzeichn
 ```
 - Standard Remote RepositoryDie ist maven central (https://repo.maven.apache.org/maven2/.). Aber manche Abhängigkeiten stehen nicht in maven central zur Verfügung. In diesem Fall muss man die Id und Url der Abhängigkeit im Repositories im pom.xml definiert.<br>
 
-Maven sucht zuerst die im pom.xml deklaierte Abhängigkeit in der lokalen Repository. Wenn die Abhängigkeit nicht vorhanden ist, wird maven die Abhängigkeit in der zentralen Repository gesucht und in der lokalen Repository runtergeladen. Wenn die Abhängigkeit nicht in der zentrale Repository vorhanden ist, dann wird in repositories *id* und *url* der Repository deklariert.
+Maven sucht zuerst die im pom.xml deklaierte Abhängigkeit im lokalen Repository. Wenn die Abhängigkeit nicht vorhanden ist, wird maven die Abhängigkeit im standard remote Repository (Maven central) gesucht und im lokalen Repository runtergeladen. Wenn die Abhängigkeit nicht im standard remote Repository vorhanden ist, dann wird in repositories *id* und *url* der Abhängigkeit deklariert.
