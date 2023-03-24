@@ -11,7 +11,7 @@ Im pom.xml werden folgende Informationen beschrieben:
 - **repositories**: Hier wird Repositories deklariert.
 Maven bietet 2 Repositories, eine lokale Repository und eine zentrale Repository. Die lokale Repository ist auf lokalem Rechner. Die standard zentrale Repository ist maven central (https://repo.maven.apache.org/maven2/.). Maven sucht zuerst die im pom.xml deklaierte Abhängigkeit in der lokalen Repository. Wenn die Abhängigkeit nicht vorhanden ist, wird maven die Abhängigkeit in der zentralen Repository gesucht und in der lokalen Repository runtergeladen. Wenn die Abhängigkeit nicht in der zentrale Repository vorhanden ist, dann wird in repositories id und url der Repository deklariert.
 - **properties**: Hier wird die Version der Abhängigkeit definiert.
-- **Build**: Hier werden die Information der default Maven goal, das Verzeichnis des kompilierten Projekts und der Name der Applikation definiert.
+- **Build**: Hier werden *defaultGoal, directory, finalName, filters, plugins* definiert.
 - **Profiles**: Hier wird die Build Umgebungen definiert.
 
 ## Maven built-in build lifecycle
