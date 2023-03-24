@@ -8,7 +8,7 @@ Im pom.xml werden folgende Informationen festgelegt:
 - **project identifiers (groupId, artifactId, version)**: Mit diesen Informationen wird das Artifakt eindeutig festgelegt.<br>
 - **packaging**: Hier wird definiert, mit welchem Dateityp das Artifakt erzeugt wird.<br>
 - **dependencies**: Hier werden die Abhängigkeiten der Applikation deklariert.<br>
-- **repositories**: Hier werden remote Repositories deklariert, die nicht das default remote Repository (Maven central) sind.
+- **repositories**: Hier werden die Id und Url einer Abhängigkeit eingegeben, die nicht im default remote Repository (Maven central) zur Verfügung steht.
 - **properties**: Hier wird die Version der Abhängigkeit definiert.
 - **Build**: Hier werden *defaultGoal, directory, finalName, filters, plugins* definiert.
 - **Profiles**: Hier wird die Build Umgebungen definiert.
