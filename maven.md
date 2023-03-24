@@ -3,10 +3,10 @@
 Maven ist ein Build Tool für Java Projekt.<br> 
 
 ## pom.xml
-Jedes Maven Projekt hat eine *pom.xml* Datei (POM=Project Object Model), die das Java Projekt konfiguriert. 
-Im pom.xml werden folgende Informationen festgelegt:
+Jedes Maven Projekt hat eine Datei *pom.xml* (POM=Project Object Model). pom.xml enthält die Konfiguration vom Projekt.
+Zur Konfiguration gehören:
 - **project identifiers (groupId, artifactId, version)**: Mit diesen Informationen wird das Artifakt eindeutig festgelegt.<br>
-- **packaging**: Hier wird definiert, mit welchem Dateityp das Artifakt erzeugt wird.<br>
+- **packaging**: Mit dem Element packaging wird das Format des Artifakts definiert.<br>
 - **dependencies**: Hier werden die Abhängigkeiten der Applikation deklariert.<br>
 - **repositories**: Hier werden die Id und Url einer Abhängigkeit eingegeben, die nicht im default remote Repository (Maven central) zur Verfügung steht.
 - **properties**: Hier wird die Version der Abhängigkeit definiert.
