@@ -115,3 +115,15 @@ erstellt ein tag im remote repository mit dem Name release-1.0.1
 ```
 git push --tag origin release-1.0.1
 ```
+zeigt dem Name und url von remote repository
+```
+git remote -v
+```
+fügt ein remote repository mit name und url hinzu.
+```
+git remote set-url --add origin https://github.com/yiyuma/familySchedule.git
+```
+löscht remote repository mit name und url aus der Konfiguration local
+```
+git remote set-url --delete origin https://github.com/yiyuma/oldProject.git
+```
