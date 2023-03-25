@@ -63,3 +63,55 @@ löscht den Branch mit dem Name branch-name aus dem remote repository. origin is
 ```
 git push -d origin branch-name
 ```
+stash die Änderungen 
+```
+git stash push -m "stash the changes"
+```
+Die Änderungen aus Stash mit Index 0 werden angezeigt
+```
+git stash show 0
+```
+Alle vorhandene Stash werden angezeigt
+```
+git stash list
+```
+Änderungen von Stash mit index 1 werden auf dem HEAD Branch eingesetzt. Das Stash mit index 1 wird gelöscht.
+```
+git stash pop 1
+```
+Änderungen von Stash mit index 1 werden auf dem HEAD Branch eingesetzt
+```
+git stash apply 1
+```
+Das Stash mit index 1 wird gelöscht
+```
+git stash drop 1
+```
+zeigt die Unterschiede zwischen dev und master. stash@{1} kann auch verglichen werden
+```
+git diff dev master
+```
+zeigt die letzte 3 Commits
+```
+git log -n 3
+```
+zeigt die globale Einstellung von git
+```
+git config --global --list
+```
+zeigt die lokale Einstellung von git
+```
+git config --local --list
+```
+erstellt ein tag mit dem Name 0.01
+```
+git tag 0.0.1
+```
+zeigt alle tags
+```
+git tag --list
+```
+erstellt ein tag im remote repository mit dem Name release-1.0.1
+```
+git push --tag origin release-1.0.1
+```
