@@ -7,7 +7,7 @@ Zur Konfiguration gehören z.B.:
 - **packaging**: Mit dem Element packaging wird das Format des Artifakts definiert.<br>
 - **dependencies**: Das Element dependencies enthält die Abhängigkeiten des Projekts.<br>
 - **repositories**: gibt an, welche remote Repository verwendet werden. 
-- **properties**: Mit dem Element properties wird Variable definiert. Die Variable verwendet in der Abhängigkeit.
+- **properties**: Mit dem Element properties wird Variable definiert. pom.xml verwendet diese Variable.
 - **Build**: Hier werden *defaultGoal, directory, finalName, filters, plugins* für Build-Prozess definiert.
 - **Profiles**: Hier wird die Build Umgebungen definiert.
 
@@ -18,7 +18,7 @@ Artifakt ist Endergebnis eines Projekts. Artifakt wird durch Build-Prozess erzeu
 ## Maven built-in build lifecycle
 maven definiert 3 Lifecycle:<br>
 - **clean**: wird die im letzten Mal beim Build erstellten Dateien aufgeräumt.
-- **default**: wird erstelltes Projekt deployment ausgeführt.
+- **default**: enthält mehrere Phases. Jede Phase hat einen Task. z.B. Die Phase compile kompiliert die source code des Projekts. Die Phase install installiert das Projekt auf dem lokalen Repository.
 - **site**: wird die Erstellung der Webseite des Projekts behandelt.
 
 Ein Lifecycle hat mehrere Phases. 
@@ -45,6 +45,5 @@ Man kann das local Repository auch in der settings.xml Datei unter dem Verzeichn
     <localRepository>C:/maven_repository</localRepository>
     ...
 ```
-- Standard Remote Repository ist maven central (https://repo.maven.apache.org/maven2/.). Aber manche Abhängigkeiten stehen nicht in maven central zur Verfügung. In diesem Fall muss man die Id und Url der Abhängigkeit im Repositories im pom.xml definiert.<br>
+- Remote Repository kann man im pom.xml definieren. Standard Remote Repository ist maven central (https://repo.maven.apache.org/maven2/.).<br>
 
-Maven sucht zuerst die im pom.xml deklaierte Abhängigkeit im lokalen Repository. Wenn die Abhängigkeit nicht vorhanden ist, wird maven die Abhängigkeit im standard remote Repository (Maven central) gesucht und im lokalen Repository runtergeladen. Wenn die Abhängigkeit nicht im standard remote Repository vorhanden ist, dann wird in repositories *id* und *url* der Abhängigkeit deklariert.
