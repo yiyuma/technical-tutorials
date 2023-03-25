@@ -11,6 +11,10 @@ zeigt alle Branch aus local repository
 ```sf
 git branch
 ```
+zeigt Details vom branch aus local repository mit Namen von upstream branch 
+```
+git branch -vv
+``
 zeigt den Status des Projekts
 ```sf
 git status
@@ -47,8 +51,8 @@ erstellt neues Branch mit dem Name branch-name und wechsle zu diesem Branch
 ```sf
 git checkout -b branch-name
 ```
-
-```sf
+setzt das Upstream-Branch für das local branch und lädt die Änderungen auf dem remote repository hoch.
+```
 git push -u origin branch-name
 ```
 löscht den Branch mit dem Name branch-name. -D zwingt das Löschen.
