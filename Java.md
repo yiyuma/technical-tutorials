@@ -52,4 +52,13 @@ List<String> hasValue = stringList.stream().filter(i->i.contains("value")).colle
 ```
 void forEach(Consumer<? super T> action);
 ```
+```
+stringList.parallelStream().map(s->s.subString(0,3)).collect(Collectors.toList());
+```
 
+Optional erleichert die Prüfung auf Null.
+```
+optional.of(user);
+optional.ofNullable(user).isPresent();
+optional.ofNullable(user).orElseThrow(new IllegalArgumentException());
+```
