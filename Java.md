@@ -66,3 +66,4 @@ Generic ermöglicht die Deklaration von Interface und die Definition von Methode
 
 Reflection bietet die Möglichkeit auf innere Struktur von Java-Klassen zuzugreifen. z.B. Class, Constructor, Method, Field and Annotation.
 
+**POJO** ist eine Java Klasse, die keine Superklasse hat, keine Interface implementiert und keine Annotation verwendet.
