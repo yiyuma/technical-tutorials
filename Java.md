@@ -74,3 +74,17 @@ Reflection bietet die Möglichkeit auf innere Struktur von Java-Klassen zuzugrei
 **Exeucator**,**ExecutorService** und **ScheduledExecutorService** sind die Interfaces aus dem Concurrency Framework. **ScheduledThreadPoolExecutor** ist die Implementierung und stellt die Methoden scheduleWithFixedDaly(Runnable/Callable, long, long, TimeUnit) and scheduleWithFixRate(Runnable/Callable, long, long, TimeUnit).
 
 **LocalDateTime** stellt API zur Verwaltung von Date und Time zur Verfügung. Die Method LocalDateTime.now() liefert die aktuelle Zeit aus dem System Zeit Zone. Mit dem Method LocalDateTime.now(ZoneId.of("Asia/Shanghai")) wird die Zeit von Shanghai erzeugt. Mit DateTimeFomatter.ofPattern("yyyy MM dd HH:mm:ss") wird die Zeit formattiert.
+
+Java 11 hat neue Methode bei String, z.B. isBlank(),lines, strip, stripLeading, stripTrailing. Neue Methode Predicate.not(Predicate)
+```
+listString.filter(Predicate.not(s -> s.isBlank()))
+== 
+listString.filter(s -> !s.isBlank())
+```
+Collection hat eine neue Methode toArray() 
+```
+List sampleList = Arrays.asList("Java", "Kotlin");
+String[] sampleArray = sampleList.toArray(String[]::new);
+assertThat(sampleArray).containsExactly("Java", "Kotlin");
+```
+Java 17 hat bei switch-statement Lambda expression.
