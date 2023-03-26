@@ -40,3 +40,16 @@ bool test(T);
 
 Lambda expression hat das Format (parameter)->{code block} und kann als Implementierung von Functional Interface verwendet werden.
 
+Stream bietet die Funktionen, die Verarbeitung von Collection vereinfacht.
+```
+<R> Stream<R> map(Function<? super T, ? extends R> mapper);
+List<int> result = list.stream().map(i->i+1).collect(Collectors.toList());
+```
+```
+Stream<T> filter(Predicate<? super T> predicate);
+List<String> hasValue = stringList.stream().filter(i->i.contains("value")).collect(Collectors.toList());
+```
+```
+void forEach(Consumer<? super T> action);
+```
+
