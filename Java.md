@@ -14,12 +14,12 @@ Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. De
 Comparator
 int compare(T,T);
 ```
-<? super T> bedeutet, ? ist super class vom T. Sprich, ? ist assignable from T.
-<? extends V> bedeutet, ? erweitert V, sprich V ist super class von ?.
 ```
 Function<T,R>
 R apply(T);
 default <V> Function<T,V> andThen(Function<? super R,? extends V> after)
+<? super T> bedeutet, ? ist super class vom T. Sprich, ? ist assignable from T.
+<? extends V> bedeutet, ? erweitert V, sprich V ist super class von ?.
 ```
 ```
 BiFunction<T, U, R> 
@@ -62,3 +62,7 @@ optional.of(user);
 optional.ofNullable(user).isPresent();
 optional.ofNullable(user).orElseThrow(new IllegalArgumentException());
 ```
+Generic ermöglicht die Deklaration von Interface und die Definition von Methode ohne auf einen konkreten Datentyp festlegen zu müssen.
+
+Reflection bietet die Möglichkeit auf innere Struktur von Java-Klassen zuzugreifen. z.B. Class, Constructor, Method, Field and Annotation.
+
