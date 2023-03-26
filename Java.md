@@ -66,4 +66,11 @@ Generic ermöglicht die Deklaration von Interface und die Definition von Methode
 
 Reflection bietet die Möglichkeit auf innere Struktur von Java-Klassen zuzugreifen. z.B. Class, Constructor, Method, Field and Annotation.
 
-**POJO** ist eine Java Klasse, die keine Superklasse hat, keine Interface implementiert und keine Annotation verwendet.
+**Plain Old Java Object (POJO)** ist eine Java Klasse, die keine Superklasse hat, keine Interface implementiert und keine Annotation verwendet.
+
+**Java Beans** ist eine Java Klasse, die public setter und getter hat, default Constructor hat und Interface Serializable implmentiert.
+
+**Thread** hat die Methoden run() und start(). Mit run() wird das Runnable im selben Thread durchgeführt, während die Methode start() das Runnable in einem neuen Thread ausführt. 
+**Exeucator**,**ExecutorService** und **ScheduledExecutorService** sind die Interfaces aus dem Concurrency Framework. **ScheduledThreadPoolExecutor** ist die Implementierung und stellt die Methoden scheduleWithFixedDaly(Runnable/Callable, long, long, TimeUnit) and scheduleWithFixRate(Runnable/Callable, long, long, TimeUnit).
+
+
