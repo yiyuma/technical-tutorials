@@ -14,9 +14,12 @@ Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. De
 Comparator
 int compare(T,T);
 ```
+<? super T> bedeutet, ? ist super class vom T. Sprich, ? ist assignable from T.
+<? extends V> bedeutet, ? erweitert V, sprich V ist super class von ?.
 ```
 Function<T,R>
 R apply(T);
+default <V> Function<T,V> andThen(Function<? super R,? extends V> after)
 ```
 ```
 BiFunction<T, U, R> 
