@@ -34,3 +34,6 @@ void accept(T);
 Predicate<T>
 bool test(T);
 ```
+
+Lambda expression hat das Format (parameter)->{code block} und kann als Implementierung von Functional Interface verwendet werden.
+
