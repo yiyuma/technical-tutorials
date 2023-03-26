@@ -6,6 +6,31 @@ Java Collecion Framework stellt Interfaces und Implementierungen zur Verwaltung 
 -- Deque (gesprochen Deck) handelt sich um eine Datenstruktur ähnlich Queue oder Stack.
 -- Set ist ähnlich wie List, aber erlaubt keine Duplikate.
 -- Map enthält ein key value Paar.
--- SortedSet ist ein Set, das die Elemente aufsteigend sortiert und speichert. Die Sortierung erfolgt anhand der natürlichen Sortierung der Elemente oder der vorgegebenen Comparator (Functional Interface).
+-- SortedSet ist ein Set, das die Elemente aufsteigend sortiert und speichert. Die Sortierung erfolgt anhand der natürlichen Sortierung der Elemente oder der vorgegebenen Comparator (Functional Interface, Methode compare(T,T)).
+-- SortedMap ist analog zu SortedSet.
 
-Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Falls eine abstrakte Methode eines Interface eine public Mehtode von Klasse Object überschreibt, zählt diese Methode nicht als abstrakte Methode.
+Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Der Vorteil ist, dass ein lamda expression als Implementierung von Functional Interface eingesetzt werden kann. Falls eine abstrakte Methode eines Interface eine public Mehtode von Klasse Object überschreibt, zählt diese Methode nicht als abstrakte Methode.
+```
+Comparator
+int compare(T,T);
+```
+```
+Function<T,R>
+R apply(T);
+```
+```
+BiFunction<T, U, R> 
+R apply(T,U);
+```
+```
+Supplier<T>
+T get();
+```
+```
+Consumer<T>
+void accept(T);
+```
+```
+Predicate<T>
+bool test(T);
+```
