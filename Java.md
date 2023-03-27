@@ -9,7 +9,7 @@ Java Collecion Framework stellt Interfaces und Implementierungen zur Verwaltung 
 - SortedSet ist ein Set, das die Elemente aufsteigend sortiert und speichert. Die Sortierung erfolgt anhand der natürlichen Sortierung der Elemente oder der vorgegebenen Comparator (Functional Interface, Methode compare(T,T)).
 - SortedMap ist analog zu SortedSet.
 
-Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Der Vorteil ist, dass ein lamda expression als Implementierung von Functional Interface eingesetzt werden kann. Falls eine abstrakte Methode eines Interface eine public Mehtode von Klasse Object überschreibt, zählt diese Methode nicht als abstrakte Methode.
+Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Der Vorteil ist, dass ein lambda expression als Implementierung von Functional Interface eingesetzt werden kann. Falls eine abstrakte Methode eines Interface eine public Mehtode von Klasse Object überschreibt, zählt diese Methode nicht als abstrakte Methode.
 ```
 Comparator
 int compare(T,T);
