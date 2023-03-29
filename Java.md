@@ -50,6 +50,10 @@ Stream<T> filter(Predicate<? super T> predicate);
 List<String> hasValue = stringList.stream().filter(i->i.contains("value")).collect(Collectors.toList());
 ```
 ```
+Stream<T> sorted(Comparator<? super T> comparator);
+Comparator<Double> doubleComparator = (d1, d2) -> {return d1.compareTo(d2);};
+List<Double> sortedList = doubleList.stream().filter(doubleComparater).collect(Collectors.toList());
+```
 void forEach(Consumer<? super T> action);
 ```
 ```
