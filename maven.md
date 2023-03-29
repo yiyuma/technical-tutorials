@@ -1,22 +1,20 @@
 Maven ist ein Build Tool für Java Projekt.<br> 
 
 ### pom.xml
-Jedes Maven Projekt hat eine Datei *pom.xml* (POM=Project Object Model). pom.xml enthält die Konfiguration von einem Projekt.
+Jedes Maven Projekt hat eine Datei *pom.xml* (POM=Project Object Model). pom.xml enthält die Konfiguration von dem Projekt.
 Zur Konfiguration gehören z.B.:
 - **groupId, artifactId & version**: Mit diesen Informationen wird das Artefakt eindeutig festgelegt.<br>
-- **packaging**: Mit dem Element packaging wird das Format des Artefakts definiert.<br>
+- **packaging**: Mit dem Element packaging wird das Format  (jar, war, ear, pom...) des Artefakts definiert.<br>
 - **dependencies**: Das Element dependencies enthält die Abhängigkeiten des Projekts. Bei Abhängigkeitsauflösung gewinnt der kürzeste Weg.<br>
 - **repositories**: gibt an, welche remote Repository verwendet werden. 
 - **properties**: Im Element properties werden Variablen definiert, die im pom.xml verwendet werden können.
-- **Plugins**: analog zu dependencies. Zusätzlich kann man mit dem Element Plugins die verwendete Plugin konfigurieren. z.B. Mit welche Phase soll ein goal angebunden werden. Plugins ist im Element Build.
--  **Profiles**: Hier werden Profiles definiert. z.B. remote repository. Profile ist eine Sammlung von Konfiguration, um eine bestimmte Umgebung zu definieren.
+- **build**: Das Element Build enthält das Element plugin.
+- **plugins**: analog zu dependencies. Zusätzlich kann man mit dem Element Plugins die verwendete Plugin konfigurieren. z.B. Mit welche Phase soll ein goal angebunden werden. Plugins ist im Element Build.
+-  **profiles**: Hier werden Profiles definiert. z.B. remote repository. Profile ist eine Sammlung von Konfigurationen, um eine bestimmte Umgebung zu definieren.
 - **distributionManagement**: definiert die remote repositories, wo das gebaute Artefakt gespeichert wird.
 - **parent**: definiert das parent Projekt
 - **dependencyManagement**: Kommt in der Regel im pom.xml von Parent Projekt und legt die Version der verwendeten Abhängigkeit fest.
 - **pluginsManagement**: Analog zu dependencyManagement.
--
-### Artifakt
-Artifakt ist Endergebnis eines Projekts. Artefakt wird durch Build-Prozess erzeugt, ist sozusagen das Binary des Projekts.
 
 
 ### Maven lifecycle
@@ -38,7 +36,6 @@ Maven wird bestimmte goal aus Plugin ausführen.
 ### Repository
 Es gibt 2 Arten von Repository, local Repository und remote Repository. <br>
 - Local Repository ist ein Verzeichnis auf dem Computer, wo Maven zuerst nach Abhängigkeit sucht.
-Das standard Verzeichnis von local Repository ist 
 - Remote Repository: Maven sucht dann in remote repository nach der Abhängigkeit und speichert die gefundene Abhängigkeit in local repository. 
 
 ### settings.xml
@@ -54,4 +51,6 @@ Maven liefert das super pom, wo die standard Konfiguration von Maven sind. z.B. 
 --src/test/resource
 --target/
 
+### Artefakt (artifact)
+Artefakt ist Endergebnis eines Projekts. Artefakt wird durch Build-Prozess erzeugt, ist sozusagen das Binary des Projekts.
 
