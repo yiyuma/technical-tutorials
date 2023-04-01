@@ -1,4 +1,5 @@
-Git ist ein Tool zur Versionierung. 
+Git ist ein Tool zur Versionierung der Dateien.<br> 
+
 clone ein Projekt aus remote repository in local repository
 ```
 git clone https://github.com/yiyu-qiao/ekl-backend.git
