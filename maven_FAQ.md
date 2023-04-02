@@ -1,5 +1,5 @@
 Was ist Maven?<br>
-Maven ist ein Build Tool für Java Projekt. Jedes Maven Projekt hat eine pom.xml Datei. Mit pom.xml kann man das Projekt konfigurieren.<br>
+Maven ist ein Build Tool für Java Projekt. Jedes Maven Projekt hat eine pom.xml Datei. In der pom.xml kann man das Projekt konfigurieren. z.B. Mit groupId, artifactId und Version kann man das Artefakt eines Projekts eindeutig festlegen. Mit Packaging kann man das Format des Artefakts definieren. Mit Dependencies kann man die Abhängigkeiten eines Projekts deklarieren. Es gibt noch viele andere Elementen, z.B. Repositories, Properties, Profiles, Build, und so weit und so fort.<br>
 Maven hat 2 Arten von Repository, local repository und remote repository.<br>
 Maven definiert 3 lifecycle. Die sind clean, default und site.
 
