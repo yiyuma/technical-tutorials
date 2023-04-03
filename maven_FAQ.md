@@ -21,4 +21,7 @@ default lifecycle hat mehrere Phases, die Teil von Build Prozess sind. z.B. Phas
 Außerdem definiert Maven default lifecycle bindings. Die definiert, welche Phase mit welchem goal aus Plugin angebunden ist.
 Wenn man mvn phase in Command line eingibt, wird Maven die eingebene Phase und die Phases, die vor dieser Phase stehen, ausführen. Vorausgesetzt, die Phase mit ein goal aus Plugin angebunden ist. 
 
+Was ist den Unterschied zwischen Dependencies und Dependencymanagement?<br>
+
+Kennst du settings.xml?<br>
 
