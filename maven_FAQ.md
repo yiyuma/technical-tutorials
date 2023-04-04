@@ -14,7 +14,7 @@ Maven hat 2 Arten von Repository, local repository und remote repository.<br>
 local repository is ein Verzeichnis auf dem lokalen Rechner. Man kann local repository in settings.xml konfigurieren. Man kann remote Repository in pom.xml konfigurieren. Maven sucht die Abhängigkeit eines Projekts zuerst in local repository. Falls Maven keine Abhängigkeit findet, sucht Maven die Abhängigkeit weiter in remote repository und speichert die gefundene Abhängigkeit in local repository. Mit der Phase install in default lifecycle kann man das gebaute Artefakt in local repository installieren. Man kann auch im pom.xml die remote repository definieren, wo das gebaute Artefakt gepeichert wird. Mit der Phase deploy in default Lifecycle kann man das gebaute Artefakt in remote repository hochladen.
 
 Was kennst du über Maven lifecycle?<br>
-Maven definiert 3 lifecycle. Das sind clean, default und site. Jede Lifecycle hat mehrere Phases. Jede Phase ist mit ein goal aus plugin angebunden. Ein goal erledigt bestimmte Aufgabe.<br>
+Maven definiert 3 lifecycle. Die sind clean, default und site. Jede Lifecycle hat mehrere Phases. Jede Phase ist mit ein goal aus plugin angebunden. Ein goal erledigt bestimmte Aufgabe.<br>
 Mit clean wird das Binary aufgeräumt.<br>
 Mit site wird die Seite von Java doc erstellt.<br>
 default lifecycle hat mehrere Phases, die Teil von Build Prozess sind. z.B. Phase compile kompiliert die Source Code. Phase package erstellt das Artefakt des Projekts. Phase install installiert das Artefakt in local repository. Phase deploy lädet das Artefakt in remote repository hoch.
