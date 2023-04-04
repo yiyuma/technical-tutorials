@@ -24,4 +24,5 @@ Wenn man mvn phase in Command line eingibt, wird Maven die eingebene Phase und d
 Was ist den Unterschied zwischen Dependencies und Dependencymanagement?<br>
 
 Kennst du settings.xml?<br>
+Maven hat 2 settings.xml Datei. Eine ist User level Datei. Dieser Datei wird im User Verzeichnis gespeichert. Eine ist global level Datei. Diese Datei wird im Verzeichnis gespeichert, wo Maven ausführt.
 
