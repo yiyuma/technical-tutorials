@@ -24,5 +24,5 @@ Wenn man mvn phase in Command line eingibt, wird Maven die eingebene Phase und d
 Was ist den Unterschied zwischen Dependencies und DependencyManagement?<br>
 
 Kennst du settings.xml?<br>
-Maven enthält die globale Konfiguration für Maven. z.B. local repository, global repository. Es gibt 2 settings.xml Dateien. Eine ist User level Datei. Dieser Datei ist im Verzeichnis, wo User Information gespeichert ist. Eine ist global level Datei. Diese Datei ist im Verzeichnis, wo Maven installiert. Diese 2 settings.xml zusammenfassen zu einer effektiven settings Datei, wenn Maven aufgerufen ist. 
+Maven enthält die globale Konfiguration für Maven. z.B. local repository, global repository. Es gibt 2 settings.xml Dateien. Eine ist User level Datei. Dieser Datei ist im Verzeichnis, wo User Information gespeichert ist. Eine ist global level Datei. Diese Datei ist im Verzeichnis, wo Maven installiert. Diese 2 settings.xml zusammenfassen zu einer effektiven settings Datei, wenn Maven aufgerufen ist. User level setting Datei hat höhere Priorität als global lever setting Datei.
 
