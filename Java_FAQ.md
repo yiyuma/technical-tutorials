@@ -17,6 +17,8 @@ Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung
 Was ist Function Programming?<br>
 Was ist Functional Interface?<br>
 Was ist Stream?<br>
+Steam bietet die Funktionen, die Verarbeitung von Collection vereinfachen. Stream ist eine neue Feature in Java 8 zum java.util-Package. Die Streams gibt es in 2 Varianten, als sequenzielle (.stream()) und parallele (.parallelStream()) Streams.
+
   
 
 
