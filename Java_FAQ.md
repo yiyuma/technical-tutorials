@@ -13,6 +13,11 @@ Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung
 - Map enthält ein key value Paar.
 - SortedSet ist ein Set, das die Elemente aufsteigend sortiert und speichert. Die Sortierung erfolgt anhand der natürlichen Sortierung der Elemente oder der vorgegebenen Comparator (Functional Interface, Methode compare(T,T)).
 - SortedMap ist analog zu SortedSet.
+  
+  Was ist Function Programming?<br>
+  Was ist Functional Interface?<br>
+  Was ist Stream?<br>
+  
 
 
 
