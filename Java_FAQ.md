@@ -5,7 +5,7 @@ JDK (Java Development Kit) ist das Entwicklungstool für Java. JDK enthält JRE 
 
 Was ist Collection? Was ist Java Collection Framework? Welche Interface kennst du in Java Collection Framework?<br>
 Collection ist ein Objekt, das mehrere Elemente zu einer einzigen Einheit zusammenfasst.<br>
-Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung von Daten. Root Interface ist Interface Collection<E>. Interface Collection hat Subinterface List, Set, Map, Queue, Deque, SortedSet, SortedMap.
+Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung von Daten. Root Interface ist Interface Collection<E>. Interface Collection hat Subinterfaces, z.B. List, Set, Map, Queue, Deque, SortedSet, SortedMap.
 - Set ist eine Collection, die keine Duplikate erlaubt.
 - List ist eine Collection, die Duplikate erlaubt.
 - Queue
@@ -14,9 +14,9 @@ Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung
 - SortedSet ist ein Set, das die Elemente aufsteigend sortiert und speichert. Die Sortierung erfolgt anhand der natürlichen Sortierung der Elemente oder der vorgegebenen Comparator (Functional Interface, Methode compare(T,T)).
 - SortedMap ist analog zu SortedSet.
   
-  Was ist Function Programming?<br>
-  Was ist Functional Interface?<br>
-  Was ist Stream?<br>
+Was ist Function Programming?<br>
+Was ist Functional Interface?<br>
+Was ist Stream?<br>
   
 
 
