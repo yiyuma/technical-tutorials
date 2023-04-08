@@ -28,5 +28,5 @@ Settings.xml Datei enthält die globale Konfiguration für Maven. z.B. local rep
 
 Was ist Super POM? Was ist simplest POM? Was ist effektive POM?<br>
 Maven liefert das super pom, wo die Standardkonfiguration von Maven sind. z.B. In der super POM definiert, dass Maven central repository die default plugin repository ist. Super POM ist parent von alle pom Dateien. 
-Simplest POM ist von User für ein Maven projekt definiert. Die muss mindestens Model version, groupId, artifactId und Version enthalten. Effektive POM mergt super pom und simplest pom. Simplest POM hat höhere Priorität.
+Simplest POM ist die pom.xml, die von User für ein Maven projekt definiert. Die muss mindestens ModelVersion, groupId, artifactId und Version enthalten. Effektive POM mergt super pom und simplest pom. Simplest POM hat höhere Priorität.
 
