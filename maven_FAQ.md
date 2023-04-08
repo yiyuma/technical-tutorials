@@ -27,4 +27,6 @@ Kennst du settings.xml?<br>
 Settings.xml Datei enthält die globale Konfiguration für Maven. z.B. local repository, global repository. Es gibt 2 settings.xml Dateien. Eine ist User level Datei. Dieser Datei ist im Verzeichnis, wo User Information gespeichert ist. Eine ist global level Datei. Diese Datei ist im Verzeichnis, wo Maven installiert. Diese 2 settings.xml zusammenfassen zu einer effektiven settings Datei, wenn Maven aufgerufen ist. User level setting Datei hat höhere Priorität als global lever setting Datei.
 
 Was ist Super POM? Was ist simplest POM? Was ist effektive POM?<br>
-Maven liefert das super pom, wo die standard Konfiguration von Maven sind. z.B. In der super POM definiert, dass Maven central repository die default plugin repository ist. Super POM ist parent von alle pom Dateien. Simplest POM ist von User für ein Maven projekt definiert. Die muss enthält Model version, groupId, artifactId und Version. Effektive POM mergt super pom und simplest pom.
+Maven liefert das super pom, wo die Standardkonfiguration von Maven sind. z.B. In der super POM definiert, dass Maven central repository die default plugin repository ist. Super POM ist parent von alle pom Dateien. 
+Simplest POM ist von User für ein Maven projekt definiert. Die muss mindestens Model version, groupId, artifactId und Version enthalten. Effektive POM mergt super pom und simplest pom. Simplest POM hat höhere Priorität.
+
