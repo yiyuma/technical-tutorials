@@ -8,7 +8,7 @@ Zur Konfiguration gehören z.B.:
 - **dependencies**: Das Element dependencies enthält die Abhängigkeiten des Projekts. Bei Abhängigkeitsauflösung gewinnt der kürzeste Weg.<br>
 - **repositories**: gibt an, welche remote Repository verwendet werden. 
 - **properties**: Im Element properties werden Variablen definiert, die im pom.xml verwendet werden können.
-- **build**: Das Element Build enthält das Element plugin.
+- **build**: Das Element Build enthält alle Informationen, die zum Erstellen eines Projekts erforderlich sind. Es enthält das Element plugin.
 - **plugins**: analog zu dependencies. Zusätzlich kann man mit dem Element Plugins die verwendete Plugin konfigurieren. z.B. Mit welche Phase soll ein goal angebunden werden. Plugins ist im Element Build.
 -  **profiles**: Hier werden Profiles definiert. z.B. remote repository. Profile ist eine Sammlung von Konfigurationen, um eine bestimmte Umgebung zu definieren.
 - **distributionManagement**: definiert die remote repositories, wo das gebaute Artefakt gespeichert wird.
