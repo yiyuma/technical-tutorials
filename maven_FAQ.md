@@ -17,7 +17,7 @@ Was kennst du über Maven lifecycle?<br>
 Maven definiert 3 lifecycle. Die sind clean, default und site. Jede Lifecycle hat mehrere Phases. Jede Phase ist mit ein goal aus plugin angebunden. Ein goal erledigt bestimmte Aufgabe.<br>
 Mit clean wird das Binary aufgeräumt.<br>
 Mit site wird die Seite von Java doc erstellt.<br>
-default lifecycle hat mehrere Phases, die Teil von Build Prozess sind. z.B. Phase compile kompiliert die Source Code. Phase package erstellt das Artefakt des Projekts. Phase install installiert das Artefakt in local repository. Phase deploy lädet das Artefakt in remote repository hoch.
+default lifecycle hat mehrere Phases. Sie sind Teile von Build Prozess. z.B. Phase compile kompiliert die Source Code. Phase package erstellt das Artefakt des Projekts. Phase install installiert das Artefakt in local repository. Phase deploy lädet das Artefakt in remote repository hoch.
 Außerdem definiert Maven default lifecycle bindings. Die definiert, welche Phase mit welchem goal aus Plugin angebunden ist.
 Wenn man mvn phase in Command line eingibt, wird Maven die eingebene Phase und die Phases, die vor dieser Phase stehen, ausführen. Vorausgesetzt, die Phase mit ein goal aus Plugin angebunden ist. 
 
