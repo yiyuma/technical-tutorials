@@ -15,8 +15,9 @@ Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung
 - SortedMap ist analog zu SortedSet.
   
 Was ist Functional Programming?<br>
-Functional Programming ist ein Programmierungsparadigma.
+Functional Programming ist ein Programmierungsparadigma.<br>
 Was ist Functional Interface?<br>
+Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Man kann ein Interface mit @FunctionalInterface annotieren.<br>
 Was ist Stream?<br>
 Steam bietet die Funktionen, die Verarbeitung von Collection vereinfachen. Stream ist eine neue Feature in Java 8 zum java.util-Package. Die Streams gibt es in 2 Varianten, als sequenzielle (.stream()) und parallele (.parallelStream()) Streams.
 
