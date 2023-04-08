@@ -14,7 +14,8 @@ Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung
 - SortedSet ist ein Set, das die Elemente aufsteigend sortiert und speichert. Die Sortierung erfolgt anhand der natürlichen Sortierung der Elemente oder der vorgegebenen Comparator (Functional Interface, Methode compare(T,T)).
 - SortedMap ist analog zu SortedSet.
   
-Was ist Function Programming?<br>
+Was ist Functional Programming?<br>
+Functional Programming ist ein Programmierungsparadigma.
 Was ist Functional Interface?<br>
 Was ist Stream?<br>
 Steam bietet die Funktionen, die Verarbeitung von Collection vereinfachen. Stream ist eine neue Feature in Java 8 zum java.util-Package. Die Streams gibt es in 2 Varianten, als sequenzielle (.stream()) und parallele (.parallelStream()) Streams.
