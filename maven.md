@@ -42,7 +42,7 @@ Es gibt 2 Arten von Repository, local Repository und remote Repository. <br>
 settings.xml enthält die globale Konfiguration für Maven. z.B. localrepository, repository und profiles.
 
 ### Super pom
-Maven liefert das super pom, wo die standard Konfiguration von Maven sind. z.B. Maven central repository
+Maven liefert das super pom, wo die standard Konfiguration von Maven sind. z.B. In der super POM definiert, dass Maven central repository die default plugin repository ist.
 
 ### standard directory layout
 --src/main/java
