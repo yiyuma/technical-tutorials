@@ -28,7 +28,7 @@ Functional Interface stellen Zieltype für Lambda expression und Method referenc
 - Optional<br>
 
 Was ist Stream?<br>
-Steam bietet die Funktionen, die Verarbeitung von Collection vereinfachen. Stream ist eine neue Feature in Java 8 zum java.util-Package. Die Streams gibt es in 2 Varianten, als sequenzielle (.stream()) und parallele (.parallelStream()) Streams.
+Steam bietet die Funktionen, die Verarbeitung von Collection vereinfachen. Stream ist eine neue Feature in Java 8 und sein Paketname ist java.util.stream. Die Streams gibt es in 2 Varianten, als sequenzielle (.stream()) und parallele (.parallelStream()) Streams.
 
   
 
