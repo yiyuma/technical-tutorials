@@ -11,9 +11,13 @@ Java Collecion Framework stellt Interfaces und Implementierungen zur Verwaltung 
 
 Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Der Vorteil ist, dass ein lambda expression als Implementierung von Functional Interface eingesetzt werden kann. Falls eine abstrakte Methode eines Interface eine public Mehtode von Klasse Object überschreibt, zählt diese Methode nicht als abstrakte Methode.
 ```
-Comparator
-int compare(T,T);
+Comparator<T>
+int compare(T o1,T o2); 
+Wenn Rückgabewert einen negative Integer ist, bedeutet o1 kleiner als o2 ist.
+Wenn Rückgabewert gleich 0 ist, bedeutet o1 gleicht wie o2 ist.
+Wenn Rückgabewert einen positive Integer ist, bedeutet o1 größer als o2 ist.
 ```
+
 ```
 Function<T,R>
 R apply(T);
@@ -53,6 +57,7 @@ List<String> hasValue = stringList.stream().filter(i->i.contains("value")).colle
 Stream<T> sorted(Comparator<? super T> comparator);
 Comparator<Double> doubleComparator = (d1, d2) -> {return d1.compareTo(d2);};
 List<Double> sortedList = doubleList.stream().filter(doubleComparater).collect(Collectors.toList());
+```
 ```
 void forEach(Consumer<? super T> action);
 ```
