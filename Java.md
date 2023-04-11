@@ -67,9 +67,10 @@ stringList.parallelStream().map(s->s.subString(0,3)).collect(Collectors.toList()
 
 Optional erleichert die Prüfung auf Null.
 ```
-optional.of(user);
-optional.ofNullable(user).isPresent();
-optional.ofNullable(user).orElseThrow(new IllegalArgumentException());
+Optional.of(user);
+Optional.ofNullable(user).isPresent();
+Optional.ofNullable(null).isEmpty(); isEmpty() in Java 11
+Optional.ofNullable(null).orElseThrow(new IllegalArgumentException()); Ab Java 10 can orElseThrow() method ohne Parameter haben. Wenn optional leer is, ist NoSuchElementException geworfen. 
 ```
 Generic ermöglicht die Deklaration von Interface und die Definition von Methode ohne auf einen konkreten Datentyp festlegen zu müssen.
 
