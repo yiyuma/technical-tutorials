@@ -71,6 +71,9 @@ Optional.of(user);
 Optional.ofNullable(user).isPresent();
 Optional.ofNullable(null).isEmpty(); isEmpty() in Java 11
 Optional.ofNullable(null).orElseThrow(new IllegalArgumentException()); Ab Java 10 can orElseThrow() method ohne Parameter haben. Wenn optional leer is, ist NoSuchElementException geworfen. 
+Optional.ofNullable(user).filter(Predicate<T>).map(Function<T,R>)
+filter ist ähnlich wie ein if statement. filter hat ein Prädikate als Argument. Nur das Object, das das Prädikat entspricht, in Optional gespeichert ist.
+map nimmt den Wert, führt den Wert mit einer Berechnung durch und gibt das Result der Berechnung in einem Optional-Objekt zurück.
 ```
 Generic ermöglicht die Deklaration von Interface und die Definition von Methode ohne auf einen konkreten Datentyp festlegen zu müssen.
 
