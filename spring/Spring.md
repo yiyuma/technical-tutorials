@@ -3,17 +3,18 @@ z.B.
 - Spring Framework ist der Basis von allen Frameworks, die Spring zur Verfügung stellt.
 - Spring Boot vereinfacht die Entwicklung der Web-Anwendung, denn Spring Boot ein embedded Tomcat (Servlet Container) hat.
 - Spring Data bietet die Funktionen für Zugriff auf verschiedene relationale und NoSQL Datenbanken.
-- Spring Data JPA ist eine Implementierung von Java Pesistence API (JPA).
-- Spring MVC bietet die Funktionen für Entwicklung Webanwendung mit den Desing Pattern MVC.
-- Spring Security stellt die Funktionen für Sicherheit der Webanwendung zur Verfügung. z.B. Unterstützung für Java web token (JWT), Authentifizierung  und Autorisierung. 
+- Spring Data JPA ist eine Implementierung von Java Persistence API (JPA).
+- Spring MVC bietet die Funktionen für Entwicklung Webanwendung mit den Design Pattern MVC.
+- Spring Security stellt die Funktionen für Sicherheit der Webanwendung zur Verfügung. z.B. Unterstützung für Java web token (JWT), Authentifizierung und Autorisierung. 
+- Spring Batch bietet
 
 Inversion of Control (IoC) ist der Kern von Spring Framework, ist gleich wie Dependence Injection (DI).
 D.h. Man erzeugt nicht selber die Beans, sondern konfiguriert man die Beans, und IoC Container übernimmt die Erzeugung von Beans.
 
 Bean ist ein Objekt, das von Spring IoC Container instanziiert und verwaltet.
 Spring hat 3 Möglichkeiten für Konfiguration des IoC Containers,
-- XML based Konfiguration , ClasspathXmlApplicationContext.java
-- Annotationen based Konfiguraion, @Component, @Controller, @Service, @Repository, @Autowired, @Primary(bei mehrere Bean Kandidaten), @Qualifier("myBean"), @Value("${build.info}"), @PropertyResource("classpath:build.info"), @ConfigurationProperties(prefix = "ekl.backend")
+- XML based Konfiguration, ClasspathXmlApplicationContext.java
+- Annotationen based Konfiguration, @Component, @Controller, @Service, @Repository, @Autowired, @Primary(bei mehrere Bean Kandidaten), @Qualifier("myBean"), @Value("${build.info}"), @PropertyResource("classpath:build.info"), @ConfigurationProperties(prefix = "ekl.backend")
 
 ```
 public class MovieRecommender {
@@ -63,7 +64,7 @@ public class BuildInfoConfigV3 {
     private Map<String, String> properties;
 }
 ```
-- Java-based Konfiguraion, @Configuration + @Bean oder @Component + @ Bean ==> Bean Factory Methode
+- Java-based Konfiguration, @Configuration + @Bean oder @Component + @ Bean ==> Bean Factory Methode
 
 3 Möglichkeiten für Dependence Injection:
 - Constructor-Based Dependency Injection: Die Abhängigkeiten (Dependencies) einer Klasse werden durch Aufruf eines Konstruktors aufgelöst. Dabei sucht IoC Container einen Konstruktor aus, der die größte Anzahl von Argumenten hat und alle Argumente können per DI injitziert werden.
@@ -87,7 +88,7 @@ HTTP Methode: Get, Put, Delete, Post
 HTTP Status Code: 
 1xx informational response
 2xx successful: 200 (OK), 202(Accepted)
-3xx redirecton
+3xx redirection
 4xx client errors: 403 (Forbidden), 404(Not Found), 405(Method not Allowed)
 5xx server errors: 500 (Internal Server Error), 501(Not Implemented), 502 (Bad Gateway)
 
