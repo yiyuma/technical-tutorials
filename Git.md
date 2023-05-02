@@ -1,4 +1,4 @@
- Git ist ein Tool zur Versionierung.<br> 
+Git ist ein Tool zur Versionierung.<br> 
 
 clone ein Projekt aus remote repository in local repository. ".git" Datei ist die remote repository.
 ```

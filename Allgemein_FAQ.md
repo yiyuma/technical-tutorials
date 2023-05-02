@@ -32,6 +32,33 @@ Environment variable ist Umgebungsvariablen von Betriebssystem.<br>
 ```
 string environmentValue = System.getenv(environmentName);
 ```
+Lombok<br>
+val ist gleich wie final var.<br>
+var<br>
+@NonNull: Man verwendet für field, record component, Parameter in Method oder Parameter in Constructor. Mit @NonNull will Lombok Null-Check für Component, field oder Parameter überprüfen. Wenn field, component oder parameter null ist, wird NullPointerException geworfen.<br>
+@Cleanup: With @Cleanup bereinigt man automatisch die Resource. Man braucht nicht close() schreiben.
+@Getter/@Setter: Lombok erstellt automatisch Getter und Setter für Field. AccessLevel sind PUBLIC, PROTECTED, PACKAGE, PRIVATE. PUBLIC ist default Wert.<br>
+Wenn es @Getter oder @Setter in Class Level gibt, bedeutet diese Annotations für alle non-static fields gültig sind.<br>
+Wenn Annotation @Getter oder @Setter in Class Level ist, aber man für ein Field kein Getter oder Setter haben möchtet. Kann man AccessLevel.NONE für dieser Annotation schreiben.
+```
+private @Id @Setter(AccessLevel.PROTECTED) Long id;
+```
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor
+@Data = @Getter+@Setter+@ToString+@RequiredArgsConstructor
+@Value
+@SneakyThrows
+@Synchronized
+@With
+@Getter(lazy=true)
+@Log
+experimental
+
+Transaction
+Two phase commit
+Data Inconsistenz
+Atomarität
 
 Was ist Clean Code?<br>
 Man verwendet Clean Code, weil er die Codes einfach verstehen und warten möchte.

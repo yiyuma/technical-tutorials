@@ -1,15 +1,15 @@
-Java Runtime Environment (JRE) ist die Laufzeitumgebung von Java, ist unabhängig von Betriebsystem. Sprich, es gibt für jedes Betriebsystem eine entsprechende Version. 
+Java Runtime Environment (JRE) ist die Laufzeitumgebung von Java, ist unabhängig von Betriebssystem. Sprich, es gibt für jedes Betriebssystem eine entsprechende Version. 
 JRE enthält ein Java Virtual Machine (JVM), welches für Ausführung von Java Bytecode verantwortlich ist. 
 Java Development Kit (JDK) ist das Entwicklungstool für Java und beinhaltet auch JRE.<br>
 
-Java Collecion Framework stellt Interfaces und Implementierungen zur Verwaltung von Daten. Die Interfaces List, Set, Map, Queue, Deque, SortedSet, SortedMap.
+Java Collection Framework stellt Interfaces und Implementierungen zur Verwaltung von Daten. Die Interfaces List, Set, Map, Queue, Deque, SortedSet, SortedMap.
 - Deque (gesprochen Deck) handelt sich um eine Datenstruktur ähnlich Queue oder Stack.
 - Set ist ähnlich wie List, aber erlaubt keine Duplikate. Set ist ein Interface. HashSet ist die Implementierung von Set.
 - Map enthält ein key value Paar. Map ist ein Interface. HashMap ist ein Implementierung von Map.
 - SortedSet ist ein Set, das die Elemente aufsteigend sortiert und speichert. Die Sortierung erfolgt anhand der natürlichen Sortierung der Elemente oder der vorgegebenen Comparator (Functional Interface, Methode compare(T,T)).
 - SortedMap ist analog zu SortedSet.
 
-Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Der Vorteil ist, dass ein lambda expression als Implementierung von Functional Interface eingesetzt werden kann. Falls eine abstrakte Methode eines Interface eine public Mehtode von Klasse Object überschreibt, zählt diese Methode nicht als abstrakte Methode.
+Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. Der Vorteil ist, dass ein lambda expression als Implementierung von Functional Interface eingesetzt werden kann. Falls eine abstrakte Methode eines Interface eine public Methode von Klasse Object überschreibt, zählt diese Methode nicht als abstrakte Methode.
 ```
 Comparator<T>
 int compare(T o1,T o2); 
@@ -79,16 +79,16 @@ Generic ermöglicht die Deklaration von Interface und die Definition von Methode
 
 Reflection bietet die Möglichkeit auf innere Struktur von Java-Klassen zuzugreifen. z.B. Class, Constructor, Method, Field and Annotation.
 
-**Plain Old Java Object (POJO)** ist eine Java Klasse, die keine Superklasse hat, keine Interface implementiert und keine Annotation verwendet.
+**Plain Old Java Object (POJO)** ist eine Java Klasse, die keine Superklasse hat, kein Interface implementiert und keine Annotation verwendet.
 
-**Java Beans** ist eine Java Klasse, die public setter und getter hat, default Constructor hat und Interface Serializable implmentiert.
+**Java Beans** ist eine Java Klasse, die public setter und getter hat, default Constructor hat und Interface Serializable implementiert.
 
 **Thread** hat die Methoden run() und start(). Mit run() wird das Runnable im selben Thread durchgeführt, während die Methode start() das Runnable in einem neuen Thread ausführt. 
-**Exeucator**,**ExecutorService** und **ScheduledExecutorService** sind die Interfaces aus dem Concurrency Framework. **ScheduledThreadPoolExecutor** ist die Implementierung und stellt die Methoden scheduleWithFixedDaly(Runnable/Callable, long, long, TimeUnit) and scheduleWithFixRate(Runnable/Callable, long, long, TimeUnit).
+**Executor**,**ExecutorService** und **ScheduledExecutorService** sind die Interfaces aus dem Concurrency Framework. **ScheduledThreadPoolExecutor** ist die Implementierung und stellt die Methoden scheduleWithFixedDaly(Runnable/Callable, long, long, TimeUnit) and scheduleWithFixRate(Runnable/Callable, long, long, TimeUnit).
 - Interface Runnable ist ein Functional Interface. Functional Method ist run(). run() hat keine Parameter und Rückgabewert. Es ist im package java.lang definiert. 
 - Interface Callable<V> ist ein Functional Interface. Functional Method ist V call() throws Exception. Es ist im package java.util.concurrent.
 
-**LocalDateTime** stellt API zur Verwaltung von Date und Time zur Verfügung. Die Method LocalDateTime.now() liefert die aktuelle Zeit aus dem System Zeit Zone. Mit dem Method LocalDateTime.now(ZoneId.of("Asia/Shanghai")) wird die Zeit von Shanghai erzeugt. Mit DateTimeFomatter.ofPattern("yyyy MM dd HH:mm:ss") wird die Zeit formattiert.
+**LocalDateTime** stellt API zur Verwaltung von Date und Time zur Verfügung. Die Method LocalDateTime.now() liefert die aktuelle Zeit aus dem System Zeit Zone. Mit dem Method LocalDateTime.now(ZoneId.of("Asia/Shanghai")) wird die Zeit von Shanghai erzeugt. Mit DateTimeFormatter.ofPattern("yyyy MM dd HH:mm:ss") wird die Zeit formatiert.
 
 Java 11 hat neue Methode bei String, z.B. isBlank(),lines, strip, stripLeading, stripTrailing. Neue Methode Predicate.not(Predicate)
 ```

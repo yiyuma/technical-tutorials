@@ -63,12 +63,12 @@ mvn help:effective-pom
 Effective pom wird angezeigt. Oder in IntelliJ kann man im Kontextmenü->Maven->Show Effective POM
 
 ### standard directory layout
---src/main/java
---src/main/resource
---src/test/java
---src/test/resource
---target/
---pom.xml
+--src/main/java<br>
+--src/main/resource<br>
+--src/test/java<br>
+--src/test/resource<br>
+--target/<br>
+--pom.xml<br>
 
 ### Artefakt (artifact)
 Artefakt ist Endergebnis eines Projekts. Artefakt wird durch Build-Prozess erzeugt, ist sozusagen das Binary des Projekts.
