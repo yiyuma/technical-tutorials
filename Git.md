@@ -1,6 +1,7 @@
-Git ist ein Tool zur Versionierung.<br> 
+Git ist ein Tool zur Versionierung.<br>
+Git hat 4 Workspaces: Working directory(Working Tree), index/Stage, local repository, remote repository. Die Dateien, die git verwaltet, haben 3 Status: modified, staged, committed.<br> 
 
-clone ein Projekt aus remote repository in local repository. ".git" Datei ist die remote repository.
+Clone ein Projekt aus remote repository in local repository. ".git" Datei ist die remote repository.
 ```
 git clone https://github.com/yiyu-qiao/ekl-backend.git
 ```
@@ -8,31 +9,43 @@ Alle Branch werden angezeigt, inklusive Branch aus remote repository
 ```
 git branch -a
 ```
-zeigt alle Branch aus local repository
+Zeigt alle Branch aus local repository
 ```
 git branch
 ```
-zeigt Details vom branch aus local repository mit Namen von upstream branch 
+Zeigt Details vom branch aus local repository mit Namen von upstream branch 
 ```
 git branch -vv
 ```
-zeigt den Status des Projekts
+Zeigt den Status aller Dateien des Projekts
 ```
 git status
 ```
-fügt alle Änderungen ins Index hinzu.
+Zeigt den Status der Datei
+```
+git status filename
+```
+Fügt alle Änderungen ins Index hinzu.
 ```
 git add .
+```
+Fügt filename1 und filename2 ins Index hinzu.
+```
+git add filename1 filename2
+```
+filename1 wird vom Index zurück zu working directory.
+```
+git reset filename1
 ```
 Alle Änderungen werden committed
 ```
 git commit -m "user login erweitert"
 ```
-Die beide Operationen aus den letzten Commands 
+fügt alle Änderungen ins Index hinzu und alle Änderungen werden committed. 
 ```
 git commit -am "user login erweitert"
 ```
-Die Änderungen in local respository werden mit remote repository synchronisiert.
+Die Änderungen in local repository werden mit remote repository synchronisiert.
 ```
 git push
 ```
@@ -116,7 +129,7 @@ erstellt ein tag im remote repository mit dem Name release-1.0.1
 ```
 git push --tag origin release-1.0.1
 ```
-zeigt dem Name und url von remote repository
+Zeigt dem Name und url von remote repository
 ```
 git remote -v
 ```
