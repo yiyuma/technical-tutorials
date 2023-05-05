@@ -37,6 +37,10 @@ filename1 wird vom Index zurück zu working directory.
 ```
 git reset filename1
 ```
+delete filename1 aus working directory.
+```
+git rm filename1
+```
 Alle Änderungen werden committed
 ```
 git commit -m "user login erweitert"
