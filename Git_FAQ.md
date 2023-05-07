@@ -26,10 +26,22 @@ Wenn man neues Feature arbeitet, wie kann man neuer Branch für das Feature mach
 ```
 git clone https://github.com/yiyu-qiao/ekl-backend.git
 ```
-2. maven build project
+2. maven build project 
+```
+   mvn clean package
+```
 3. create new feature branch
+```
+    git checkout -b newBranchName
+   ```
 4. maven build and test the feature branch
+```
+   mvn clean package
+```
 5. push changes to remote repository
+```
+  git push
+```
 6. pull request from feature branch to dev branch
 7. maven build and test pull request with Jenkins
 8. merge pull request in dev branch
@@ -39,14 +51,18 @@ git clone https://github.com/yiyu-qiao/ekl-backend.git
 
 Create a new repository on the command line
 echo "# TestProject" >> README.md
+```
 git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/yiyuma/TestProject.git
 git push -u origin main
+```
 
 Push an existing repository from the command line
+```
 git remote add origin https://github.com/yiyuma/TestProject.git
 git branch -M main
 git push -u origin main
+```
