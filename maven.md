@@ -20,7 +20,7 @@ Zur Konfiguration gehören z.B.:
 ### Maven lifecycle
 Maven definiert 3 lifecycle. Die sind clean, default und site. Jede Lifecycle hat mehrere Phases. Jede Phase ist mit ein goal aus plugin angebunden. Ein goal erledigt bestimmte Aufgabe.<br>
 Maven definiert auch default lifecycle binding.<br> 
-- **clean**: Das binay wird damit aufgeräumt. Definiert Phases pre-clean, clean und post-clean
+- **clean**: Das Binary wird damit aufgeräumt. Definiert Phases pre-clean, clean und post-clean
 - **default**:definiert die Phases z.B. compile, test, package, install & deploy.
 - **site**: Mit lifecycle site wird die Seite von Java doc erstellt.
 
@@ -40,7 +40,7 @@ Es gibt 2 Arten von Repository, local Repository und remote Repository. <br>
 - Remote Repository: Falls Maven die Dependencies nicht in local repository gefunden hat, sucht Maven in remote repository nach sie weiter und speichert die gefundene Dependencies in local repository.<br>
 Die URL von remote repository wird im pom.xml im Block "repositories" deklariert. <br>
 Mit der Phase install in default lifecycle kann man das gebaute Artefakt in local repository installieren.<br>
-Man kann auch im pom.xml die remote repository definieren, wo das gebaute Artefakt gespeichert wird.<br>
+Man kann auch im pom.xml im Block "distributionsManagement" die remote repository definieren, wo das gebaute Artefakt gespeichert wird.<br>
 Mit der Phase deploy in default Lifecycle kann man das gebaute Artefakt in remote repository hochladen.
 
 ### Projekt Inheritance und Projekt Aggregation
@@ -48,7 +48,7 @@ Projekt Inheritance: Im pom.xml kann man im Block "parent" die Parent Projekt de
 Projekt Aggregation: Im pom.xml kann man im Block "modules" mehrere Subprojekte deklarieren. Jedes Subprojekt wird im Block "module" deklariert.
 
 ### settings.xml
-settings.xml enthält die globale Konfiguration für Maven. z.B. localrepository, repository und profiles. Es gibt 2 settings.xml Dateien. Eine ist User level Datei. Dieser Datei ist im Verzeichnis, wo User Information gespeichert ist. Eine ist global level Datei. Diese Datei ist im Verzeichnis, wo Maven installiert. Diese 2 settings.xml zusammenfassen zu einer effektiven settings Datei, wenn Maven aufgerufen ist. User level setting Datei hat höhere Priorität als global lever setting Datei.
+settings.xml enthält die globale Konfiguration für Maven. z.B. local repository, repository und profiles. Es gibt 2 settings.xml Dateien. Eine ist User level Datei. Dieser Datei ist im Verzeichnis, wo User Information gespeichert ist. Eine ist global level Datei. Diese Datei ist im Verzeichnis, wo Maven installiert ist. Diese 2 settings.xml zusammenfassen zu einer effektiven settings Datei, wenn Maven aufgerufen ist. User level settings Datei hat höhere Priorität als global lever settings Datei.
 ```
 mvn help:effective-settings
 ```
