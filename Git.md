@@ -3,10 +3,11 @@ Git hat 4 Workspaces: Working directory, index/Stage, local repository, remote r
 Die Dateien, die git verwaltet, haben 4 Status: untracked, modified, staged, unmodified.<br> 
 ```
 untracked + git add => staged (in stage/indexs)
+staged + git reset => untracked (in working directory)
 modified + git add => staged (in stage/indexs)
+staged + git reset => modified (in working directory)
 staged + git commit => unmodified (in local repository)
 unmodified + git push => (in remote repository)
-staged + git reset => modified (in working directory)
 ```
 
 Clone ein Projekt aus remote repository in local repository. ".git" Datei ist die remote repository.
