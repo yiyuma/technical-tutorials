@@ -105,6 +105,7 @@ git stash list
 Änderungen von Stash mit index 1 werden auf dem HEAD Branch eingesetzt. Das Stash mit index 1 wird gelöscht.
 ```
 git stash pop 1
+pop = apply + drop
 ```
 Änderungen von Stash mit index 1 werden auf dem HEAD Branch eingesetzt
 ```
@@ -117,6 +118,10 @@ git stash drop 1
 zeigt die Unterschiede zwischen dev und master. stash@{1} kann auch verglichen werden
 ```
 git diff dev master
+```
+zeigt die Unterschiede Datei zwischen dev und master. Man kann durch den Command wissen, welche Dateien schon committed, aber noch nicht push sind.
+```
+git diff --stat dev master
 ```
 zeigt die letzte 3 Commits
 ```
