@@ -1,5 +1,13 @@
 Git ist ein Tool zur Versionierung.<br>
-Git hat 4 Workspaces: Working directory, index/Stage, local repository, remote repository. Die Dateien, die git verwaltet, haben 3 Status: modified, staged, committed.<br> 
+Git hat 4 Workspaces: Working directory, index/Stage, local repository, remote repository.<br>
+Die Dateien, die git verwaltet, haben 4 Status: untracked, modified, staged, unmodified.<br> 
+```
+untracked + git add => staged (in stage/indexs)
+modified + git add => staged (in stage/indexs)
+staged + git commit => unmodified (in local repository)
+unmodified + git push => (in remote repository)
+staged + git reset => modified (in working directory)
+```
 
 Clone ein Projekt aus remote repository in local repository. ".git" Datei ist die remote repository.
 ```
