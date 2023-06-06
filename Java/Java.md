@@ -14,7 +14,7 @@ Functional Interface ist ein Interface, das genau eine abstrakte Methode hat. De
 Comparator<T>
 int compare(T o1,T o2); 
 Wenn Rückgabewert einen negative Integer ist, bedeutet o1 kleiner als o2 ist.
-Wenn Rückgabewert gleich 0 ist, bedeutet o1 gleicht wie o2 ist.
+Wenn Rückgabewert gleich 0 ist, bedeutet o1 gleich wie o2 ist.
 Wenn Rückgabewert einen positive Integer ist, bedeutet o1 größer als o2 ist.
 ```
 

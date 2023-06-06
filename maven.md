@@ -6,7 +6,7 @@ Zur Konfiguration gehören z.B.:
 - **groupId, artifactId & version**: Mit diesen Informationen wird das Artefakt eindeutig festgelegt.<br>
 - **packaging**: Mit dem Element packaging wird das Format (jar, war, ear, pom...) des Artefakts definiert.<br>
 - **dependencies**: Das Element dependencies enthält die Abhängigkeiten des Projekts. Bei Abhängigkeitsauflösung gewinnt der kürzeste Weg.<br>
-- **repositories**: gibt an, welche remote Repository verwendet werden. 
+- **repositories**: gibt an, welche remote Repository verwendet werden. Falls es keine Repository definiert, wird die Maven center repository verwendet.
 - **properties**: Im Element properties werden Variablen definiert, die im pom.xml verwendet werden können.
 - **build**: Das Element build enthält alle Informationen, die zum Erstellen eines Projekts erforderlich sind. Es enthält das Element plugin.
 - **plugins**: analog zu dependencies. Zusätzlich kann man mit dem Element plugins die verwendeten Plugins konfigurieren. z.B. Mit welche Phase soll ein goal angebunden werden. Plugins ist im Element Build.
@@ -39,9 +39,9 @@ Es gibt 2 Arten von Repository, local Repository und remote Repository. <br>
 - Local Repository ist ein Verzeichnis auf dem Computer, wo Maven zuerst nach Abhängigkeit sucht. Das Verzeichnis für local repository liegt in der settings.xml.
 - Remote Repository: Falls Maven die Dependencies nicht in local repository gefunden hat, sucht Maven in remote repository nach sie weiter und speichert die gefundene Dependencies in local repository.<br>
 Die URL von remote repository wird im pom.xml im Block "repositories" deklariert. <br>
-Mit der Phase install in default lifecycle kann man das gebaute Artefakt in local repository installieren.<br>
+Mit der Phase **install** in default lifecycle kann man das gebaute Artefakt in local repository installieren.<br>
 Man kann auch im pom.xml im Block "distributionsManagement" die remote repository definieren, wo das gebaute Artefakt gespeichert wird.<br>
-Mit der Phase deploy in default Lifecycle kann man das gebaute Artefakt in remote repository hochladen.
+Mit der Phase **deploy** in default Lifecycle kann man das gebaute Artefakt in remote repository hochladen.
 
 ### Projekt Inheritance und Projekt Aggregation
 Projekt Inheritance: Im pom.xml kann man im Block "parent" die Parent Projekt deklarieren. Das Projekt kann die default Value von Parent Projekt übernehmen, wenn es selber nicht für den Wert definiert. Jedes Projekt kann nur ein Parent Projekt haben.<br>

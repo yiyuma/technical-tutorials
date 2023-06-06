@@ -5,8 +5,7 @@ z.B.
 - Spring Data bietet die Funktionen für Zugriff auf verschiedene relationale und NoSQL Datenbanken.
 - Spring Data JPA ist eine Implementierung von Java Persistence API (JPA).
 - Spring MVC bietet die Funktionen für Entwicklung Webanwendung mit den Design Pattern MVC.
-- Spring Security stellt die Funktionen für Sicherheit der Webanwendung zur Verfügung. z.B. Unterstützung für Java web token (JWT), Authentifizierung und Autorisierung. 
-- Spring Batch bietet
+- Spring Security stellt die Funktionen für Sicherheit der Webanwendung zur Verfügung. z.B. Unterstützung für Java web token (JWT), Authentifizierung und Autorisierung.
 
 Inversion of Control (IoC) ist der Kern von Spring Framework, ist gleich wie Dependence Injection (DI).
 D.h. Man erzeugt nicht selber die Beans, sondern konfiguriert man die Beans, und IoC Container übernimmt die Erzeugung von Beans.
