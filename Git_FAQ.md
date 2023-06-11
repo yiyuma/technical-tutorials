@@ -3,7 +3,7 @@ Wenn man neues Feature arbeitet, wie kann man neuer Branch für das Feature mach
    ```
    git pull
    ```
-2. maven build das Projekt. 
+2. maven build das Projekt. (Ziel: Aktualisiertes Projekt hat keinen Fehler.)
     ```
     mvn clean package
     ```
@@ -11,37 +11,44 @@ Wenn man neues Feature arbeitet, wie kann man neuer Branch für das Feature mach
    ```
     git checkout -b newBranchName
    ```
-4. Bearbeiten auf diesem Feature Branch. maven build und testen das Feature Branch.
+4. Bearbeiten auf diesem Feature Branch. Danach build und testen das Feature Branch.
     ```
     mvn clean package
     ```
 5. Push die Änderungen zu remote repository
    ```
-   git commit -am -m "Comments"
+   git commit -am "Comments in feature branch"
    git push
-    ```
+   ```
+6. Bringen die Änderungen von Feature Branch zu Dev Branch
+   ```
+   git merge dev
+   git switch dev
+   git merge featureBranch
+   ```
+
 
 
 1. clone from remote repository to local workspace
-```
-git clone https://github.com/yiyu-qiao/ekl-backend.git
-```
-2. maven build project 
-```
+   ```
+   git clone https://github.com/yiyu-qiao/ekl-backend.git
+   ```
+2. maven build project (Ziel: Aktualisiertes Projekt hat keinen Fehler.)
+   ```
    mvn clean package
-```
+   ```
 3. create new feature branch
-```
-    git checkout -b newBranchName
+   ```
+   git checkout -b newBranchName
    ```
 4. maven build and test the feature branch
-```
+   ```
    mvn clean package
-```
+   ```
 5. push changes to remote repository
-```
-  git push
-```
+   ```
+   git push
+   ```
 6. pull request from feature branch to dev branch
 7. maven build and test pull request with Jenkins
 8. merge pull request in dev branch

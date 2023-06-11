@@ -1,4 +1,4 @@
-Git ist ein Tool zur Versionierung.<br>
+gitGit ist ein Tool zur Versionierung.<br>
 Git hat 4 Workspaces: Working directory, index/Stage, local repository, remote repository.<br>
 Die Dateien, die git verwaltet, haben 4 Status: untracked, modified, staged, unmodified.<br> 
 ```
@@ -82,13 +82,15 @@ setzt das Upstream-Branch für das local branch und lädt die Änderungen auf de
 ```
 git push -u origin branch-name
 ```
-löscht den Branch mit dem Name branch-name. -D zwingt das Löschen.
+löscht den Branch in local repository mit dem Name branch-name. -D zwingt das Löschen.
 ```
 git branch -d branch-name
 ```
 löscht den Branch mit dem Name branch-name aus dem remote repository. origin ist default name von remote repository.
 ```
 git push -d origin branch-name
+or
+git push origin :branch-nameq
 ```
 stash die Änderungen 
 ```
