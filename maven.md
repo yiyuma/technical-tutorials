@@ -1,7 +1,7 @@
 Maven ist ein Build Tool für Java Projekt.<br> 
 
 ### pom.xml
-Jedes Maven Projekt hat eine Datei *pom.xml* (POM=Project Object Model). pom.xml enthält die Konfiguration von dem Projekt.
+Jedes Maven Projekt hat eine Datei *pom.xml* (POM=Project Object Model). pom.xml ist Maven Konfigurationsdatei.
 Zur Konfiguration gehören z.B.:
 - **groupId, artifactId & version**: Mit diesen Informationen wird das Artefakt eindeutig festgelegt.<br>
 - **packaging**: Mit dem Element packaging wird das Format (jar, war, ear, pom...) des Artefakts definiert.<br>
@@ -16,6 +16,14 @@ Zur Konfiguration gehören z.B.:
 - **dependencyManagement**: Kommt in der Regel im pom.xml von Parent Projekt und legt die Version der verwendeten Abhängigkeit fest.
 - **pluginsManagement**: Analog zu dependencyManagement.
 
+### spring-boot-starter-web
+spring-boot-starter-web is a collection of Maven dependencies. It contains spring-web, spring-webmvc, hibernate-validator, tomcat, json etc.
+
+### spring-boot-maven-plugin 
+spring-boot-maven-plugin package executable jar or war archive and can also run the app.
+
+### spring-boot-devtools
+spring-boot-devtools: automatically restarts the application when code is updated.
 
 ### Maven lifecycle
 Maven definiert 3 lifecycle. Die sind clean, default und site. Jede Lifecycle hat mehrere Phases. Jede Phase ist mit ein goal aus plugin angebunden. Ein goal erledigt bestimmte Aufgabe.<br>
@@ -33,6 +41,10 @@ Ein goal erledigt bestimmte Aufgabe.
 mvn <PLUGIN>:<GOAL>
 ```
 Maven wird bestimmte goal aus Plugin ausführen.
+```
+mvn spring-boot:run
+```
+run the spring boot application.
 
 ### Repository
 Es gibt 2 Arten von Repository, local Repository und remote Repository. <br>
@@ -63,12 +75,19 @@ mvn help:effective-pom
 Effective pom wird angezeigt. Oder in IntelliJ kann man im Kontextmenü->Maven->Show Effective POM
 
 ### standard directory layout
---src/main/java<br>
---src/main/resource<br>
---src/test/java<br>
---src/test/resource<br>
---target/<br>
---pom.xml<br>
+--src/main/java : for Java source code<br>
+--src/main/resource : for Properties or config files used by app<br>
+--src/main/resource/static : Spring boot will load static resources (HTML files, CSS, JavaScript, images, etc...) from here.<br>
+--src/main/resource/templates : FreeMarker, Thymeleaf, Mustache<br>
+--src/main/webapp: JSP files and web config files other web asserts(images, css, js, etc...). Only use it if the application is packaged as a war.<br>
+--src/test/java : Unit testing source code<br>
+--src/test/resource : Unit testing properties or config files<br>
+--target/ : Destination directory for compiled code. Automatically created by Maven.<br>
+--pom.xml : Configuration file for Maven project<br>
+
+### Maven Wrapper file
+**mvnw** allows you to run a Maven project without install Maven.<br>
+**mvnw.cmd** for Windows, **mvnw.sh** for Linux/Mac
 
 ### Artefakt (artifact)
 Artefakt ist Endergebnis eines Projekts. Artefakt wird durch Build-Prozess erzeugt, ist sozusagen das Binary des Projekts.
