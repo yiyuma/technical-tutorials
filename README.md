@@ -1,4 +1,4 @@
-# TechnicalTutorials
+## Contents
 - Git
 - Maven
 - IntelliJ
