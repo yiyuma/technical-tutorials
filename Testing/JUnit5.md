@@ -12,7 +12,20 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - @AfterEach: Method is executed after each test method (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. Useful for common clean up code: releasing resources, cleaning up test data
 - @BeforeAll: Method is executed only once, before all test methods (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. It must be a static method. Useful for getting database connections, connecting to servers
 - @AfterAll: Method is executed only once, after all test methods (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory).  It is inherited. It must be a static method. Useful for releasing database connections, disconnecting from servers
-
+- @DisplayName: Custom display name with spaces, special characters and emojis. Useful for test reports in IDE or external test runner.
+- @DisplayNameGeneration: Generation the display name automatically. Write on the class level
+  - Simple: Removes trailing parentheses from test method name
+    ```
+    @DisplayNameGeneration(DisplayNameGenerator.Simple.class)
+    ```
+  - ReplaceUnderscores: Replace underscores in test method name with spaces
+    ```
+    @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
+    ```
+  - IndicativeSentences: Generate sentence based on test class name and test method name
+    ```
+    @DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
+    ```
 - @ParameterizedTest
 - @RepeatedTest
 - @TestFactory
@@ -20,8 +33,8 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - @TestClassOrder
 - @TestmethodOrder
 - @TestInstance
-- @DisplayName
-- @DisplayNameGeneration
+
+
 - @Nested
 - @Tag
 - @Disabled
