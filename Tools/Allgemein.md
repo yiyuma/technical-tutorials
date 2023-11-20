@@ -1,4 +1,4 @@
-**Java JDK (Java SE Development Kit)**
+### Java JDK (Java SE Development Kit)
 - Download link: https://www.oracle.com/java/technologies/downloads/  
 - Install Java JDK
 - Set environment varialbes:
@@ -9,19 +9,20 @@
   java -version
   ```
 
-**Maven (Build automation tool)**
+### Maven (Build automation tool)
 - Download link: https://maven.apache.org/download.cgi?.
-- unzip file in the programm file folder
+- Unzip file in the programm file folder
 - Set environment varialbes:
   - Add maven bin folder in the path: Environment variables -> Path -> Edit -> New -> type C:\Program Files\apache-maven-3.9.5\bin
 - Check maven version in cmd
   ```
   mvn -v
   ```
-**IntelliJ** bietet automatisierte Code Formatters.
+
+### IntelliJ (IDE, Integrated Development Enviroment)
 - Download link: https://www.jetbrains.com/idea/download/?fromIDE=&section=windows
 
-**MySQL**
+### MySQL (Relational Database)
 - Download link: https://dev.mysql.com/downloads/windows/installer/8.0.html <br>
 - We install 
   - MySQL Community Server
@@ -33,11 +34,15 @@
   ```
   mysql --version
   ```
-  
-**ProgresSQL**
 
+### Git (Version control)
+- Download link: https://git-scm.com/downloads
+- Check Git version in cmd
+  ```
+  git -v
+  or
+  git --version
+  ```
 
-**Git**
-
-
-**Postman** is a client tool. It can send HTTP requests to the REST Web Service / API, and then it will get the response, and we can actually view it there in the tool.
+### Postman
+Postmann is a client tool. It can send HTTP requests to the REST Web Service / API, and then it will get the response, and we can actually view it there in the tool.
