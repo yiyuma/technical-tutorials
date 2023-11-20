@@ -54,3 +54,12 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - assertNotEquals
 - assertNull
 - assertNotNull
+- assertSame: Assert that items refer to same object
+- assertNotSame: Assert that items do not refer to same object
+- assertTrue: Assert that condition is true
+- assertFalse: Assert that condition is false
+- assertArrayEquals: Assert that both objects arrays are deeply equal
+- assertIterableEquals: Assert that both object iterables (ArrayList, LinkedList, HashSet, TreeSet) are deeply equal
+- assertLinesMatch: Assert that both lists of strings match
+- assertThrows: Assert that an executable throws an exception of expected type
+- assertTimeoutPreemptively: Assert that an executable completes before given timeout is exceeded.
