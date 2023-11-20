@@ -6,7 +6,7 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
  - Automation of the test cases with pass / fail
  - Utilities for testsetup, teardown and assertions
 
-**Annotations**
+### Annotations
 - @Test: It means it is a test method. Method is inherited
 - @BeforeEach: Method is executed before each test method (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. Useful for common set up code: creating objects,setting up test data
 - @AfterEach: Method is executed after each test method (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. Useful for common clean up code: releasing resources, cleaning up test data
@@ -30,13 +30,13 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - @RegisterExtension
 - @TempDir
 
-**Lifecycle methods**
+### Lifecycle methods
 - @BeforeEach
 - @AfterEach
 - @BeforeAll
 - @AfterAll
 
-**Assertions**
+### Assertions
 - assertEquals
 - assertNotEquals
 - assertNull
