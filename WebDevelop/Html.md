@@ -3,35 +3,43 @@
 **HTML Tags**
 - void element (self closing tag): It is element without content
   ```
-  - <hr /> or <hr>: horizontal line element
+  - <hr /> or <hr>: horizontal rules, it defines a thematic break.
   - <br /> or <br>: break element
   - <img />: element for image.
     attribute:
-    scr: source. <img src="location of image" />
-    alt: alternative text description. <img src="URL" alt="description of the image" />
-  - <meta>:
+    - scr: source path. <img src="location of image" />. You can use absolute path or relatives path as the value for the src.
+    - alt: alternative text description. <img src="URL" alt="description of the image" />
+    - width: width of the image in pixels
+    - height: height of the image in pixels
+  - <meta>: meta information
     attribute:
-    charset:
+    - charset: charset="utf-8"
   ```
 - no void element: it has content between opening tag and closing tag.
+  form: <tag attribute=value anotherattribute=value>Content</tag>
   ```
   - <h1></h1> to <h6></h6>: HTML section heading elements. They represent six levels of the sectin heading. h1 ist the highest section level and h6 is the lowest.
-  - <p></p>: paragraph.
+    attribute:
+    - style: style="font-size:60px;"
+  - <p></p>: paragraph. A paragraph starts always on a new line.
+    attribute:
+    - style: styles to the element. color:red, font, size, etc
+    - title: defines extra information about the element. It will be displayed as a tooltip.
   - <ul></ul>: unorder list. The list items in the unorder list will be listed with bullet points.
   - <ol></ol>: order list. The list items in the order list will be listed with numbers.
     -<ol start=5></ol>: the order list will be started with number 5. 
   - <li></li>: list item.
   - <a></a>: anchor tag will give us a link to a web page or something on the internet. The additional attribute will be added in the opening tag. 
-    - form: <tag attribute=value anotherattribute=value>Content</tag>
-    - attribute:
-      href: the URL that the hyperlink points to. <a href="www.google.com">google</a>
+    attribute:
+    - href: the URL that the hyperlink points to. <a href="www.google.com">google</a>
       draggable: to drag the element. <a draggable=true></a>
   - <html></html>: html tag, It is root element.
-    - attribute:
-      lang: language of the text conten in the element.
+    attribute:
+    - lang: language of the text conten in the element. lang=en, or lang=en-US(Country code)
   - <head></head>: It contains meta information about the website and will not display for the user.
   - <title>title for the html page</title>: It will be displayed in the browser's title bar or in the page's tab.
   - <body></body>: defines the contents of the website.
+  - <pre></pre>: defines preformatted text. It is displayed in a fixed-width font, and it preservess both spaces and line breaks.
   ```
 
 
