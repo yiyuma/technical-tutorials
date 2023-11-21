@@ -42,11 +42,30 @@
   - <pre></pre>: defines preformatted text. It is displayed in a fixed-width font, and it preservess both spaces and line breaks.
   ```
 
+HTML attribute
+```
+- style
+  <tagname style="property:value;"> // property is a CSS property (background-color, color(text color), font-family, font-size, text-align), value is a CSS value.
+  
+```
+HTML Text Formatting
+```
+- <b></b>: defines bold text
+- <strong></strong>: defines important text
+- <i></i>: defines a part of text in an alternate voice or mood
+- <em></em>:
+- <small></small>:
+- <mark></mark>
+- <del></del>
+- <ins></ins>
+- <sub></sub>
+- <sup></sup>
+```
 
 - button
 - canvas
 - div
-- em
+
 - embed
 - footer
 - form
@@ -69,8 +88,7 @@
 - script
 - section
 - span
-- strong
-- style
+
 - textarea
 
 
