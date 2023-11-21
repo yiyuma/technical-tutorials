@@ -26,12 +26,12 @@
     - attribute:
       href: the URL that the hyperlink points to. <a href="www.google.com">google</a>
       draggable: to drag the element. <a draggable=true></a>
-  - <html></html>: html tag, It is the root of the document.
+  - <html></html>: html tag, It is root element.
     - attribute:
       lang: language of the text conten in the element.
-  - <head></head>: important information about the website. not display for the user.
-  - <title>title in the </title>
-  - <body></body>: content of the website.
+  - <head></head>: It contains meta information about the website and will not display for the user.
+  - <title>title for the html page</title>: It will be displayed in the browser's title bar or in the page's tab.
+  - <body></body>: defines the contents of the website.
   ```
 
 
