@@ -1,7 +1,7 @@
 ## Git
-**Git** ist ein Tool zur Versionierung.<br>
-Git hat 4 Workspaces: Working directory, index/Stage, local repository, remote repository.<br>
-Die Dateien, die git verwaltet, haben 4 Status: untracked, modified, staged, unmodified.<br> 
+**Git** is a version control.<br>
+Git has 4 workspaces: Working directory, index/Stage, local repository, remote repository.<br>
+The file in git has 4 states: untracked, modified, staged, unmodified.<br> 
 ```
 untracked + git add [path] => staged (in stage/indexs)
 staged + git reset [path] => untracked (in working directory)
@@ -10,21 +10,23 @@ staged + git reset [path] => modified (in working directory)
 staged + git commit -m "message" => unmodified (in local repository)
 unmodified + git push => (in remote repository)
 ```
-**Clone** ein Projekt aus remote repository in local repository. ".git" Datei ist die remote repository.
+
+**Clone** a project from remote repository to local repository. File with the extension ".git" is the remote repository.
 ```
+cd localRepositoryDirectory
 git clone https://github.com/yiyuma/technical-tutorials.git
 ```
 
 **Branch**
-- Alle Branch werden angezeigt, inklusive Branch aus remote repository.
+- Show all branches in the local repository and in the remote repository.
   ```
   git branch -a
   ```
-- Alle Branch aus local repository werden angezeigt.
+- Show all branches in the local repository.
   ```
   git branch
   ```
-- Details aller Branchen aus local repository mit Namen von upstream branch werden angezeigt.
+- Show the details of all branches in the local repository mit Namen von upstream branch werden angezeigt.
   ```
   git branch -vv
   ```
