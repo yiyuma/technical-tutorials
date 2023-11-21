@@ -13,7 +13,7 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - @BeforeAll: Method is executed only once, before all test methods (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. It must be a static method. Useful for getting database connections, connecting to servers
 - @AfterAll: Method is executed only once, after all test methods (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory).  It is inherited. It must be a static method. Useful for releasing database connections, disconnecting from servers
 - @DisplayName: Custom display name with spaces, special characters and emojis. Useful for test reports in IDE or external test runner.
-- @DisplayNameGeneration: Generation the display name automatically. Write on the class level
+- @DisplayNameGeneration: Generation the display name automatically. It is a class level annotation.
   - Simple: Removes trailing parentheses from test method name
     ```
     @DisplayNameGeneration(DisplayNameGenerator.Simple.class)
@@ -26,12 +26,41 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
     ```
     @DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
     ```
+- @TestmethodOrder: Configures the order /sort algorithm for the test methods. It is a class level annotation.
+  - MethodOrderer.DisplayName: Sorts test methods alphanumerically based on display names
+    ```
+    @TestmethodOrder(MethodOrderer.DisplayName.class)
+    ```
+  - MethodOrderer.MethodName: Sorts test methods alphanumerically based on method names
+     ```
+    @TestmethodOrder(MethodOrderer.MethodName.class)
+    ```
+  - MethodOrderer.Random: Pseudo-random order based on method names
+     ```
+    @TestmethodOrder(MethodOrderer.Random.class)
+    ```
+  - MethodOrderer.OrderAnnotation: Sorts test methods numerically based on @Order annotation
+    - @Order: Manually specify the order with an int number. It is a method level annotation. Order with lowest number has highest priority. Negative numbers are allowed.
+    ```
+    @TestmethodOrder(MethodOrderer.OrderAnnotation.class)
+    class TestClass{
+     @Order(1)
+     void testRunIn2(){...}
+
+     @Order(3)
+     void testRunIn3(){...}
+
+     @Order(-5)
+     void testRunIn1(){...}
+    
+    }
+    ```
 - @ParameterizedTest
 - @RepeatedTest
 - @TestFactory
 - @TestTemplate
 - @TestClassOrder
-- @TestmethodOrder
+
 - @TestInstance
 
 
