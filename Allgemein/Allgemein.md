@@ -44,5 +44,3 @@ Leverage HTTP Method for CRUD Operation
     - Nested JSON object with curley braces
     - Array with square brackets[] (["Java", "JavaScript","C#", "Python"])
     - null
-
-**Postman** is a client tool. It can send HTTP requests to the REST Web Service / API, and then it will get the response, and we can actually view it there in the tool.
