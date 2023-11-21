@@ -72,12 +72,6 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - @RegisterExtension
 - @TempDir
 
-### Lifecycle methods
-- @BeforeEach
-- @AfterEach
-- @BeforeAll
-- @AfterAll
-
 ### Assertions
 - assertEquals
 - assertNotEquals
