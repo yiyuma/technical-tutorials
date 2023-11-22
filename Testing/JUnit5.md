@@ -7,13 +7,14 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
  - Utilities for testsetup, teardown and assertions
 
 ### Annotations
-- @Test: It means it is a test method. Method is inherited
+- @Test: Specify this is a test method. It is inherited.
 - @BeforeEach: Method is executed before each test method (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. Useful for common set up code: creating objects,setting up test data
 - @AfterEach: Method is executed after each test method (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. Useful for common clean up code: releasing resources, cleaning up test data
 - @BeforeAll: Method is executed only once, before all test methods (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory). It is inherited. It must be a static method. Useful for getting database connections, connecting to servers
 - @AfterAll: Method is executed only once, after all test methods (@Test, @ParameterizedTest, @RepeatedTest, @TestFactory).  It is inherited. It must be a static method. Useful for releasing database connections, disconnecting from servers
-- @DisplayName: Custom display name with spaces, special characters and emojis. Useful for test reports in IDE or external test runner.
+- @DisplayName: Custom display name with spaces, special characters and emojis. It can be used for the class and method. Useful for test reports in IDE or external test runner.
 - @DisplayNameGeneration: Generation the display name automatically. It is a class level annotation.
+  - Standard: Matches the standard display name generation behavior.
   - Simple: Removes trailing parentheses from test method name
     ```
     @DisplayNameGeneration(DisplayNameGenerator.Simple.class)
