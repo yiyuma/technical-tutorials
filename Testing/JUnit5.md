@@ -56,6 +56,36 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
     
     }
     ```
+- @Disabled: Disable a test method.
+- @EnabledOnOs: Enable test when running on a given operatin system.
+  ```
+  @EnabledOnOs(OS.WINDOWS)
+  @EnabledOnOs(OS.MAC)
+  @EnabledOnOs(OS.LINUX)
+  @EnabledOnOs(OS.WINDOWS, OS.MAC)
+  ```
+- @EnabledOnJre: Enable thes for a given Java verion.
+  ```
+  @EnabledOnJre(JRE.JAVA_17)
+  ```
+- @EnabledForJreRange: Enable test for a given Java verion range.
+  ```
+  @EnabledForJreRange(min=JRE.JAVA_11)
+  @EnabledForJreRange(min=JRE.JAVA_13, max=JRE.JAVA_18)
+  ```
+- @EnabledIfSystemProperty: Enable test based on system property. System property can be set in the "Edit Configuraions..." in IntelliJ.
+  ```
+  in Edit Configurations defines: testProperty=test
+  in test:
+  @EnabledIfSystemProperty(named="testProperty",machtes="test")
+  ```
+- @EnabledIfEnviromentVariable: Enable test based on enviroment variable. Enviroment variable can be set in the "Edit Configuraions..." in IntelliJ.
+  ```
+  in Edit Configurations defines: enviroment=test
+  in test:
+  @EnabledIfEnviromentVariable(named="enviroment",machtes="test")
+  ```
+
 - @ParameterizedTest
 - @RepeatedTest
 - @TestFactory
@@ -67,7 +97,7 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 
 - @Nested
 - @Tag
-- @Disabled
+
 - @Timeout
 - @ExtendWith
 - @RegisterExtension
