@@ -116,4 +116,5 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - assertIterableEquals: Assert that both object iterables (ArrayList, LinkedList, HashSet, TreeSet) are deeply equal
 - assertLinesMatch: Assert that both lists of strings match
 - assertThrows: Assert that an executable throws an exception of expected type
+- assertDoesNotThrows:
 - assertTimeoutPreemptively: Assert that an executable completes before given timeout is exceeded.
