@@ -32,7 +32,7 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
     ```
     @TestMethodOrder(MethodOrderer.DisplayName.class)
     ```
-  - MethodOrderer.MethodName: Sorts test methods alphanumerically based on method names
+  - MethodOrderer.MethodName: Sorts test methods alphanumerically based on method names. Here should the @DisplayName not be defined.
      ```
     @TestMethodOrder(MethodOrderer.MethodName.class)
     ```
