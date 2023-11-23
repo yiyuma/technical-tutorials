@@ -27,36 +27,35 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
     ```
     @DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
     ```
-- @TestmethodOrder: Configures the order /sort algorithm for the test methods. It is a class level annotation.
+- @TestMethodOrder: Configures the order /sort algorithm for the test methods. It is a class level annotation.
   - MethodOrderer.DisplayName: Sorts test methods alphanumerically based on display names
     ```
-    @TestmethodOrder(MethodOrderer.DisplayName.class)
+    @TestMethodOrder(MethodOrderer.DisplayName.class)
     ```
   - MethodOrderer.MethodName: Sorts test methods alphanumerically based on method names
      ```
-    @TestmethodOrder(MethodOrderer.MethodName.class)
+    @TestMethodOrder(MethodOrderer.MethodName.class)
     ```
   - MethodOrderer.Random: Pseudo-random order based on method names
      ```
-    @TestmethodOrder(MethodOrderer.Random.class)
+    @TestMethodOrder(MethodOrderer.Random.class)
     ```
   - MethodOrderer.OrderAnnotation: Sorts test methods numerically based on @Order annotation
     - @Order: Manually specify the order with an int number. It is a method level annotation. Order with lowest number has highest priority. Negative numbers are allowed.
     ```
-    @TestmethodOrder(MethodOrderer.OrderAnnotation.class)
+    @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
     class TestClass{
      @Order(1)
-     void testRunIn2(){...}
+     void testRunInSecond(){...}
 
      @Order(3)
-     void testRunIn3(){...}
+     void testRunInThird(){...}
 
      @Order(-5)
-     void testRunIn1(){...}
-    
+     void testRunInFirst(){...}   
     }
     ```
-- @Disabled: Disable a test method.
+- @Disabled: Disable a test method. It is not inherited.
 - @EnabledOnOs: Enable test when running on a given operatin system.
   ```
   @EnabledOnOs(OS.WINDOWS)
@@ -64,27 +63,32 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
   @EnabledOnOs(OS.LINUX)
   @EnabledOnOs(OS.WINDOWS, OS.MAC)
   ```
+- @DisabledOnOs, analog @EnabledOnOs
 - @EnabledOnJre: Enable thes for a given Java verion.
   ```
   @EnabledOnJre(JRE.JAVA_17)
   ```
+- @DisabledOnJre, analog @EnabledOnJre.
 - @EnabledForJreRange: Enable test for a given Java verion range.
   ```
   @EnabledForJreRange(min=JRE.JAVA_11)
   @EnabledForJreRange(min=JRE.JAVA_13, max=JRE.JAVA_18)
   ```
+- @DisabledForJreRange, analog @EnabledForJreRange
 - @EnabledIfSystemProperty: Enable test based on system property. System property can be set in the "Edit Configuraions..." in IntelliJ.
   ```
   in Edit Configurations defines: testProperty=test
   in test:
   @EnabledIfSystemProperty(named="testProperty",machtes="test")
   ```
+- @DisabledIfSystemProperty, analog @EnabledIfSystemProperty
 - @EnabledIfEnviromentVariable: Enable test based on enviroment variable. Enviroment variable can be set in the "Edit Configuraions..." in IntelliJ.
   ```
   in Edit Configurations defines: enviroment=test
   in test:
   @EnabledIfEnviromentVariable(named="enviroment",machtes="test")
   ```
+- @DisabledIfEnvironmentVariable, analog @EnabledIfEnviromentVariable
 
 - @ParameterizedTest
 - @RepeatedTest
