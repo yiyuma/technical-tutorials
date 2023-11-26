@@ -42,6 +42,7 @@ Code Coverage measures how many methods / lines are called by the tests. It is r
         </plugins>
     </build>
   // Using Maven in the cmd (site: add website resources, images, css etc...), -DgenerateReports=false: Don't overwrite existing HTML reports
+  
   mvn site -DgenerateReports=false
   
   ```
