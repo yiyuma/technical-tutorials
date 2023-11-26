@@ -40,7 +40,38 @@ public static void main(String[] args){
   CustomErrorResponse: Type of the response body
   CustomException: Exception type to handle/catch
   ```
-  
+## Spring Boot Unit Testing
+Using **@SpringBootTest**
+- Loads the application context
+- Support for Spring dependency injection
+- Can access data from Spring application.peoperties
+
+Step1 : Add **spring-boot-starter-test** dependency in pom.xml file. spring-boot-starter-test includes a transitive dependency on JUnit 5.
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
+</dependency>
+```
+Step2: Add Annotation @SpringBootTest on the test method
+```
+@SpringBootTest (classes=Application.class) // load Spring Application Context.
+public class ApplicationTest{
+// Injection
+@Autowired
+User user;
+// Access Spring Application Context
+@Autowired
+ApplicationContext context
+// Access data from application.properties (info.app.name=ToDoListApplication)
+@Value("${info.app.name}")
+private String appInfo
+@Test
+void basicTest(){}
+}
+```
+
 ## Annotations
 **@SpringBootApplication** is used to mark the main class of a Spring Boot application.<br>
 @SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan<br>
