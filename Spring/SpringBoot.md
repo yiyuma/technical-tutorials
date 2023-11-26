@@ -58,17 +58,17 @@ Step2: Add Annotation @SpringBootTest on the test method
 ```
 @SpringBootTest (classes=Application.class) // load Spring Application Context.
 public class ApplicationTest{
-// Injection
-@Autowired
-User user;
-// Access Spring Application Context
-@Autowired
-ApplicationContext context
-// Access data from application.properties (info.app.name=ToDoListApplication)
-@Value("${info.app.name}")
-private String appInfo
-@Test
-void basicTest(){}
+	// Injection
+	@Autowired
+	User user;
+	// Access Spring Application Context
+	@Autowired
+	ApplicationContext context
+	// Access data from application.properties (info.app.name=ToDoListApplication)
+	@Value("${info.app.name}")
+	private String appInfo
+	@Test
+	void basicTest(){}
 }
 ```
 
