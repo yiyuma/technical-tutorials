@@ -44,3 +44,5 @@ Leverage HTTP Method for CRUD Operation
     - Nested JSON object with curley braces
     - Array with square brackets[] (["Java", "JavaScript","C#", "Python"])
     - null
+
+**CSV** (Comma-Separated Values) is text file format that uses commas to separat values.
