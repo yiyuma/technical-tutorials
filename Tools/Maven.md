@@ -102,5 +102,9 @@ Effective pom wird angezeigt. Oder in IntelliJ kann man im Kontextmenü->Maven->
 Artefakt ist Endergebnis eines Projekts. Artefakt wird durch Build-Prozess erzeugt, ist sozusagen das Binary des Projekts.
 
 
-
+```
+mvn clean test
+mvn site -DgenerateReports=false
+mvn dependency:tree
+```
 
