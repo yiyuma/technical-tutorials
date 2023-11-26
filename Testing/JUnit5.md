@@ -122,3 +122,4 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - assertThrows: Assert that an executable throws an exception of expected type
 - assertDoesNotThrows:
 - assertTimeoutPreemptively: Assert that an executable completes before given timeout is exceeded.
+- fail
