@@ -90,7 +90,13 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
   ```
 - @DisabledIfEnvironmentVariable, analog @EnabledIfEnviromentVariable
 
-- @ParameterizedTest
+- @ParameterizedTest: run a test multiple times and provide different parameter values.
+  Value sources for the @ParameterizedTest
+  - @ValueSource: Array of values: Strings, ints, doubles, floats etc
+  - @CsvSource: Array of CSV String values
+  - @CsvFileSource: CSV values read from a file
+  - @EnumSource: Enum constant values
+  - @MethodSource: Custom method for providing values
 - @RepeatedTest
 - @TestFactory
 - @TestTemplate
