@@ -26,3 +26,6 @@
 
 - Reformat code: Ctrl + Alt +  L
 - Refactor this: Ctrl + Alt + Shift + T
+
+
+psvm + [Tab] = public static void main(String[] args){}
