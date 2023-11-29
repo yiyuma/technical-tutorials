@@ -128,4 +128,5 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
 - assertThrows: Assert that an executable throws an exception of expected type
 - assertDoesNotThrows:
 - assertTimeoutPreemptively: Assert that an executable completes before given timeout is exceeded.
-- fail
+- fail: The fail assertion fails a test throwing an AssertionFailedError. It creates a failure under desired testing conditions.
+- assertAll:Wrapp multiple assertions up into a single action. All the assertions in the aseertAll were executed and their failures were reported in the MultipleFailuresError message.
