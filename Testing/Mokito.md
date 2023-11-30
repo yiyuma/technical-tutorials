@@ -10,7 +10,7 @@
 Spring Boot has built-in support for Mockito.<br>
 
 Structure:
-- Set Up: Set expectations with mock responses
+- Set Up: Set expectations with mock responses. (when(doSomeWork()).thenReturn(aResponse);
 - Execute: Call the method you want to test
 - Assert: Check the result and verify that it is the expected result
 - Verify: Optionally... verify calls (how many times called etc...)
