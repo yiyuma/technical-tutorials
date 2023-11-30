@@ -15,7 +15,7 @@ Code Coverage measures how many methods / lines are called by the tests. It is r
   - Generate test result report
     In the tab "Cover" select "Export Test Results..."
 - Use **Maven** to check code coverage. It is useful when running as part of DevOps build process, or CI/CD environments.
-  - Maven Surefire Plugin: maven.surefire-report-plugin
+  - Add Maven Surefire Plugin: maven.surefire-report-plugin
   ```
   // To use Maven to create report with code coverage, you have to at first add plugin in the build in pom.xml.
     <build>
@@ -33,6 +33,7 @@ Code Coverage measures how many methods / lines are called by the tests. It is r
                 </configuration>
             </plugin>
 
+            // report
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
@@ -47,7 +48,7 @@ Code Coverage measures how many methods / lines are called by the tests. It is r
                 </executions>
             </plugin>
 
-            // Java Code Coverage
+            // Java Code Coverage (Add jacoco)
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -71,11 +72,11 @@ Code Coverage measures how many methods / lines are called by the tests. It is r
         </plugins>
     </build>
   ```
-  // run tests and executes Surefire Report Plugin to generate HTML reports using Maven in the terminal
+  - run tests and executes Surefire Report Plugin to generate HTML reports using Maven in the terminal
   ```
   mvn clean test
   ```
-  // Using Maven in the cmd (site: add website resources, images, css etc...), -DgenerateReports=false: Don't overwrite existing HTML reports
+  - Using Maven in the cmd (site: add website resources, images, css etc...), -DgenerateReports=false: Don't overwrite existing HTML reports
   ```
   mvn site -DgenerateReports=false
   ```
