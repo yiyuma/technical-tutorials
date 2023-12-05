@@ -11,6 +11,8 @@ spring-boo-starter-test includes JUnit 5 and Mockito.
 - @SpringBootTest: class level annotation
 - @MockBean: @MockBean = functionality of @Mock (Mockito) + add mock bean to Spring ApplicationContext + making the mock bean avariable for inject with @Autowired,
 - @Autowired instead of @InjectMocks (Mockito)
+- @TestPropertySource
+- @Sql
   
 ### ReflectionTestUtils
 Spring provides a utility class: ReflectionTestUtils. It allows you to get/set non-public fields and invoke non-public methods.
