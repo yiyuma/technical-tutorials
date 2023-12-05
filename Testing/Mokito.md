@@ -1,11 +1,3 @@
-## Mocking
-- Allows us to test a given class in isolation
-- Test interaction between given class and its dependencies
-- Minimizes configuration /availability of dependencies
-- We can mock the DAO, DB or REST API to give a response
-- Mocking Frameworks: Mockito, EasyMock...
-
-
 ## Mockito
 Spring Boot has built-in support for Mockito.<br>
 
