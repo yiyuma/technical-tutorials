@@ -84,6 +84,13 @@ Code Coverage measures how many methods / lines are called by the tests. It is r
   mvn site -DgenerateReports=false
   ```
 
+## Integration Testing
+- Test multiple components together as part of a test plan
+- Detemine if software units wotk together as expected
+- Identify any negative side effects due to integration
+- Can test using mocks/stubs
+- Can also test using live integrations (database, file system)
+  
 ## Mocking
 - Allows us to test a given class in isolation
 - Test interaction between given class and its dependencies
