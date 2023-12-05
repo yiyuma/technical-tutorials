@@ -15,7 +15,9 @@ spring-boo-starter-test includes JUnit 5 and Mockito.
 ### ReflectionTestUtils
 Spring provides a utility class: ReflectionTestUtils. It allows you to get/set non-public fields and invoke non-public methods.
 ```
-ReflectionTestUtils.getField(targetObject, "fieldName");
-ReflectionTestUtils.setField(targetObject, "fieldName", fieldValue);
-ReflectionTestUtils.invokeMethod(targetObject, "methodName");
+User user = (User)context.getBean("User");
+
+ReflectionTestUtils.getField(user, "id");
+ReflectionTestUtils.setField(user, "id", int);
+ReflectionTestUtils.invokeMethod(user, "getUserTelefon");
 ```
