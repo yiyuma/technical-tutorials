@@ -81,3 +81,9 @@ Code Coverage measures how many methods / lines are called by the tests. It is r
   mvn site -DgenerateReports=false
   ```
 
+## Mocking
+- Allows us to test a given class in isolation
+- Test interaction between given class and its dependencies
+- Minimizes configuration /availability of dependencies
+- We can mock the DAO, DB or REST API to give a response
+- Mocking Frameworks: Mockito, EasyMock...
