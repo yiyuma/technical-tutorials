@@ -1,10 +1,13 @@
+## Tranditional Development vs. Test Driven Development (TDD)
 ### Tranditional Development
 Design -> Code -> Test
-
 ### Test Driven Development (TDD)
 Test(First, write a failing test) -> Code( Write code to make the test pass) -> Refactor (Refactor and improve on design) -> Test (Report process for the next test) -> ...<br>
 It is a continue loop.
 
+## Unit Testing
+### Unit Testing
+Testing an individual unit of code for correctness. It provide fixed input und expects known output.
 ### Unit Test Code Coverage
 Code Coverage measures how many methods / lines are called by the tests. It is represented as a percentage.
 - Use **IntelliJ** to check code coverage. IntelliJ has built-in support for code coverage.
