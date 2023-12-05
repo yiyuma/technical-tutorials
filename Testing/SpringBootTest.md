@@ -21,3 +21,12 @@ ReflectionTestUtils.getField(user, "id");
 ReflectionTestUtils.setField(user, "id", int);
 ReflectionTestUtils.invokeMethod(user, "getUserTelefon");
 ```
+
+### JdbcTemplate
+JdbcTemplate is from the Spring Framework and allows us to execute JDBC operations.
+```
+@Autowired
+private jdbcTemplate jdbc;
+
+jdbc.execute("DELETE FROM user");
+```
