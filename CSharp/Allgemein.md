@@ -1,4 +1,5 @@
-## Regex
+## Regular Expression (Regex)
+Regular expression is a query
 ```
 ^ - Starts with
 $ - Ends with
