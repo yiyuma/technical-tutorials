@@ -46,3 +46,15 @@
 
 ### Postman
 Postmann is a client tool. It can send HTTP requests to the REST Web Service / API, and then it will get the response, and we can actually view it there in the tool.
+
+### Visual Studio Code
+- Download link: https://code.visualstudio.com/
+
+### node (Command-line tool)
+For running JavaScript code from command-line
+
+### npm (Command-line tool)
+Download new noce packages and features. Similar to Maven
+
+### tcs (Command-line tool)
+TypeScript Compiler
