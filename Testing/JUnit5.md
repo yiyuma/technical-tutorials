@@ -55,7 +55,7 @@ User Guide: https://junit.org/junit5/docs/current/user-guide/
      void testRunInFirst(){...}   
     }
     ```
-- @Disabled: Disable a test method. It is not inherited.
+- @Disabled: Disable a test class or a test method. It is not inherited.
 - @EnabledOnOs: Enable test when running on a given operatin system.
   ```
   @EnabledOnOs(OS.WINDOWS)
