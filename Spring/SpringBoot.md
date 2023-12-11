@@ -1,4 +1,12 @@
 ## Spring Boot
+
+### Run a spring boot project in cmd
+```
+java -jar filename.jar
+or
+mvn spring-boot:run
+```
+
 **Spring Boot Application** must be annotated with @SpringBootApplication. <br>
 The Spring-Boot Application bootstraps with SpringApplication.run(classname.class, args) to 
 - create application context and registers all beans.
