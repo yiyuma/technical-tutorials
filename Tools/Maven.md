@@ -25,6 +25,7 @@ spring-boot-starter-parent is a special starter that provides Maven defaults. Ve
 ### spring-boot-maven-plugin 
 spring-boot-maven-plugin package executable jar or war archive and can also run the app.
 ```
+mvn package
 mvn spring-boot:run
 ```
 Maven runs the spring boot application.
