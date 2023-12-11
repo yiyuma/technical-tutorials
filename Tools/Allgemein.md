@@ -51,10 +51,27 @@ Postmann is a client tool. It can send HTTP requests to the REST Web Service / A
 - Download link: https://code.visualstudio.com/
 
 ### node (Command-line tool)
-For running JavaScript code from command-line
+For running JavaScript code from command-line.
+- Download link: https://nodejs.org/download/release/v16.10.0/
+- Check node version in cmd
+  ```
+  node --version
+  ```
 
-### npm (Command-line tool)
-Download new noce packages and features. Similar to Maven
+### npm (Node Package Manager) (Command-line tool)
+It can download new node packages and features. Similar to Maven.
+- Check npm version in cmd
+  ```
+  npm --version
+  ```
 
 ### tcs (Command-line tool)
 TypeScript Compiler
+- Install tcs in cmd using npm
+  ```
+  npm install -g typescript@4.6.4
+  ```
+- Check tcs version in cmd
+  ```
+  tcs --version
+  ```
