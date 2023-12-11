@@ -35,3 +35,16 @@ $ - Ends with
 (x|y) - Alternatice - x or y
 [^x] - Anything but x (where x is whatever character you want)
 ```
+
+## String
+String separate in an array with separator ;
+```
+string name;
+List<string> names = name.Split(';').Select(n=>n.Trim()).Where(n=>!n.IsNullOrEmpty).ToList();
+```
+An string array to a string with separator ,
+```
+List<string> names;
+string name = string.Join(",", names);
+```
+          
