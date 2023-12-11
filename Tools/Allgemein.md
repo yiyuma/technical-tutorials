@@ -1,4 +1,4 @@
-### Java JDK (Java SE Development Kit)
+## Java JDK (Java SE Development Kit)
 - Download link: https://www.oracle.com/java/technologies/downloads/  
 - Install Java JDK
 - Set environment varialbes:
@@ -9,7 +9,7 @@
   java -version
   ```
 
-### Maven (Build automation tool)
+## Maven (Build automation tool)
 - Download link: https://maven.apache.org/download.cgi?.
 - Unzip file in the programm file folder
 - Set environment varialbes:
@@ -19,10 +19,10 @@
   mvn -v
   ```
 
-### IntelliJ (IDE, Integrated Development Enviroment)
+## IntelliJ (IDE, Integrated Development Enviroment)
 - Download link: https://www.jetbrains.com/idea/download/?fromIDE=&section=windows
 
-### MySQL (Relational Database)
+## MySQL (Relational Database)
 - Download link: https://dev.mysql.com/downloads/windows/installer/8.0.html <br>
 - We install 
   - MySQL Community Server
@@ -35,7 +35,7 @@
   mysql --version
   ```
 
-### Git (Version control)
+## Git (Version control)
 - Download link: https://git-scm.com/downloads
 - Check Git version in cmd
   ```
@@ -44,13 +44,13 @@
   git --version
   ```
 
-### Postman
+## Postman
 Postmann is a client tool. It can send HTTP requests to the REST Web Service / API, and then it will get the response, and we can actually view it there in the tool.
 
-### Visual Studio Code
+## Visual Studio Code
 - Download link: https://code.visualstudio.com/
 
-### node (Command-line tool)
+## node (Command-line tool)
 For running JavaScript code from command-line.
 - Download link: https://nodejs.org/download/release/v16.10.0/
 - Check node version in cmd
@@ -58,14 +58,14 @@ For running JavaScript code from command-line.
   node --version
   ```
 
-### npm (Node Package Manager) (Command-line tool)
+## npm (Node Package Manager) (Command-line tool)
 It can download new node packages and features. Similar to Maven.
 - Check npm version in cmd
   ```
   npm --version
   ```
 
-### tcs (Command-line tool)
+## tcs (Command-line tool)
 TypeScript Compiler
 - Install tcs in cmd using npm
   ```
