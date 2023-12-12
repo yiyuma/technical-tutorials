@@ -39,8 +39,14 @@ Maven runs the spring boot application.
 ### spring-boot-devtools
 spring-boot-devtools: automatically restarts the application when code is updated. 
 - add dependency of spring-boot-devtool
-- Preferences->Build,Execution,Deployment->Compiler: check Build project automatically
-- Preferences->Advanced Settings: Check Allow auto-make to...
+  ```
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+  </dependency>
+  ```
+- Preferences->Build,Execution,Deployment->Compiler: select "check Build project automatically"
+- Preferences->Advanced Settings: select "Allow auto-make to..."
 
 ### spring-boot-starter-actuator
 Expose endpoints to monitor and manager your application
