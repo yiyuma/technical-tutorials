@@ -7,7 +7,6 @@ or
 mvn spring-boot:run
 ```
 
-
 **Spring Boot Application** must be annotated with @SpringBootApplication. <br>
 The Spring-Boot Application bootstraps with SpringApplication.run(classname.class, args) to 
 - create application context and registers all beans.
@@ -135,12 +134,48 @@ application properties is saved unter
 
 
 
-### application.properties
+## application.properties
+Inject properties into Spring Boot application using @Value.
+```
+@Value("${info.app.name}")
+```
+***Application information***
+```
+info.app.name=test project
+info.app.description=This is a test project
+info.app.verion=1.0.0
+```
+***Web***
+```
+// HTTP server port
+server.port=7000
+// Context path of the application
+server.servlet.context-path=/my-app
+// Default HTTP session time out
+server.servlet.session.timeout=15m
+```
 ***Database configuration***
 ```
+// JDBC URL of the database
 spring.datasource.url=jdbc:mysql://localhost:3306/databaseUrl
+// Login username of the database
 spring.datasource.username=user
+// Login password of the database
 spring.datasource.password=password
+```
+***Security***
+```
+// Override default username (user) and set password
+spring.security.user.name=newUser
+spring.security.user.password=password
+```
+***Actuator***
+```
+management.endpoints.web.exposure.include=health,info
+management.endpoints.web.exposure.include=*
+management.endpoints.web.exclude=health
+// Base path for actuator endpoints
+management.endpoints.web.base-path=/actuator
 ```
 ***Turn off the spring boot banner***
 ```
@@ -152,7 +187,8 @@ logging.level.root=warn
 - warn is only for warning and error
 ```
 ### spring-boot-devtools
-spring-boot-devtools: automatically restarts the application when code is updated. 
+spring-boot-devtools: automatically restarts the application when code is updated. <br>
+Add spring-boot-devtools:
 - add dependency of spring-boot-devtool
   ```
   <dependency>
@@ -164,7 +200,34 @@ spring-boot-devtools: automatically restarts the application when code is update
 - Preferences->Advanced Settings: select "Allow auto-make to..."
 
 ### spring-boot-starter-actuator
-Expose endpoints to monitor and manager your application
+Expose endpoints to monitor and manager your application.<br>
+Add spring-boot-starter-actuator in pom.xml
+```
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+  </dependency>
+```
+/actuator is the prefix.
+- /health: check the status your application. It is exposed by default
+- /info: provide information about your application. The infos must be defined in the application.properties file.
+  ```
+  in application.properties
+  info.app.name=test project
+  info.app.description=This is a test project
+  info.app.verion=1.0.0
+  ```
+- /auditevents: audit events for your application
+- /beans: list of all beans registered in the Spring application context
+- /mapping: List of all @RequestMapping paths
+
+Only the /health is exposed by default. To expose all actuator endpoints over HTTP you have to define in the application.properties.
+```
+management.endpoints.web.exposure.include=*
+or for the /info
+management.endpoints.web.exposure.include=health,info
+management.info.env.enabled=true
+```
 
 ### Design pattern
 ***Service Facade*** is used in the service layer.<br>
