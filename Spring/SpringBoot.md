@@ -7,6 +7,7 @@ or
 mvn spring-boot:run
 ```
 
+
 **Spring Boot Application** must be annotated with @SpringBootApplication. <br>
 The Spring-Boot Application bootstraps with SpringApplication.run(classname.class, args) to 
 - create application context and registers all beans.
@@ -150,6 +151,21 @@ spring.main.banner-mode=off
 logging.level.root=warn
 - warn is only for warning and error
 ```
+### spring-boot-devtools
+spring-boot-devtools: automatically restarts the application when code is updated. 
+- add dependency of spring-boot-devtool
+  ```
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+  </dependency>
+  ```
+- Preferences->Build,Execution,Deployment->Compiler: select "check Build project automatically"
+- Preferences->Advanced Settings: select "Allow auto-make to..."
+
+### spring-boot-starter-actuator
+Expose endpoints to monitor and manager your application
+
 ### Design pattern
 ***Service Facade*** is used in the service layer.<br>
 ***Proxy*** is used in the AOP.<br>
