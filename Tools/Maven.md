@@ -20,7 +20,13 @@ Zur Konfiguration gehören z.B.:
 spring-boot-starter-web is a collection of Maven dependencies. It contains spring-web, spring-webmvc, hibernate-validator, tomcat, json etc.
 
 ### spring-boot-starter-parent
-spring-boot-starter-parent is a special starter that provides Maven defaults. Version is Spring-Boot version
+spring-boot-starter-parent is a special starter that provides Maven defaults (Java version, UTF-8 source encoding, version from the spring-boot-start-*,  etc.).<br>
+if you want to change the default value, you should overwrite it in the properties.
+```
+<properties>
+  <java.version>17</java.version>
+</properties>
+```
 
 ### spring-boot-maven-plugin 
 spring-boot-maven-plugin package executable jar or war archive and can also run the app.
