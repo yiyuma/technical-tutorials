@@ -59,9 +59,16 @@ spring.main.banner-mode=off
 logging.level.root=warn
 ```
 
-### Custom properties
+### info about app
+This infos will be shown in actuator/info.
 ```
 info.app.name=myApp
 info.app.description=This is my first app.
 info.app.version=1.0.0
+```
+
+### Custom properties
+```
+coach.name=Winne
+coach.company=CompanyOne
 ```
