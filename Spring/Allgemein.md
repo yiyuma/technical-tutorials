@@ -20,9 +20,9 @@ It provide an embedded HTTP server (Tomcat).
   - This is as first choice
 - Setter Injection
   - Use this when you have optional dependencies
-  - if dependency is not provided, your app can provide rea
+  - if dependency is not provided, your app can provide reasonable default logic.
 
-
+**@Autowird vs. @Inject**
 
 Dependency Injection: <br>
 The dependency inversion principle: The client delegates to another object the responsibility of providing its dependencies.
