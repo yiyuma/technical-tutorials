@@ -7,7 +7,8 @@ or
 mvn spring-boot:run
 ```
 
-**Spring Boot Application** must be annotated with @SpringBootApplication. <br>
+### Spring Boot Application
+***Spring Boot Application*** must be annotated with @SpringBootApplication. <br>
 The Spring-Boot Application bootstraps with SpringApplication.run(classname.class, args) to 
 - create application context and registers all beans.
 - start the embedded server Tomcat...
@@ -81,10 +82,10 @@ public class ApplicationTest{
 ```
 
 ## Annotations
-**@SpringBootApplication** is used to mark the main class of a Spring Boot application.<br>
+- **@SpringBootApplication** is used to mark the main class of a Spring Boot application.<br>
 @SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan<br>
-- @Configuration
-- @EnableAutoConfiguration: Spring Boot looks for auto-configuration beans on its classpath and automatically applies them. @EnableAutoConfiguraion should be used always with @Configurion together.
+- **@Configuration**: able to register extra beans with @Bean or import other configuration classes.
+- **@EnableAutoConfiguration**: Spring Boot looks for auto-configuration beans on its classpath and 	automatically applies them. @EnableAutoConfiguraion should be used always with @Configurion together.
 Able to register extra beans with @Bean or import other configuration classes
 - @ComponentScan: Enables component scanning of current package. Also recursively scans sub-package. Man can define scan path with scanBasePackage or scanBasePackages
 ```
