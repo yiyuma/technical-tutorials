@@ -1,17 +1,28 @@
 ## Spring 
 
-## Spring Boot
+### Spring Boot
 Spring Boot uses Spring behind the scense, but it makes easier to get started with Spring development. 
 It provide an embedded HTTP server (Tomcat).
 
-## application.properties
-### Server
-```
-server.port=8080
-```
+### Spring Container
+**Primary functions**
+- create and manage objects (Inversion of Control)
+- Inject object dependencies (Dependency Inject)
 
-### Custom porperties
-```
-coach.name=Micky Mouse
-team.name=Disney land
-```
+**Configuring Spring Container**
+- XML configuration file (legacy)
+- Java Annotations
+- Java Source Code
+
+**Injection Types**
+- Constructor Injection
+  - Use this when you have required dependencies
+  - This is as first choice
+- Setter Injection
+  - Use this when you have optional dependencies
+  - if dependency is not provided, your app can provide rea
+
+
+
+Dependency Injection: <br>
+The dependency inversion principle: The client delegates to another object the responsibility of providing its dependencies.
