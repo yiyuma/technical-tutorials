@@ -83,18 +83,26 @@ public class ApplicationTest{
 
 ## Annotations
 - **@SpringBootApplication** is used to mark the main class of a Spring Boot application.<br>
-@SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan<br>
+@SpringBootApplication = @EnableAutoConfiguration + @Configuration + @ComponentScan<br>
+- **@EnableAutoConfiguration**: Spring Boot looks for auto-configuration beans on its classpath and 	automatically applies them. @EnableAutoConfiguraion should be used always with @Configuration together.
 - **@Configuration**: able to register extra beans with @Bean or import other configuration classes.
-- **@EnableAutoConfiguration**: Spring Boot looks for auto-configuration beans on its classpath and 	automatically applies them. @EnableAutoConfiguraion should be used always with @Configurion together.
-Able to register extra beans with @Bean or import other configuration classes
-- @ComponentScan: Enables component scanning of current package. Also recursively scans sub-package. Man can define scan path with scanBasePackage or scanBasePackages
+- **@ComponentScan**: @ComponentScan without arguments tells Spring to scan components in the current package and its sub-packages. Man can also define the scan path with **scanBasePackage** or **scanBasePackages**
 ```
 @SpringBootApplication(scanBasePackage="scanPackage")
 or
 @SpringBootApplication(scanBasePackages={"scanPackage1",
                                          "scanPackage2"})
+or
+@ComponentScan(scanBasePackage="scanPackage1")
+@ComponentScan(scanBasePackage="scanPackage2")
 ```
-**@Component**: Configuration, Controller, Service and Repository are meta-annotated with Component. Congiguraion, Controller, Service, Repoistory are Component, but the inverse is not true.<br>
+```
+// ComponentScan with Exclusions
+@ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.Regex, pattern="..."))
+or
+@ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.ASSIGNABLE_TYPE, value=className.class))
+```
+**@Component**: Configuration, Controller, Service and Repository are meta-annotated. Congiguraion, Controller, Service, Repoistory are Component, but the inverse is not true.<br>
 **@Configuration** is meta-annotation. It is used for defining beans with @Bean (method level) and their dependencies.<br>
 **@Controller** is meta-annotation. It applied to Controller implementations. In the @ControllerAdvice will implemented the Exceptions for the Controller.<br>
 **@Service** is meta-annotation. It applied to Service implementations. Spring will automatically register the Service implementation.<br>
