@@ -24,6 +24,8 @@ Spring will scan for @Component, @Controller, @RestController, @Service, @Reposi
 - Setter Injection
   - Use this when you have optional dependencies
   - if dependency is not provided, your app can provide reasonable default logic.
+- Field Injection
+  - does not recommended, because it maked the code harder to unit test
 
 **@Autowired vs. @Inject**
 @Autowired: matches by type: class or interface
