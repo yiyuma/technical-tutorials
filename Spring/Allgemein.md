@@ -8,7 +8,6 @@ It provide an embedded HTTP server (Tomcat).
 **Primary functions**
 - create and manage objects (Inversion of Control)
 - Inject object dependencies (Dependency Inject)
-
 **Inversion of Control**
 Spring will scan for @Component, @Controller, @RestController, @Service, @Repository, @Configuration, @Bean. They are meta annotations and mark the class as a Spring Bean. They make the bean available for the dependency injection.
 
@@ -34,6 +33,3 @@ Spring will scan for @Component, @Controller, @RestController, @Service, @Reposi
 Dependency Injection: <br>
 The dependency inversion principle: The client delegates to another object the responsibility of providing its dependencies.
 
-### Annotations
-@Component: makes the class as a Spring Bean and make it available for dependency injection.
-@Autowired: tells Spring to inject a dependency. If you only have one constructor then @Autowired on constructor is optional.
