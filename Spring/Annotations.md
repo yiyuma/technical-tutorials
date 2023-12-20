@@ -28,7 +28,7 @@ or
 - **@Repository** is meta-annotation. It applied the Repository implementations.
 - **@Configuration** is meta-annotation. It is used for defining beans with @Bean (method level) and their dependencies.
 - **@Bean** is an annotation that Spring uses to gather beans at runtime. It is a method level annotation. The methods with @Bean must be in @Configuraion classes. We can use @Bean for the outside class.
-- **@Autowird** is an annotation to mark a dependency which Spring is going to resolve and inject. We can use it with constructor, setter or field injection.
+- **@Autowired** is an annotation to mark a dependency which Spring is going to resolve and inject. We can use it with constructor, setter or field injection. If you only have one constructor then @Autowired on constructor is optional.
 - **@Qualifier** In @Qualifier we can give the bean id. Bean id is same name as class, only first character is lower-case.
 - **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
 
