@@ -31,7 +31,9 @@ or
 - **@Autowird** is an annotation to mark a dependency which Spring is going to resolve and inject. We can use it with constructor, setter or field injection.
 - **@Qualifier** In @Qualifier we can give the bean id. Bean id is same name as class, only first character is lower-case.
 - **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
-@RequestMapping("/api") is class level annotation.<br>
+
+### Spring web annotations
+- @RequestMapping("/api") is class level annotation.<br>
 @GetMapping("/students/{id}") is method level annotation. {id} here is path variable.
 ```
 @GetMapping("/students/{id})
