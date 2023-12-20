@@ -7,13 +7,13 @@
 - **@Configuration**: able to register extra beans with @Bean or import other configuration classes.
 - **@ComponentScan**: @ComponentScan without arguments tells Spring to scan components in the current package and its sub-packages. Man can also define the scan path with **scanBasePackage** or **scanBasePackages**
 ```
-@SpringBootApplication(scanBasePackage="scanPackage")
+@SpringBootApplication(basePackages="scanPackage")
 or
-@SpringBootApplication(scanBasePackages={"scanPackage1",
-                                         "scanPackage2"})
+@SpringBootApplication(basePackages={"scanPackage1",
+                                     "scanPackage2"})
 or
-@ComponentScan(scanBasePackage="scanPackage1")
-@ComponentScan(scanBasePackage="scanPackage2")
+@ComponentScan(basePackages="scanPackage1")
+@ComponentScan(basePackages="scanPackage2")
 ```
 ```
 // ComponentScan with Exclusions
@@ -21,15 +21,16 @@ or
 or
 @ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.ASSIGNABLE_TYPE, value=className.class))
 ```
-**@Component**: Configuration, Controller, Service and Repository are meta-annotated. Congiguraion, Controller, Service, Repoistory are Component, but the inverse is not true.<br>
-**@Configuration** is meta-annotation. It is used for defining beans with @Bean (method level) and their dependencies.<br>
-**@Controller** is meta-annotation. It applied to Controller implementations. In the @ControllerAdvice will implemented the Exceptions for the Controller.<br>
-**@Service** is meta-annotation. It applied to Service implementations. Spring will automatically register the Service implementation.<br>
-- Service layer: Service Facade design pattern. It is intermediate layer for custom business logic. Integrate data from multiple sources(DAO/repositories).
-- Service layer has the responsibility to manage transaction boundaries. Apply @Transactional annotation on service methods.
-**@Repository**is meta-annotation. It applied the Repository implementations.<br>
-**@RestController** = @Controller + @ResponseBody (The return value of the methods will be saved in a ResponseBody.). It is for REST. It is class level annotation. <br>
-
+- **@Component** is an annotation that allows Spring to detect our cunstom beans automatically. @Configuration, @Controller, @Service, @Repoistory are @Component, but the inverse is not true. @Configuration, @Controller, @Service and @Repository are stereotype annotations. 
+- **@Controller** is meta-annotation. It applied to Controller implementations. In the @ControllerAdvice will implemented the Exceptions for the Controller.
+- **@RestController** = @Controller + @ResponseBody (The return value of the methods will be saved in a ResponseBody.). It is for REST. It is class level annotation.
+- **@Service** is meta-annotation. It applied to Service implementations. Spring will automatically register the Service implementation.
+- **@Repository** is meta-annotation. It applied the Repository implementations.
+- **@Configuration** is meta-annotation. It is used for defining beans with @Bean (method level) and their dependencies.
+- **@Bean** is an annotation that Spring uses to gather beans at runtime. It is a method level annotation. The methods with @Bean must be in @Configuraion classes. We can use @Bean for the outside class.
+- **@Autowird** is an annotation to mark a dependency which Spring is going to resolve and inject. We can use it with constructor, setter or field injection.
+- **@Qualifier** In @Qualifier we can give the bean id. Bean id is same name as class, only first character is lower-case.
+- **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
 @RequestMapping("/api") is class level annotation.<br>
 @GetMapping("/students/{id}") is method level annotation. {id} here is path variable.
 ```
@@ -54,7 +55,8 @@ public Student addStudent(@RequestBody Student theStudent){
 
 @PathVariable String id
 @RequestParam(name="user-name", defaultValue="") String userName
-
+- Service layer: Service Facade design pattern. It is intermediate layer for custom business logic. Integrate data from multiple sources(DAO/repositories).
+- Service layer has the responsibility to manage transaction boundaries. Apply @Transactional annotation on service methods.
 
 Define custom application properties:
 application properties is saved unter 
