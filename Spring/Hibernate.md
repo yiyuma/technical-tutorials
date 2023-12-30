@@ -7,17 +7,19 @@
 
 **Hibernate** is a framework for persisting / saving Java objects in a database. Hibernate provides the Object-to-Relational Mapping (ORM). It is an implementation of JPA.
 
-**JDBC** is 
+**Java DataBase Connectivity (JDBC)** is an API for conncecting and executing queries on a database for Java. JDBC can work with any database as long as proper drivers are provided. 
 
 ### Hibernate/JPA und JDBC
 Hibernate/JPA benutzt JDBC für alle Datenbank Kommunikationen.
-### CRUD (= Create, Read, Update, Delete )
-### Add JDBC connection info in the application.properties
+Add JDBC connection info in the application.properties
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/student_tracker
 spring.datasource.username=springstudent
 spring.datasource.password=springstudent
 ```
+
+### CRUD (= Create, Read, Update, Delete )
+
 #### Entity class
 Java class that is mapped to a database table.
 - Must be annotated with @Entity
