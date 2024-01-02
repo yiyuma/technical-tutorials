@@ -19,11 +19,9 @@ spring.datasource.username=springstudent
 spring.datasource.password=springstudent
 ```
 
+## Hibernate
 
-
-### CRUD (= Create, Read, Update, Delete )
-
-#### Entity class
+### Entity class
 Java class that is mapped to a database table.
 - Must be annotated with @Entity
 - Must have a public or protected no-argument constructor
@@ -82,7 +80,7 @@ http://localhost:8080/employees?sort=lastName,desc
 
 
 #### Annotations
-- @Entity
+- @Entity: to specify that the class is an entity. Class level annotation.
 - @Table(name="tablename"): If not specified, table name is the same name as class name.
 - @Column(name="columnname"): @Column is optional. If not specified, column name is the same name as java field.
 - @Id: marks the field as the primary key. Java primitive and primitive wrapper types, String, Date, BigDecimal and BigInteger
