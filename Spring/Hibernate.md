@@ -31,8 +31,8 @@ Java class that is mapped to a database table.
 ### Data Access Object (DAO)
 DAO is a common design pattern. DAO is responsible for interfacing with the database. (like a helper for communicating with the database) DAO needs a JPA Entity Manager.<br>
 
-### JPA Entity Manager
-JPA Entity Manager is the main component for saving and retrieving entities. JPA Entity Manager is automatically created by Spring Boot. JPA Entity Manager needs a Data Source.<br>
+### Entity Manager
+EntityManager is the main component for saving and retrieving entities. It is from Jakarta Persistence API (JPA). Its bean will be created automatically from Spring Boot.<br>
 - entityManager.persist(obj): create obj
 - entityManager.find(obj): read obj
 - entityManager.merge(obj): update obj
