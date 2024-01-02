@@ -9,14 +9,17 @@
 
 **Java DataBase Connectivity (JDBC)** is an API for conncecting and executing queries on a database for Java. JDBC can work with any database as long as proper drivers are provided. 
 
-### Hibernate/JPA und JDBC
-Hibernate/JPA benutzt JDBC für alle Datenbank Kommunikationen.
+**Relationship between Hibernate/JPA and JDBC** <br>
+Hibernate/JPA use JDBC to communicate with all database. Hibernate/JPA <=> JDBC <=> Datebase. <br>
 Add JDBC connection info in the application.properties
 ```
+// Spring use JDBC to communicate with mySQL database
 spring.datasource.url=jdbc:mysql://localhost:3306/student_tracker
 spring.datasource.username=springstudent
 spring.datasource.password=springstudent
 ```
+
+
 
 ### CRUD (= Create, Read, Update, Delete )
 
