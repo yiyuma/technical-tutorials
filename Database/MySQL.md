@@ -6,6 +6,10 @@
 - Add dependency in Maven: MySQL Driver: mysql-connector-j
 - Add database connection info in application.properties
   ```
+  // Spring use JDBC for mySQL database communication
+  spring.datasource.url=jdbc:mysql://localhost:3306/student_tracker
+  spring.datasource.username=springstudent
+  spring.datasource.password=springstudent
   ```
 
 
