@@ -2,8 +2,11 @@
 - MySQL Database Server: main engine of the database
 - MySQL Workbench: client GUI for interacting with the database
 
-## Add MySQL dependence in Maven
-MySQL Driver: mysql-connector-j
+## Add MySQL in Spring project
+- Add dependency in Maven: MySQL Driver: mysql-connector-j
+- Add database connection info in application.properties
+  ```
+  ```
 
 
 ## Commands
