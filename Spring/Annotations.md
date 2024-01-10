@@ -33,15 +33,24 @@ or
 - **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
 
 ### Hibernate annotations
-- **@Entity**
-- **@Table**
-- **@Id**
-- **@Column**
-- **@GeneratedValue**
-- **@OneToOne**
-- **@OneToMany**
-- **@ManyToOne**
-- **@ManyToMany**
+- **@Entity**: declare any POJO class as an entity for a database. (Class level annotation)
+- **@Table**: Used to change table details. (Class level annotation)
+  - name: mapping table name in the database
+  - schema
+  - catalogue
+  - enforce unique constraints
+- **@Id**: declare a primary key inside the POJO class. (Method level annotation)
+- **@GeneratedValue**: 
+- **@Column**: mapping column in database.
+  - name: mapping column name in the database
+  - length:
+  - unique:
+  - nullable: 
+- **@Transient**: Do not add the field in the database
+- **@OneToOne**:
+- **@OneToMany**:
+- **@ManyToOne**:
+- **@ManyToMany**:
 
   
 ### Spring web annotations
