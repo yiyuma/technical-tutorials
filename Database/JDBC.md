@@ -14,9 +14,9 @@ Registering the Driver:
 - Add MySQL Driver "mysql-connector-j" in pom.xml file.
 Creating the connection:
 - Add MySQL Connection in the application.properites file.
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/DBMS_name
-spring.datasource.username=user
-spring.datasource.password=password
-```
-DataSource is a factory for connections to a physical database.
+  ```
+  spring.datasource.url=jdbc:mysql://localhost:3306/DBMS_name
+  spring.datasource.username=user
+  spring.datasource.password=password
+  ```
+  DataSource is a factory for connections to a physical database.
