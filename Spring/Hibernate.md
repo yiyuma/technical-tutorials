@@ -32,12 +32,15 @@ DAO is a common design pattern. DAO is responsible for interfacing with the data
 ### Entity Manager
 EntityManager is the main component for saving and retrieving entities. It is from Jakarta Persistence API (JPA). Its bean will be created automatically from Spring Boot.<br>
 - entityManager.persist(obj): create obj
-- entityManager.find(obj): read obj
+- entityManager.find(obj, primary key): read obj
 - entityManager.merge(obj): update obj
 - entityManager.remove(obj): delete obj
 
 ### Data Source
 Data source defines database connection info. Data Source is automatically created by Spring Boot based on the file application properties (JDBC URL, user id, password, etc...)
+
+### Relationship DAO, Entity Manager, Data Source and database
+DAO <--> Entity Manager <--> Data Source <--> database
 
 ### Java Persistence Query Language (JPQL) 
 JPQL is based on **entity name** and **entity fields** in the **java class**. <br>
