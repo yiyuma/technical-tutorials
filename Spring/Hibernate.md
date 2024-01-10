@@ -48,6 +48,7 @@ Statement: FROM, WHERE, =, OR, LIKE, order by, asc(ascending), desc(descending),
 JPQL Named Parameters are prefixed with a colon ':'. JPQL Named Parameters is as a placeholder.<br>
 
 ### Create database tables from Java Code
+in application.properties define
 ```
 spring.jpa.hibernate.ddl-auto=create
 ```
