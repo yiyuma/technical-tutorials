@@ -25,7 +25,7 @@ or
 - **@Controller** is meta-annotation. It applied to Controller implementations. In the @ControllerAdvice will implemented the Exceptions for the Controller.
 - **@RestController** = @Controller + @ResponseBody (The return value of the methods will be saved in a ResponseBody.). It is for REST. It is class level annotation.
 - **@Service** is meta-annotation. It applied to Service implementations. Spring will automatically register the Service implementation.
-- **@Repository** is meta-annotation. It applied the Repository implementations.
+- **@Repository**: specifies a repository. It supports component scanning. It translated JDBC exceptions.
 - **@Configuration** is meta-annotation. It is used for defining beans with @Bean (method level) and their dependencies.
 - **@Bean** is an annotation that Spring uses to gather beans at runtime. It is a method level annotation. The methods with @Bean must be in @Configuraion classes. We can use @Bean for the outside class.
 - **@Autowired** is an annotation to mark a dependency which Spring is going to resolve and inject. We can use it with constructor, setter or field injection. If you only have one constructor then @Autowired on constructor is optional.
@@ -53,7 +53,8 @@ or
   - nullable: specifies whether the column is nullable or not
 - **@Transient**: Do not pesist the field in the database
 - **@Temporal**:
-- **@Enumarated**: specifies whether the enum should be persisted by name (EnumType.STRING) or by ordinal(default). 
+- **@Enumarated**: specifies whether the enum should be persisted by name (EnumType.STRING) or by ordinal(default).
+- **@Transactional**: automatically begin and end a transaction for the JPA code.
 - **@OneToOne**:
 - **@OneToMany**:
 - **@ManyToOne**:
