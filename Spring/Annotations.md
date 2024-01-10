@@ -32,6 +32,18 @@ or
 - **@Qualifier** In @Qualifier we can give the bean id. Bean id is same name as class, only first character is lower-case.
 - **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
 
+### Hibernate annotations
+- **@Entity**
+- **@Table**
+- **@Id**
+- **@Column**
+- **@GeneratedValue**
+- **@OneToOne**
+- **@OneToMany**
+- **@ManyToOne**
+- **@ManyToMany**
+
+  
 ### Spring web annotations
 - @RequestMapping("/api") is class level annotation.<br>
 @GetMapping("/students/{id}") is method level annotation. {id} here is path variable.
