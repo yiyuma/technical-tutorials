@@ -10,6 +10,7 @@ It provide an embedded HTTP server (Tomcat).
 - Inject object dependencies (Dependency Inject)
 **Inversion of Control**
 Spring will scan for @Component, @Controller, @RestController, @Service, @Repository, @Configuration, @Bean. They are meta annotations and mark the class as a Spring Bean. They make the bean available for the dependency injection.
+
 **Dependency Injection** <br>
 The dependency inversion principle: The client delegates to another object the responsibility of providing its dependencies.
 
@@ -61,8 +62,6 @@ Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spri
 - You can add custom code during bean initialization with @PostConstuct
 - You can add custom code during bean destruction with @PreDestory
 
-**@Autowired vs. @Inject**
-@Autowired: matches by type: class or interface
 
 
 
