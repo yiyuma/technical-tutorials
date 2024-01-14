@@ -1,3 +1,17 @@
+## POJO (Plain old java object)
+A normal java object class
+- cannot extend any other class.
+- cannot implement any interfaces.
+- no outside annotations.
+
+POJO is not Java Bean. Java Bean has some additional requirements.
+
+## Java Bean
+- has a public no args constructor.
+- Properties must be private.
+- Has public getters and setters
+- Must be serializable (has to implement Interface Serializable)
+
 ## REST
 **REST (REpresentational State Transfer)** is lightweight approach for communicating between applications.
 - REST calls can be made over HTTP.
