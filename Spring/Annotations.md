@@ -6,21 +6,21 @@
 - **@EnableAutoConfiguration**: Spring Boot looks for auto-configuration beans on its classpath and 	automatically applies them. @EnableAutoConfiguraion should be used always with @Configuration together.
 - **@Configuration**: able to register extra beans with @Bean or import other configuration classes.
 - **@ComponentScan**: @ComponentScan without arguments tells Spring to scan components in the current package and its sub-packages. Man can also define the scan path with **scanBasePackage** or **scanBasePackages**
-```
-@SpringBootApplication(basePackages="scanPackage")
-or
-@SpringBootApplication(basePackages={"scanPackage1",
+  ```
+  @SpringBootApplication(basePackages="scanPackage")
+  or
+  @SpringBootApplication(basePackages={"scanPackage1",
                                      "scanPackage2"})
-or
-@ComponentScan(basePackages="scanPackage1")
-@ComponentScan(basePackages="scanPackage2")
-```
-```
-// ComponentScan with Exclusions
-@ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.Regex, pattern="..."))
-or
-@ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.ASSIGNABLE_TYPE, value=className.class))
-```
+  or
+  @ComponentScan(basePackages="scanPackage1")
+  @ComponentScan(basePackages="scanPackage2")
+  ```
+  ```
+  // ComponentScan with Exclusions
+  @ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.Regex, pattern="..."))
+  or
+  @ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.ASSIGNABLE_TYPE,       value=className.class))
+  ```
 - **@Component** is an annotation that allows Spring to detect our cunstom beans automatically. @Configuration, @Controller, @Service, @Repoistory are @Component, but the inverse is not true. @Configuration, @Controller, @Service and @Repository are stereotype annotations. 
 - **@Controller** is meta-annotation. It applied to Controller implementations. In the @ControllerAdvice will implemented the Exceptions for the Controller.
 - **@RestController** = @Controller + @ResponseBody (The return value of the methods will be saved in a ResponseBody.). It is for REST. It is class level annotation.
@@ -31,6 +31,10 @@ or
 - **@Autowired** is an annotation to mark a dependency which Spring is going to resolve and inject. We can use it with constructor, setter or field injection. If you only have one constructor then @Autowired on constructor is optional.
 - **@Qualifier** In @Qualifier we can give the bean id. Bean id is same name as class, only first character is lower-case.
 - **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
+- **@Lazy**: Lazy initialisieren
+- **@Scope** define the bean scope.(singleton, prototype...)
+- **@Autowired vs. @Inject**
+@Autowired: matches by type: class or interface
 
 ### Hibernate annotations
 - **@Entity**: declare any POJO class as an entity for a database. (Class level annotation)
@@ -61,8 +65,6 @@ or
 - **@ManyToMany**:
 
  
-- @Transactional: begin and end a transaction for the JPA code
-- @Repository:
 ### Spring web annotations
 - @RequestMapping("/api") is class level annotation.<br>
 @GetMapping("/students/{id}") is method level annotation. {id} here is path variable.
