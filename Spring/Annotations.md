@@ -33,6 +33,8 @@
 - **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
 - **@Lazy**: Lazy initialisieren
 - **@Scope** define the bean scope.(singleton, prototype...)
+- **@PostConstuct**: Bean lifecycle
+- **@PreDestroy**: Bean lifecycle
 - **@Autowired vs. @Inject**
 @Autowired: matches by type: class or interface
 
