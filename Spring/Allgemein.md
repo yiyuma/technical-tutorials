@@ -62,6 +62,10 @@ Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spri
 - You can add custom code during bean initialization with @PostConstuct
 - You can add custom code during bean destruction with @PreDestory
 
+### JSON Data Binding with Jackson
+Spring uses Jackson Project to handle data binding between JSON and Java POJO.
+- Jackson calls setter methods to convert JSON to Java POJO
+- Jackson calls getter methods to convert Java POJO to JSON
 
 
 
