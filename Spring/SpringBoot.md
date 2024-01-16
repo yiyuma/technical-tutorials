@@ -24,7 +24,21 @@ public static void main(String[] args){
 ## Spring Exception Handler
 **Spring Exception Handler** <br>
 - step 1: create custom response class: It is a Java POJO class. It will be sent back to client as JSON.
+  ```
+  public class UserErrorResponse{
+  	private int status;
+  	private String message;
+  	private long timeStamp;
+  	// Constructors
+  	// Getters / Setters
+  }
+  ```
 - step 2: create custom exception class: This class will be extended from RuntimeException
+  ```
+  public class UserNotFoundException extends RuntimeException{
+  	public UserNotFoundException(String message){super(message);}
+  }
+  ```
 - step 3: Add throw exception in REST service
 - step 4: Add an exception handler method using ***@ExceptionHandler*** annotation.
 
@@ -33,11 +47,11 @@ public static void main(String[] args){
 - **@ExceptionHandler** (method level annotation): is a class level annotation and will return a ResponseEntity.
   ```
   @ControllerAdvice
-  public class CustomRestExceptionHandler{
+  public class UserRestExceptionHandler{
     @ExceptionHandler
-    public ResponseEntity<CustomErrorResponse> handleException(CustomException exc)
+    public ResponseEntity<UserErrorResponse> UserNotFoundhandleException(UserNotFoundException exc)
     {
-      CustomErrorResponse error = new CustomErrorResponse();
+      UserErrorResponse error = new UserErrorResponse();
       error.setStatus(HttpStatus.NOT_FOUND.value());
       error.setMessage(exc.getMessage());
       error.setTimeStamp(System.currentTimeMillis());
@@ -45,10 +59,13 @@ public static void main(String[] args){
       return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
   }
-  
-  CustomErrorResponse: Type of the response body
-  CustomException: Exception type to handle/catch
+
+  ResponseEntity: a wrapper for the HTTP response object (HTTP status code (=HttpStatus.NOT_FOUND), HTTP headers and Reponse body (= error)).
+  UserErrorResponse: Type of the response body
+  UserNotFoundException: Exception type to handle/catch
   ```
+
+  
 ## Spring Boot Unit Testing
 Using **@SpringBootTest**
 - Loads the application context
