@@ -31,10 +31,13 @@
 - **@Autowired** is an annotation to mark a dependency which Spring is going to resolve and inject. We can use it with constructor, setter or field injection. If you only have one constructor then @Autowired on constructor is optional.
 - **@Qualifier** In @Qualifier we can give the bean id. Bean id is same name as class, only first character is lower-case.
 - **@Primary** is a class level annotation. @Primary can have only one for multiple implementations. If you mix @Primary and @Qualifier, then @Qualifier has higher priority.
+- **@Inject**:
 - **@Lazy**: Lazy initialisieren
 - **@Scope** define the bean scope.(singleton, prototype...)
 - **@PostConstuct**: Bean lifecycle
 - **@PreDestroy**: Bean lifecycle
+- **@ControllerAdvice**: In @ControllerAdvice defines Exception Handler. It is similar to a filter. Pre-process requests to controllers. Post-process responses to handle exception.
+- **@ExceptionHandler**: define a REST Exception Handler
 - **@Autowired vs. @Inject**
 @Autowired: matches by type: class or interface
 
