@@ -1,4 +1,6 @@
 ## application.properties
+Link: https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html <br>
+
 Inject properties into Spring Boot application using **@Value**.
 ```
 @Value("${info.app.name}")
