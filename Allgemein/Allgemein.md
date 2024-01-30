@@ -8,9 +8,12 @@ POJO is not Java Bean. Java Bean has some additional requirements.
 
 ## Java Bean
 - has a public no args constructor.
-- Properties must be private.
-- Has public getters and setters
-- Must be serializable (has to implement Interface Serializable)
+- properties must be private.
+- has public getters and setters
+- must be serializable (has to implement Interface Serializable)
+
+## Servlet and Tomcat
+Servlet is a java api, which specifies the http methods with java. Tomcat is a implementation of the servlet.
 
 ## REST
 **REST (REpresentational State Transfer)** is lightweight approach for communicating between applications.
