@@ -5,7 +5,14 @@
 - **Spring Data**: Spring Data is used to access different relational and NoSQL databases.
 - **Spring MVC**: Spring MVC is used to create web applications.
 - **Spring Security**: Spring Security is uesed to secure the java applications and web pages.
-  
+
+### Create Spring project
+We can create Spring project with the help from the web page "Spring Initializr"(https://start.spring.io/). In this page we can add dependcies for the project.
+- spring-boot-starter-web: building web apps, includes validation, REST. Uses Tomcat as default embedded server
+- spring-boot-starter-security: Adding Spring Security support
+- spring-boot-starter-data-jpa: Spring database support with JPA and Hibernate
+- spring-boot-starter-thymeleaf
+
 ### Spring Container
 **Primary functions**
 - create and manage objects (Inversion of Control)
