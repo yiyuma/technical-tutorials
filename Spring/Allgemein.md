@@ -2,7 +2,7 @@
 
 ### Spring projects
 - **Spring Boot**: Spring Boot is used to create web applications. It uses Spring behind the scense, but it makes easier to get started with Spring development. It provides an embedded HTTP server (Tomcat).
-- **Spring Data**: Spring Data is used to retrieve different relational and NoSQL databases.
+- **Spring Data**: Spring Data is used to access different relational and NoSQL databases.
 - **Spring MVC**: Spring MVC is used to create web applications.
 - **Spring Security**: Spring Security is uesed to secure the java applications and web pages.
   
