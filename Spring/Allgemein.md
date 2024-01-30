@@ -12,6 +12,7 @@ We can create Spring project with the help from the web page "Spring Initializr"
 - spring-boot-starter-security: Adding Spring Security support
 - spring-boot-starter-data-jpa: Spring database support with JPA and Hibernate
 - spring-boot-starter-thymeleaf
+- spring-boot-starter-parent: special starter that provides Maven defaults. In it define the default Maven configuration.
 
 ### Spring Container
 **Primary functions**
