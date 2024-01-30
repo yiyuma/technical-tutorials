@@ -1,5 +1,10 @@
 ### Run java code in cmd
 ```
+// compile java project
+javac projectname.java;
+// run a java project
+java project;
+// run a jar file
 java -jar filename.jar
 ```
 
