@@ -59,6 +59,9 @@ spring.main.banner-mode=off
 ```
 // warn is only for warning and error
 logging.level.root=warn
+// log file name
+logging.file.name=application.log
+logging.file.path=c:/myapps/demo
 ```
 
 ### info about app
