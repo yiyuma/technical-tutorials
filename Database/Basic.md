@@ -1,3 +1,7 @@
+## DBMS (Database Management System)
+- relational
+- NoSQL
+
 ## JDBC (Java DataBase Connectivity)
 JDBC is an API for conncecting and executing queries on a database for Java. JDBC can work with any database as long as proper drivers are provided.
 
