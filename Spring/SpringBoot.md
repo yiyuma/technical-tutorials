@@ -158,7 +158,7 @@ Define custom application properties:
 application properties is saved unter 
 @Value("PropertyName in the application properties")
 
-### spring-boot-devtools
+## spring-boot-devtools
 spring-boot-devtools: automatically restarts the application when code is updated. <br>
 Add spring-boot-devtools:
 - add dependency of spring-boot-devtool
@@ -171,7 +171,7 @@ Add spring-boot-devtools:
 - Preferences->Build,Execution,Deployment->Compiler: select "check Build project automatically"
 - Preferences->Advanced Settings: select "Allow auto-make to..."
 
-### spring-boot-starter-actuator
+## spring-boot-starter-actuator
 Expose endpoints to monitor and manager your application.<br>
 Add spring-boot-starter-actuator in pom.xml
 ```
@@ -201,7 +201,7 @@ management.endpoints.web.exposure.include=health,info
 management.info.env.enabled=true
 ```
 
-### Design pattern
+## Design pattern
 ***Service Facade*** is used in the service layer.<br>
 ***Proxy*** is used in the AOP.<br>
 
