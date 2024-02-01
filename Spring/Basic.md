@@ -69,8 +69,7 @@ or
 - **SCOPE_SESSION** or **session**: Scoped to an HTTP web session. Only used for web apps.
 
 ### Bean lifecycle
-Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spring Processing -> Your Custom Init Method -> Your Custom Destroy Method -> Stop
-Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spring Processing -> Your Custom Init Method -> Your Custom Destroy Method -> Stop
+**Container Started** -> **Bean Instantiated** -> **Dependencies Injected** -> **Internal Spring Processing** -> **Your Custom Init Method** -> **Your Custom Destroy Method** -> **Stop**
 - You can add custom code during bean initialization with @PostConstuct
 - You can add custom code during bean destruction with @PreDestory
 
