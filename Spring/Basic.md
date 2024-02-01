@@ -13,6 +13,7 @@ We can create Spring project with the help from the web page "Spring Initializr"
 - spring-boot-starter-data-jpa: Spring database support with JPA and Hibernate
 - spring-boot-starter-thymeleaf
 - spring-boot-starter-parent: special starter that provides Maven defaults. In it define the default Maven configuration.
+- spting-boot-start-actuator: monitor and manager the application.
 
 ### Spring Container
 **Primary functions**
@@ -22,7 +23,7 @@ We can create Spring project with the help from the web page "Spring Initializr"
 Spring will scan for @Component, @Controller, @RestController, @Service, @Repository, @Configuration, @Bean. They are meta annotations and mark the class as a Spring Bean. They make the bean available for the dependency injection.
 
 **Dependency Injection** <br>
-The dependency inversion principle: The client delegates to another object the responsibility of providing its dependencies.
+The dependency inversion principle: The client delegates to another object the responsibility of providing its dependencies. @Autowired (matches by type, class or interface), @Primary, @Inject
 
 **Configuring Spring Container**
 - XML configuration file (legacy)
