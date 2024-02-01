@@ -41,7 +41,7 @@ The dependency inversion principle: The client delegates to another object the r
   - does not recommended, because it maked the code harder to unit test
 
 ### Lazy initialization
-With lazy initialization will a bean only be initialized when it is needed for dependency injection.
+With lazy initialization will a bean only be initialized when it is needed for dependency injection, or it is wxplicitly required.
 - Mark annotation @Lazy on the class.
 - Or define a global configuration in the application.properties 
   ```
@@ -63,12 +63,13 @@ public class className{ ... }
 or
 @Scope("singleton")
 ```
-- SCOPE_SINGLETON: Create a single shared instance of the bean. It is cached in memory. All dependency injections will reference the same bean. Default scope.
-- SCOPE_PROTOTYPE: Creates a new bean instance for each container request. Protrtype beans are lazy by default. It is no need to use @Lazy. For prototype beans Spring does not call the destroy method.
-- SCOPE_REQUEST: Scoped to an HTTP web request. Only used for web apps.
-- SCOPE_SESSION: Scoped to an HTTP web session. Only used for web apps.
+- **SCOPE_SINGLETON** or **singleton**: Create a single shared instance of the bean. It is cached in memory. All dependency injections will reference the same bean. Default scope.
+- **SCOPE_PROTOTYPE** or **prototype**: Creates a new bean instance for each container request. Protrtype beans are lazy by default. It is no need to use @Lazy. For prototype beans Spring does not call the destroy method.
+- **SCOPE_REQUEST** or **request**: Scoped to an HTTP web request. Only used for web apps.
+- **SCOPE_SESSION** or **session**: Scoped to an HTTP web session. Only used for web apps.
 
 ### Bean lifecycle
+Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spring Processing -> Your Custom Init Method -> Your Custom Destroy Method -> Stop
 Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spring Processing -> Your Custom Init Method -> Your Custom Destroy Method -> Stop
 - You can add custom code during bean initialization with @PostConstuct
 - You can add custom code during bean destruction with @PreDestory
