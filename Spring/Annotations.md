@@ -7,9 +7,9 @@
 - **@Configuration**: able to register extra beans with @Bean or import other configuration classes.
 - **@ComponentScan**: @ComponentScan without arguments tells Spring to scan components in the current package and its sub-packages. Man can also define the scan path with **scanBasePackage** or **scanBasePackages**
   ```
-  @SpringBootApplication(basePackages="scanPackage")
+  @SpringBootApplication(scanBasePackages="scanPackage")
   or
-  @SpringBootApplication(basePackages={"scanPackage1",
+  @SpringBootApplication(scanBasePackages={"scanPackage1",
                                      "scanPackage2"})
   or
   @ComponentScan(basePackages="scanPackage1")
