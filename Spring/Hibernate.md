@@ -68,7 +68,7 @@ spring.jpa.hibernate.ddl-auto=create
 - update: Update the database tables schema
 
 ### Spring Data JPA
-Spring Data JPA create a DAO and just plug in your entity type and primary key. Spring will give a CRUD implementation. Spring Data JPA provides the interface JpaRepository.<br>
+Spring Data JPA create a DAO and just plug in your **entity name** and **type of primary key**. Spring will give a CRUD implementation. Spring Data JPA provides the interface JpaRepository.<br>
 
 ### Spring Data REST
 - Spring Data REST will scan your project for JpaRepository
