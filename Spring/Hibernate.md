@@ -105,7 +105,12 @@ Java class that is mapped to a database table.
 
 ### FetchType
 - Eager loading: will retrieve everything
-- Lazy loading: will retrieve on request
+- Lazy loading: will retrieve on request. Lazy loading requires an open Hibernate session. If the Hibernate session is cloed, Hibernate will throw an exception.
+- Default Fetch Types:
+  - @OneToOne: FetchType.EAGER
+  - @OneToMany: FetchType.LAZY
+  - @ManyToOne: FetchType.EAGER
+  - @ManyToMany: FetchType.LAZY
 
 ### Directional
 - Uni-Directional: One way directional
