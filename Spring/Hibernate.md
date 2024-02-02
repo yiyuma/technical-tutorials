@@ -37,6 +37,12 @@ Data source defines database connection info. Data Source is automatically creat
 ### Relationship DAO, Entity Manager, Data Source and database
 DAO <--> Entity Manager <--> Data Source <--> database
 
+### Hibernate Mapping
+- One-to-One mapping
+- One-to-Many mapping
+- Many-to-One mapping
+- Many-to-Many mapping
+
 ### Java Persistence Query Language (JPQL) 
 JPQL is based on **entity name** and **entity fields** in the **java class**. <br>
 Statement: FROM, WHERE, =, OR, LIKE, order by, asc(ascending), desc(descending), UPDATE, SET, DELETE<br>
@@ -94,5 +100,28 @@ Java class that is mapped to a database table.
 - Link tables together
 - a field in one table that refers to primary key in another table
 
-## Cascade
+### Cascade
 - apply the same operation to related entities
+
+### FetchType
+- Eager loading: will retrieve everything
+- Lazy loading: will retrieve on request
+
+### Directional
+- Uni-Directional: One way directional
+- Bi-Directional: Two ways directional
+
+### Entity Lifecycle
+- Detach: If entity is detached, it is not associated with a Hibernate session
+- Merge: If instance is detached from session, then merge will reattach to session
+- Persist: Transitions new instances to managed state. Next flush / commit will save in db.
+- Remove: Transitions managed entity to be removed. Next flush / commit will delete from db.
+- Refresh: Reload /synch object with data from db. Prevents state date.
+
+### Cascade Type
+- PERSIST: If entity is persisted / saved, related entity will also be persisited
+- REMOVE: If entity is removed / deleted, related entity will also be deleted
+- REFRESH: If entity is refreshed, related entity will also be refreshed
+- DETACH: If entity is detached (not associated w/ session), then related entity will also be detached.
+- MERGER: if entity is merged, then related entity will also be merged.
+- ALL: all of above cascade types
