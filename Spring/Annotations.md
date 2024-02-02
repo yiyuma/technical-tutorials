@@ -68,9 +68,15 @@
 - **@Temporal**:
 - **@Enumarated**: specifies whether the enum should be persisted by name (EnumType.STRING) or by ordinal(default).
 - **@Transactional**: automatically begin and end a transaction for the JPA code.
-- **@OneToOne**:
-- **@OneToMany**:
-- **@ManyToOne**:
+- **@OneToOne**: annotation for the one to one mapping. Method level annotation.
+  - cascade: cascade type (CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE, CascadeType.ALL). It can used by Uni-Directional and Bi-Directional.
+  - mappedBy: used in Bi-Directional. It is the property name in the related class.
+- **@JoinColumn**: to define foreign key.
+  - name: foreign key column name
+- **@OneToMany**: annotation for one to many mapping.
+- **@ManyToOne**: annotation for many to one mapping.
+  - mappedBy:  It is the property name in the related class.
+  - fetch: fetch type
 - **@ManyToMany**:
 
  
