@@ -48,7 +48,7 @@
 ### Hibernate annotations
 - **@Entity**: declare any POJO class as an entity for a database. (Class level annotation)
 - **@Table**: Use to change table details. (Class level annotation)
-  - name: If not specified, table name is the same name as class name.
+  - name: If not specified, table name in db is the same name as class name.
   - schema:
   - catalogue
   - enforce unique constraints
