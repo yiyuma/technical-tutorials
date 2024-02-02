@@ -75,7 +75,7 @@ spring.data.rest.base-path=/magic-api
 spring.data.rest.default-page-size=50
 ```
 - Sort: default is ascending
-````
+```
 http://localhost:8080/employees?sort=lastName,desc
 ```
 
