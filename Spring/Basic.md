@@ -70,8 +70,12 @@ or
 
 ### Bean lifecycle
 **Container Started** -> **Bean Instantiated** -> **Dependencies Injected** -> **Internal Spring Processing** -> **Your Custom Init Method** -> **Your Custom Destroy Method** -> **Stop**
-- You can add custom code during bean initialization with @PostConstuct
-- You can add custom code during bean destruction with @PreDestory
+- You can add custom code during bean initialization with **@PostConstuct**
+  - calling custom business logic methods
+  - setting up handles to resources(db, sockets, files etc)
+- You can add custom code during bean destruction with **@PreDestory**
+  - calling custom business logic methods
+  - clean up handles to resources (db, sockets, files etc)
 
 ### JSON Data Binding with Jackson
 Spring uses Jackson Project to handle data binding between JSON and Java POJO.
