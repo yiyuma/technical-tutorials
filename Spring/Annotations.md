@@ -38,8 +38,8 @@
   spring.main.lazy-initialization=true  
   ```
 - **@Scope** define the bean scope.(singleton, prototype...)
-- **@PostConstuct**: Bean lifecycle
-- **@PreDestroy**: Bean lifecycle
+- **@PostConstuct**: use it to add custom code during bean initialization (custom business logic methods, setting up handles to resources)
+- **@PreDestroy**: use it to add custom code during bean destruction (custom business logic methods, clean up handles to resources
 - **@ControllerAdvice**: In @ControllerAdvice defines Exception Handler. It is similar to a filter. Pre-process requests to controllers. Post-process responses to handle exception.
 - **@ExceptionHandler**: define a REST Exception Handler
 - **@Autowired vs. @Inject**
