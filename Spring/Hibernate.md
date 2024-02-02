@@ -21,11 +21,6 @@ spring.datasource.password=password
 
 ## Hibernate
 
-### Entity class
-Java class that is mapped to a database table.
-- Must be annotated with @Entity
-- Must have a public or protected no-argument constructor
-
 ### Data Access Object (DAO)
 DAO is a common design pattern. DAO is responsible for interfacing with the database. (like a helper for communicating with the database) DAO needs a JPA Entity Manager.<br>
 
@@ -34,12 +29,7 @@ EntityManager is the main component for saving and retrieving entities. It is fr
 - entityManager.persist(obj): create obj
 - entityManager.find(obj, primary key): read obj
 - entityManager.merge(obj): update obj
-- entityManager.remove(obj): delete obj
-
-### Primary Key
-- Uniquely identifies each row in a table.
-- Must be a unique value
-- Cannot contain NULL values
+- entityManager.remove(obj): delete obj 
 
 ### Data Source
 Data source defines database connection info. Data Source is automatically created by Spring Boot based on the file application properties (JDBC URL, user id, password, etc...)
@@ -89,3 +79,20 @@ spring.data.rest.default-page-size=50
 http://localhost:8080/employees?sort=lastName,desc
 ```
 
+## Terminology
+### Entity class
+Java class that is mapped to a database table.
+- Must be annotated with @Entity
+- Must have a public or protected no-argument constructor
+
+### Primary Key
+- Uniquely identifies each row in a table.
+- Must be a unique value
+- Cannot contain NULL values
+
+### Foreign Key
+- Link tables together
+- a field in one table that refers to primary key in another table
+
+## Cascade
+- apply the same operation to related entities
