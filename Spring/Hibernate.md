@@ -39,6 +39,57 @@ DAO <--> Entity Manager <--> Data Source <--> database
 
 ### Hibernate Mapping
 - One-to-One mapping
+  - Uni-Directional: STUDENT, STUDENT_DETAIL
+    ```
+    @Entity
+    @Table(name="STUDENT")
+    @Data
+    @NoArgsConstructor
+    public class Student{
+      @OneToOne(cascade=CascadeType.ALL)
+      @JoinColumn(name="STUDENT_DETAIL_ID)
+      private StudentDetail studentDetail;
+    }
+    
+    @Entity
+    @Table(name="STUDENT_DETAIL")
+    @Data
+    @NoArgsConstructor
+    public class StudentDetail{
+      @Id
+      @GeneratedValue
+      @Column(name="ID")
+      private UUID id;
+    }
+    ```
+  -Bi-Directional: STUDENT, STUDENT_DETAIL
+    ```
+    @Entity
+    @Table(name="STUDENT")
+    @Data
+    @NoArgsConstructor
+    public class Student{
+      @OneToOne(cascade=CascadeType.ALL)
+      @JoinColumn(name="STUDENT_DETAIL_ID)
+      private StudentDetail studentDetail;
+    }
+    
+    @Entity
+    @Table(name="STUDENT_DETAIL")
+    @Data
+    @NoArgsConstructor
+    public class StudentDetail{
+      @Id
+      @GeneratedValue
+      @Column(name="ID")
+      private UUID id;
+
+      // for Bi-Directional
+      // studentDetail is the field name in the class Student
+      @OneToOne(mappedBy="studentDetail", cascade=CascadeType.ALL)
+      private Student student;
+    }
+    ```
 - One-to-Many mapping
 - Many-to-One mapping
 - Many-to-Many mapping
