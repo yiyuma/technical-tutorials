@@ -1,7 +1,7 @@
 ## ORM, JPA, Hibernate
-**Object-to-Relational Mapping (ORM)** means the Mapping between Java class and database table.
+**Object-to-Relational Mapping (ORM)** means the Mapping between object and database table.
 
-**Jakarta Pesistence API (JPA)** is a Standard API for Object-to-Relational Mapping. It is only a specification
+**Jakarta Pesistence API (JPA)** is a Standard JAVA API for Object-to-Relational Mapping. It is only a specification
 - defines a set of interface
 - requires an inplementation to be useable.
 
@@ -15,8 +15,8 @@ Add JDBC connection info in the application.properties
 ```
 // Spring use JDBC for mySQL database communication
 spring.datasource.url=jdbc:mysql://localhost:3306/student_tracker
-spring.datasource.username=springstudent
-spring.datasource.password=springstudent
+spring.datasource.username=user
+spring.datasource.password=password
 ```
 
 ## Hibernate
@@ -35,6 +35,11 @@ EntityManager is the main component for saving and retrieving entities. It is fr
 - entityManager.find(obj, primary key): read obj
 - entityManager.merge(obj): update obj
 - entityManager.remove(obj): delete obj
+
+### Primary Key
+- Uniquely identifies each row in a table.
+- Must be a unique value
+- Cannot contain NULL values
 
 ### Data Source
 Data source defines database connection info. Data Source is automatically created by Spring Boot based on the file application properties (JDBC URL, user id, password, etc...)
