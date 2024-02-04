@@ -39,59 +39,90 @@ DAO <--> Entity Manager <--> Data Source <--> database
 
 ### Hibernate Mapping
 - One-to-One mapping
-  - Uni-Directional: STUDENT, STUDENT_DETAIL
+  - Uni-Directional: INSTRUCTOR, INSTRUCTOR_DETAIL
     ```
     @Entity
-    @Table(name="STUDENT")
+    @Table(name="INSTRUCTOR")
     @Data
     @NoArgsConstructor
-    public class Student{
+    public class Instructor{
+      // INSTRUCTOR_DETAIL_ID is the foreign key in the Table INSTRUCTOR
       @OneToOne(cascade=CascadeType.ALL)
-      @JoinColumn(name="STUDENT_DETAIL_ID)
-      private StudentDetail studentDetail;
+      @JoinColumn(name="INSTRUCTOR_DETAIL_ID)
+      private InstructorDetail instructorDetail;
     }
     
     @Entity
-    @Table(name="STUDENT_DETAIL")
+    @Table(name="INSTRUCTOR_DETAIL")
     @Data
     @NoArgsConstructor
-    public class StudentDetail{
+    public class InstructorDetail{
       @Id
       @GeneratedValue
       @Column(name="ID")
       private UUID id;
     }
     ```
-  -Bi-Directional: STUDENT, STUDENT_DETAIL
+  -Bi-Directional: INSTRUCTOR, INSTRUCTOR_DETAIL
     ```
     @Entity
-    @Table(name="STUDENT")
+    @Table(name="INSTRUCTOR")
     @Data
     @NoArgsConstructor
-    public class Student{
+    public class Instructor{
+      // INSTRUCTOR_DETAIL_ID is the foreign key in the Table INSTRUCTOR
       @OneToOne(cascade=CascadeType.ALL)
-      @JoinColumn(name="STUDENT_DETAIL_ID)
-      private StudentDetail studentDetail;
+      @JoinColumn(name="INSTRUCTOR_DETAIL_ID)
+      private InstructorDetail instructorDetail;
     }
     
     @Entity
-    @Table(name="STUDENT_DETAIL")
+    @Table(name="INSTRUCTOR_DETAIL")
     @Data
     @NoArgsConstructor
-    public class StudentDetail{
+    public class InstructorDetail{
       @Id
       @GeneratedValue
       @Column(name="ID")
       private UUID id;
 
       // for Bi-Directional
-      // studentDetail is the field name in the class Student
-      @OneToOne(mappedBy="studentDetail", cascade=CascadeType.ALL)
-      private Student student;
+      // instructorDetail is the field name in the class Instructor
+      @OneToOne(mappedBy="instructorDetail", cascade=CascadeType.ALL)
+      private Instructor instructor;
     }
     ```
 - One-to-Many mapping
 - Many-to-One mapping
+  Bi-Directional: INSTRUCTOR, COURSE
+  ```
+    @Entity
+    @Table(name="INSTRUCTOR")
+    @Data
+    @NoArgsConstructor
+    public class Instructor{
+      // INSTRUCTOR_DETAIL_ID is the foreign key in the Table INSTRUCTOR
+      @OneToOne(cascade=CascadeType.ALL)
+      @JoinColumn(name="INSTRUCTOR_DETAIL_ID)
+      private InstructorDetail instructorDetail;
+    }
+    
+    @Entity
+    @Table(name="COURSE")
+    @Data
+    @NoArgsConstructor
+    public class Course{
+      @Id
+      @GeneratedValue
+      @Column(name="ID")
+      private UUID id;
+
+      // INSTRUCTOR_ID is the foreign key in the Table COURSE
+      @ManyToOne(cascade=CascadeType.PERSIST)
+      @JoinColumn(name="INSTRUCTOR_ID")
+      private Instructor instructor;
+    }
+  ```
 - Many-to-Many mapping
 
 ### Java Persistence Query Language (JPQL) 
