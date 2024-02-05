@@ -46,6 +46,7 @@ DAO <--> Entity Manager <--> Data Source <--> database
     @Data
     @NoArgsConstructor
     public class Instructor{
+      // Instructor has an InstructorDetail: One to One Mapping
       // INSTRUCTOR_DETAIL_ID is the foreign key in the Table INSTRUCTOR
       @OneToOne(cascade=CascadeType.ALL)
       @JoinColumn(name="INSTRUCTOR_DETAIL_ID)
@@ -101,10 +102,18 @@ DAO <--> Entity Manager <--> Data Source <--> database
     @Data
     @NoArgsConstructor
     public class Instructor{
+      // Instructor has an InstructorDetail: One to One Mapping
       // INSTRUCTOR_DETAIL_ID is the foreign key in the Table INSTRUCTOR
       @OneToOne(cascade=CascadeType.ALL)
       @JoinColumn(name="INSTRUCTOR_DETAIL_ID)
       private InstructorDetail instructorDetail;
+
+  
+      // An Instructor has more cources: One to Many Mapping
+      // instructor is the field name in the class Course
+      @OneToMany(mappedBy="instructor",
+                cascade={CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE})
+      Set<Course> courses;
     }
     
     @Entity
@@ -118,7 +127,7 @@ DAO <--> Entity Manager <--> Data Source <--> database
       private UUID id;
 
       // INSTRUCTOR_ID is the foreign key in the Table COURSE
-      @ManyToOne(cascade=CascadeType.PERSIST)
+      @ManyToOne(cascade={CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE})
       @JoinColumn(name="INSTRUCTOR_ID")
       private Instructor instructor;
     }
