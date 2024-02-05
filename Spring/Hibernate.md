@@ -63,7 +63,7 @@ DAO <--> Entity Manager <--> Data Source <--> database
       private UUID id;
     }
     ```
-  -Bi-Directional: INSTRUCTOR, INSTRUCTOR_DETAIL
+  - Bi-Directional: INSTRUCTOR, INSTRUCTOR_DETAIL
     ```
     @Entity
     @Table(name="INSTRUCTOR")
