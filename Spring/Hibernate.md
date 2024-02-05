@@ -38,8 +38,8 @@ Data source defines database connection info. Data Source is automatically creat
 DAO <--> Entity Manager <--> Data Source <--> database
 
 ### Hibernate Mapping
-- One-to-One mapping
-  - Uni-Directional: INSTRUCTOR, INSTRUCTOR_DETAIL
+- **One-to-One mapping**
+  - ***Uni-Directional***: INSTRUCTOR, INSTRUCTOR_DETAIL
     ```
     @Entity
     @Table(name="INSTRUCTOR")
@@ -64,7 +64,7 @@ DAO <--> Entity Manager <--> Data Source <--> database
       private UUID id;
     }
     ```
-  - Bi-Directional: INSTRUCTOR, INSTRUCTOR_DETAIL
+  - ***Bi-Directional***: INSTRUCTOR, INSTRUCTOR_DETAIL
     ```
     @Entity
     @Table(name="INSTRUCTOR")
@@ -93,8 +93,8 @@ DAO <--> Entity Manager <--> Data Source <--> database
       private Instructor instructor;
     }
     ```
-- One-to-Many mapping
-- Many-to-One mapping
+- **One-to-Many mapping**
+- **Many-to-One mapping**
   Bi-Directional: INSTRUCTOR, COURSE
   ```
     @Entity
@@ -114,6 +114,15 @@ DAO <--> Entity Manager <--> Data Source <--> database
       @OneToMany(mappedBy="instructor",
                 cascade={CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE})
       Set<Course> courses;
+
+      // Add convenience methods for bi-directional relationship
+      public void add(Course course){
+          if(courses==null){
+              courses = new Set<>();
+          }
+          courses.add(course);
+          course.setInstructor(this);
+      }
     }
     
     @Entity
@@ -132,7 +141,7 @@ DAO <--> Entity Manager <--> Data Source <--> database
       private Instructor instructor;
     }
   ```
-- Many-to-Many mapping
+- **Many-to-Many mapping**
 
 ### Java Persistence Query Language (JPQL) 
 JPQL is based on **entity name** and **entity fields** in the **java class**. <br>
