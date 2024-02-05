@@ -1,4 +1,9 @@
 ## SQL (Structured Query Language) Syntax
+
+### SQL Commands
+- DDL: Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database. CREATE, ALTER, DROP, TRUNCATE, COMMENT; RENAME
+- DML: Data Manipulation Language, which deals with data manipulation. SELECT, INSERT, UPDATE, DELETE, MERGE
+  
 ### SQL Statements
 - SELECT * FROM datebaseName
 - SELECT columnName FROM databaseName
