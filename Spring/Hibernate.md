@@ -39,7 +39,7 @@ DAO <--> Entity Manager <--> Data Source <--> database
 
 ### Hibernate Mapping
 - **One-to-One mapping**
-  - ***Uni-Directional***: INSTRUCTOR, INSTRUCTOR_DETAIL
+  - ***Uni-Directional***: An Instructor has an instructor detail.
     ```
     @Entity
     @Table(name="INSTRUCTOR")
@@ -64,7 +64,7 @@ DAO <--> Entity Manager <--> Data Source <--> database
       private UUID id;
     }
     ```
-  - ***Bi-Directional***: INSTRUCTOR, INSTRUCTOR_DETAIL
+  - ***Bi-Directional***: An Instructor has an instructor detail.
     ```
     @Entity
     @Table(name="INSTRUCTOR")
@@ -94,9 +94,37 @@ DAO <--> Entity Manager <--> Data Source <--> database
     }
     ```
 - **One-to-Many mapping**
-- **Many-to-One mapping**
-  Bi-Directional: INSTRUCTOR, COURSE
-  ```
+  - ***Uni-Directional***: A course has many reviews
+    ```
+    @Entity
+    @Table(name="COURSE")
+    @Data
+    @NoArgsConstructor
+    public class Course{
+      @Id
+      @GeneratedValue
+      @Column(name="ID")
+      private UUID id;
+
+      // COURSE_ID is the foreign key in the Table REVIEW
+      @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.Lazy)
+      @JoinColumn(name="COURSE_ID")
+      private List<Review> reviews;
+    }
+
+    @Entity
+    @Table(name="REIVEW")
+    @Data
+    @NoArgsConstructor
+    public class Review{
+      @Id
+      @GeneratedValue
+      @Column(name="ID")
+      private UUID id;
+    }
+    ```
+  - ***Bi-Directional***: An instructor has many courses.
+    ```
     @Entity
     @Table(name="INSTRUCTOR")
     @Data
@@ -107,9 +135,8 @@ DAO <--> Entity Manager <--> Data Source <--> database
       @OneToOne(cascade=CascadeType.ALL)
       @JoinColumn(name="INSTRUCTOR_DETAIL_ID)
       private InstructorDetail instructorDetail;
-
   
-      // An Instructor has more cources: One to Many Mapping
+      // An Instructor has many cources: One to Many Mapping
       // instructor is the field name in the class Course
       @OneToMany(mappedBy="instructor",
                 cascade={CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE})
@@ -123,8 +150,16 @@ DAO <--> Entity Manager <--> Data Source <--> database
           courses.add(course);
           course.setInstructor(this);
       }
+
+      // Remove convenience methods for bi-directional relationship
+      public void delete(Course course){
+      }
     }
     
+    ```
+- **Many-to-One mapping**
+  - ***Bi-Directional***: An instructor has many courses.
+  ```
     @Entity
     @Table(name="COURSE")
     @Data
@@ -139,6 +174,11 @@ DAO <--> Entity Manager <--> Data Source <--> database
       @ManyToOne(cascade={CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE})
       @JoinColumn(name="INSTRUCTOR_ID")
       private Instructor instructor;
+
+      // COURSE_ID is the foreign key in the Table REVIEW
+      @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.Lazy)
+      @JoinColumn(name="COURSE_ID")
+      private List<Review> reviews;
     }
   ```
 - **Many-to-Many mapping**
