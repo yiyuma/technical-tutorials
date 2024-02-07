@@ -181,7 +181,52 @@ DAO <--> Entity Manager <--> Data Source <--> database
       private List<Review> reviews;
     }
   ```
-- **Many-to-Many mapping**
+- **Many-to-Many mapping**: A student visits many courses. A course has many students.
+  ```
+    @Entity
+    @Table(name="COURSE")
+    @Data
+    @NoArgsConstructor
+    public class Course{
+      @Id
+      @GeneratedValue
+      @Column(name="ID")
+      private UUID id;
+
+      // INSTRUCTOR_ID is the foreign key in the Table COURSE
+      @ManyToOne(cascade={CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE, CascadeType.DETACH})
+      @JoinColumn(name="INSTRUCTOR_ID")
+      private Instructor instructor;
+
+      // COURSE_ID is the foreign key in the Table REVIEW
+      @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.Lazy)
+      @JoinColumn(name="COURSE_ID")
+      private List<Review> reviews;
+
+      // A course has many students
+      @ManyToMany(cascade={CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE, CascadeType.DETACH}
+      @JoinTable(name="COURSE_STUDENT", joinColumns=@JoinColumn(name="COURSE_ID"),
+                 inverseJoinColumns=@JoinColum(name="STUDENT_ID"))
+      private List<Student> students;
+    }
+
+    @Entity
+    @Table(name="STUDENT")
+    @Data
+    @NoArgsConstructor
+    public class Student{
+      @Id
+      @GeneratedValue
+      @Column(name="ID")
+      private UUID id;
+  
+      // A student has many courses
+      @ManyToMany(cascade={CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE, CascadeType.DETACH}
+      @JoinTable(name="COURSE_STUDENT", joinColumns=@JoinColumn(name="STUDENT_ID"),
+                 inverseJoinColumns=@JoinColum(name="COURSE_ID"))
+      private List<Course> courses;
+    }
+  ```
 
 ### Java Persistence Query Language (JPQL) 
 JPQL is based on **entity name** and **entity fields** in the **java class**. <br>
@@ -239,6 +284,9 @@ Java class that is mapped to a database table.
 ### Foreign Key
 - Link tables together
 - a field in one table that refers to primary key in another table
+
+### Join Table
+A table that provides a mapping between two tables. It has foreign keys for each table to define the mapping relationship.
 
 ### Cascade
 - apply the same operation to related entities
