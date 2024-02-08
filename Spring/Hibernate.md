@@ -299,13 +299,10 @@ A table that provides a mapping between two tables. It has foreign keys for each
   - @OneToMany: FetchType.LAZY
   - @ManyToOne: FetchType.EAGER
   - @ManyToMany: FetchType.LAZY
-- In One-To-Many Mapping, if you only need instructor without courses, you can directly use appDao.findInstructorById(), which is created by JpaRepoisoty. If you need instructor with courses, but the fetch type is FetchType.Lazy. You can write a function findInstructorByIdJoinFetch()
+- In One-To-Many Mapping, if you only need instructor without courses, you can directly use findInstructorById(), which is created by JpaRepository. If you need instructor with courses, but the fetch type is FetchType.Lazy. You can declare a function findInstructorByIdJoinFetch() in the interface, which extends Interface JpaRepository. Then you can override it in the implemetation class from the interface.
   ```
   public Instructor findInstructorByIdJoinFetch(UUID theId){
-    TypedQuery<Instructor> query = entityManager.createQuery(
-                                    "select i from instructor i "
-                                      + "JOIN FETCH i.courses "
-                                      + "where i.id= :data", Instructor.class);
+    TypedQuery<Instructor> query = entityManager.createQuery("select i from instructor i JOIN FETCH i.courses where i.id= :data", Instructor.class);
     query.setParameter("data", theId);
     Instructor instructor = query.getSingleResult();
     return instructor;
