@@ -6,3 +6,8 @@
   ```
     Application/Business Layout <--> DAO <--> Persistence Layout (Relational Database)
   ```
+## Composite
+
+## Proxy
+
+## Facade
