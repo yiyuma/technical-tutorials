@@ -22,7 +22,8 @@
   @ComponentScan(excludeFilters = @ComponentScan.Filter(type=FilterType.ASSIGNABLE_TYPE,       value=className.class))
   ```
 - **@Component** is an annotation that allows Spring to detect our cunstom beans automatically. @Configuration, @Controller, @Service, @Repoistory are @Component, but the inverse is not true. @Configuration, @Controller, @Service and @Repository are stereotype annotations. 
-- **@Controller** is meta-annotation. It applied to Controller implementations. In the @ControllerAdvice will implemented the Exceptions for the Controller.
+- **@Controller** is meta-annotation. It applied to Controller implementations.
+- **@ControllerAdvice** will implemented the Exceptions for the Controller.
 - **@RestController** = @Controller + @ResponseBody (The return value of the methods will be saved in a ResponseBody.). It is for REST. It is class level annotation.
 - **@Service** is meta-annotation. It applied to Service implementations. Spring will automatically register the Service implementation.
 - **@Repository**: specifies a repository. It supports component scanning. It translated JDBC exceptions.
@@ -85,7 +86,28 @@
 - **@Enumarated**: specifies whether the enum should be persisted by name (EnumType.STRING) or by ordinal(default).
 
 ### Spring web annotations
-- @RequestMapping("/api") is class level annotation.<br>
+- **@RequestMapping("/api")** is used to map web request to Spring Controller methods<br>
+- **@PathVariable**: Bind path variable
+  ```
+  // studentId is here the path variable
+  @GetMapping("/student/{studentId}")
+  public Student getStudent(@PathVariable int studentId){...}
+  ```
+**ResponseEntity** is a wrapper for the HTTP response object. It provides fine-grainted control to specify HTTP status code, HTTP headers and Response body.
+```
+@ExceptionHandler
+public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exc){
+  StudentErrorResponse error = new StudentErrorResponse();
+  error.setStatus(HttpStatus.NOT_FOUND.value());
+  error.setMessage(exc.getMessage());
+  error.setTimeStamp(System.currentTimeMillis());
+  return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+}
+```
+
+
+
+
 @GetMapping("/students/{id}") is method level annotation. {id} here is path variable.
 ```
 @GetMapping("/students/{id})
@@ -100,14 +122,14 @@ public Student addStudent(@RequestBody Student theStudent){
     Student dbStudent = studentService.save(theStudent);
 }
 ```
-**ResponseEntity** is a wrapper for the HTTP response object. It provides fine-grainted control to specify HTTP status code, HTTP headers and Response body.
+
 
 @GetMapping(path= "/api/user/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 @PostMapping(path= "/api/auth/login",consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 @PutMapping itempotent
 @DeleteMapping
 
-@PathVariable String id
+
 @RequestParam(name="user-name", defaultValue="") String userName
 - Service layer: Service Facade design pattern. It is intermediate layer for custom business logic. Integrate data from multiple sources(DAO/repositories).
 - Service layer has the responsibility to manage transaction boundaries. Apply @Transactional annotation on service methods.
