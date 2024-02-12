@@ -65,21 +65,25 @@
   - unique: specifies whether the column is unique
   - nullable: specifies whether the column is nullable or not
 - **@Transient**: Do not pesist the field in the database
-- **@Temporal**:
-- **@Enumarated**: specifies whether the enum should be persisted by name (EnumType.STRING) or by ordinal(default).
 - **@Transactional**: automatically begin and end a transaction for the JPA code.
 - **@OneToOne**: annotation for the one to one mapping. Method level annotation.
-  - cascade: cascade type (CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE, CascadeType.ALL). It can used by Uni-Directional and Bi-Directional.
-  - mappedBy: used in Bi-Directional. It is the property name in the related class.
+  - cascade: cascade type (CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE, CascadeType.ALL). It can be used by Uni-Directional and Bi-Directional.
+  - fetch: fetchType (fetchType.LAZY, fetchType.EAGER)
+  - mappedBy: used in Bi-Directional. It is the field name in the related class.
 - **@JoinColumn**: to define foreign key.
   - name: foreign key column name
 - **@OneToMany**: annotation for one to many mapping.
 - **@ManyToOne**: annotation for many to one mapping.
   - mappedBy:  It is the property name in the related class.
   - fetch: fetch type
-- **@ManyToMany**:
+- **@ManyToMany**: annotation for many to many mapping.
+- **@JoinTable**: annotation for a table that provides a mapping between two tables.
+  - name: Join table name (name="COURSE_STUDENT")
+  - joinColumns: join column (joinColumns=@JoinColumn(name="COURSE_ID")): COURSE_ID is foreign key of the course in the table COURSE_STUDENT.
+  - inverseJoinColumns: inverse join column (inverseJoinColumns=@JoinColumn(name="STUDENT_ID")): STUDENT_ID is foreign key of student in the table COURSE_STUDENT.
+- **@Temporal**:
+- **@Enumarated**: specifies whether the enum should be persisted by name (EnumType.STRING) or by ordinal(default).
 
- 
 ### Spring web annotations
 - @RequestMapping("/api") is class level annotation.<br>
 @GetMapping("/students/{id}") is method level annotation. {id} here is path variable.
