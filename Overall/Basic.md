@@ -62,4 +62,7 @@ Leverage HTTP Method for CRUD Operation
     - Array with square brackets[] (["Java", "JavaScript","C#", "Python"])
     - null
 
+**JSON Data Binding with Jackson (Converting JSON data to a Java POJO)** <br>
+***Jackson*** handles data binding between JSON and Java POJO with getter and setter method. JSON to Java POJO with setter methods on POJO. Java POJO to JSON with getter methods on POJO. Spring Boot will automatically handle Jackson integration (Spring Boot Stater Web). JSON data being passed to REST controller is converted to Java POJO. Java POJO being returned from REST controller is converted to JSON.
+
 **CSV** (Comma-Separated Values) is text file format that uses commas to separat values.
