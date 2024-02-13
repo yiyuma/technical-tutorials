@@ -17,10 +17,6 @@ public static void main(String[] args){
   SpringBootApplication.run(classname.class, args);
 }
 ```
-
-**Java JSON Data Binding with Jackson (Converting JSON data to a Java POJO)** <br>
-***Jackson*** handles data binding between JSON and Java POJO with getter and setter method. JSON to Java POJO with setter methods on POJO. Java POJO to JSON with getter methods on POJO. Spring Boot will automatically handle Jackson integration (Spring Boot Stater Web). JSON data being passed to REST controller is converted to Java POJO. Java POJO being returned from REST controller is converted to JSON.
-
 ## Spring Exception Handler
 **Spring Exception Handler** <br>
 - step 1: create custom response class: It is a Java POJO class. It will be sent back to client as JSON.
