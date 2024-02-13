@@ -6,9 +6,10 @@
   ```
     Application/Business Layout <--> DAO <--> Persistence Layout (Relational Database)
   ```
-- We define the functions of CRUD in DAO.
+-  DAO is responsible for interfacing with the database. (like a helper for communicating with the database). We define the functions of CRUD in DAO.
+- if we use JPA API, we need JPA Entity Manager to implemet DAO.
 - Spring Data JPA Interface (CrudRepository or JpaRepository) has defined the CRUD operations for the user.
-  
+
 ## Composite
 
 ## Proxy
