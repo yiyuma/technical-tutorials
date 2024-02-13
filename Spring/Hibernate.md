@@ -249,7 +249,12 @@ spring.jpa.hibernate.ddl-auto=create
 - update: Update the database tables schema
 
 ### Spring Data JPA
-Spring Data JPA create a DAO and just plug in your **entity name** and **type of primary key**. Spring will give a CRUD implementation. Spring Data JPA provides the interface JpaRepository.<br>
+Spring Data JPA create a DAO and just plug in your **entity type** and **type of primary key**. Spring will give a CRUD implementation. Spring Data JPA provides the interface JpaRepository.<br>
+```
+public interface ShoppingItemRepository extends JpsRepository<ShoppingItem, UUID>(){
+  ...
+}
+```
 
 ### Spring Data REST
 - Spring Data REST will scan your project for JpaRepository
@@ -257,18 +262,18 @@ Spring Data JPA create a DAO and just plug in your **entity name** and **type of
 - Spring Data REST will create endpoints based on entity type. 
 - Spring Data REST endpoints are HATEOAS compliant. (HATEOAS: Hypermedia as the Engine of Application State, think of it as meta-data for REST data)
 - Set base path in the application.properties
-```
-spring.data.rest.base-path=/magic-api
-```
+  ```
+  spring.data.rest.base-path=/magic-api
+  ```
 - Specify plural name/ path with an annotation: @RepositoryRestResource(path="members")
 - Pagination: default page size is 20. 
-```
-spring.data.rest.default-page-size=50
-```
+  ```
+  spring.data.rest.default-page-size=50
+  ```
 - Sort: default is ascending
-```
-http://localhost:8080/employees?sort=lastName,desc
-```
+  ```
+  http://localhost:8080/employees?sort=lastName,desc
+  ```
 
 ## Terminology
 ### Entity class
