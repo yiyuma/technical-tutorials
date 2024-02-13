@@ -26,6 +26,8 @@
 - **@ControllerAdvice** will implemented the Exceptions for the Controller.
 - **@RestController** = @Controller + @ResponseBody (The return value of the methods will be saved in a ResponseBody.). It is for REST. It is class level annotation.
 - **@Service** is meta-annotation. It applied to Service implementations. Spring will automatically register the Service implementation.
+  - Service layer: uses Service Facade design pattern. It is intermediate layer for custom business logic. Integrate data from multiple sources(DAO/repositories).
+  - Service layer inject DAO and has the responsibility to manage transaction boundaries. Apply @Transactional annotation on service methods.
 - **@Repository**: specifies a repository. It supports component scanning. It translated JDBC exceptions.
 - **@Configuration** is meta-annotation. It is used for defining beans with @Bean (method level) and their dependencies.
 - **@Bean** is an annotation that Spring uses to gather beans at runtime. It is a method level annotation. The methods with @Bean must be in @Configuraion classes. We can use @Bean for the outside class.
