@@ -24,7 +24,7 @@
 - **@EnableAutoConfiguration** vs. **@ComponentScan**:
   - @ComponentScan scans for Spring components.
   - @EnableAutoConfiguration enables Spring Boot to auto-configure the application context. It automatically creates and registers beans based on both the included jar files in the classpath and the beans (Components, controllers, services, repositories) defined by application.
-- **@Component** is an annotation that allows Spring to detect our cunstom beans automatically. @Controller, @Service, @Repoistory are @Component, but the inverse is not true. @Controller, @Service and @Repository are stereotype annotations. 
+- **@Component** is an annotation that allows Spring to detect our cunstom beans automatically. @Controller, @Service, @Repoistory and @Configuration are @Component, but the inverse is not true. @Configuraion, @Controller, @Service and @Repository are stereotype annotations. 
 - **@Controller** is meta-annotation. It applied to Controller implementations.
 - **@ControllerAdvice** will implemented the Exceptions for the Controller.
 - **@RestController** = @Controller + @ResponseBody (The return value of the methods will be saved in a ResponseBody.). It is for REST. It is class level annotation.
