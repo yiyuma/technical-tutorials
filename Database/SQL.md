@@ -39,4 +39,14 @@ With SQL can man access and manipulate database.
 - **ALTER TABLE**: modifies a table
 - **DROP TABLE**: deletes a table
 - **CREATE INDEX**: creates an index (search key)
-- DROP INDEX: deletes an index
+- **DROP INDEX**: deletes an index
+- **WHERE** clause: is used to filter records.
+  ```
+    SELECT column1 FROM tableName WHERE condition
+  ```
+  **Operator** in the WHERE clause:
+  - =: Equlas
+  - >:
+  - <:
+  - >=:
+  - <=
