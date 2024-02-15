@@ -5,19 +5,28 @@ With SQL can man access and manipulate database.
 - DDL: Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database. CREATE, ALTER, DROP, TRUNCATE, COMMENT; RENAME
 - DML: Data Manipulation Language, which deals with data manipulation. SELECT, INSERT, UPDATE, DELETE, MERGE
   
-### SQL Statements
-- SELECT * FROM datebaseName
-- SELECT columnName FROM databaseName
-- SELECT DISTINCT columnName FROM databaseName: get a list of the different values
-- Create a new SQL database with the name databasename
+### SQL Statements (SQL keywords are not case sensitive)
+- SELECT: extracts data from a database
   ```
-   CREATE DATABASE databasename;
+    SELECT * FROM datebaseName
+    SELECT columnName FROM databaseName
+    // get a list of the different values
+    SELECT DISTINCT columnName FROM databaseName
   ```
-- Drop an existing SQL database with the name databasename
+- UPDATE: updates data in a database
+- DELETE: deletes data from a database
+- INSERT INTO: inserts new data into a database
+- CREATE DATABASE: creates a new database
   ```
-   DROP DATABASE databasename;
+    // Create a new SQL database with the name databasename
+    CREATE DATABASE databasename;
   ```
-- Create table
+- ALTER DATABASE: modifies a database
+- DROP DATABAS: deletes a database
+  ```
+    DROP DATABASE databasename;
+  ```
+- CREATE TABLE: creates a new table
   ```
    CREATE TABLE tablename(
       column1 datatype,
@@ -25,3 +34,7 @@ With SQL can man access and manipulate database.
       ...
     );
   ```
+- ALTER TABLE: modifies a table
+- DROP TABLE: deletes a table
+- CREATE INDEX: creates an index (search key)
+- DROP INDEX: deletes an index
