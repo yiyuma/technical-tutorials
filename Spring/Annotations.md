@@ -89,6 +89,7 @@
         private long depId;
       }
       ```
+    - Customer Generator: we can define our custom generator by implementing the IdentifierGenerator interface.
 - **@Column**: @Column is optional. mapping column in database.
   - name: specifies the name of the column in the table. If not specified, column name is the same name as java field.
   - length: specifies its length
