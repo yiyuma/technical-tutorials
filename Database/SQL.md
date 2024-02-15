@@ -1,4 +1,5 @@
-## SQL (Structured Query Language) Syntax
+## SQL (Structured Query Language)
+With SQL can man access and manipulate database.
 
 ### SQL Commands
 - DDL: Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database. CREATE, ALTER, DROP, TRUNCATE, COMMENT; RENAME
