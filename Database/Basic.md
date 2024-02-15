@@ -1,6 +1,12 @@
 ## DBMS (Database Management System)
-- relational
+- relational: RDBMS (Relational Database Management System)
 - NoSQL
+
+## RDBMS
+RDBMS (MySQL, PostegreSQL...) is the basis for SQL. 
+- table: The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.
+- column: A field is a column in a table that is designed to maintain specific information about the every revord in the table.
+- row: A record called a row. It is each individual entry that exists in a table.
 
 ## JDBC (Java DataBase Connectivity)
 JDBC is an API for conncecting and executing queries on a database for Java. JDBC can work with any database as long as proper drivers are provided.
