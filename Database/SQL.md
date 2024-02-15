@@ -44,9 +44,4 @@ With SQL can man access and manipulate database.
   ```
     SELECT column1 FROM tableName WHERE condition
   ```
-  **Operator** in the WHERE clause:
-  - =: Equlas
-  - >:
-  - <:
-  - >=:
-  - <=
+  **Operator** in the WHERE clause: =, >, <, >=, <=, <>, BETWEEN, LIKE, IN
