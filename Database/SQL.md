@@ -8,9 +8,11 @@ With SQL can man access and manipulate database.
 ### SQL Statements (SQL keywords are not case sensitive)
 - SELECT: extracts data from a database
   ```
-    SELECT * FROM datebaseName
-    SELECT columnName FROM databaseName
-    // get a list of the different values
+    // return all columns from the table tableName
+    SELECT * FROM tableName
+    // return colum1 and column2 from the table tableName
+    SELECT columnq, column2 FROM tableName
+    // return only distinct (different) values
     SELECT DISTINCT columnName FROM databaseName
   ```
 - UPDATE: updates data in a database
@@ -22,7 +24,7 @@ With SQL can man access and manipulate database.
     CREATE DATABASE databasename;
   ```
 - ALTER DATABASE: modifies a database
-- DROP DATABAS: deletes a database
+- DROP DATABASE: deletes a database
   ```
     DROP DATABASE databasename;
   ```
