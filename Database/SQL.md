@@ -24,10 +24,6 @@ With SQL can man access and manipulate database.
     CREATE DATABASE databasename;
   ```
 - **ALTER DATABASE**: modifies a database
-- **DROP DATABASE**: deletes a database
-  ```
-    DROP DATABASE databasename;
-  ```
 - **CREATE TABLE**: creates a new table
   ```
    CREATE TABLE tablename(
