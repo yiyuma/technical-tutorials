@@ -65,20 +65,30 @@
       @Entity
       public class User{
         @Id
-        @GeneratedValue(generator="sequence-generator")
-        @GenericGenerator(
-          name="sequence-generator",
-          strategy="org.hibernate.id.enhanced.SequenceStyleGenerator",
-          parameters={
-            @Parameter(name="sequence_name", value="user_generator"),
-            @Parameter(name="initial_value", value="4"),
-            @Parameter(name="increment_size", value="1")
-          }
-        )
+        @GeneratedValue(strategy=GenerationType.SEQUENCE,
+                        generator="sequence-generator")
+        @GenericGenerator(name="sequence-generator",
+                          strategy="org.hibernate.id.enhanced.SequenceStyleGenerator",
+                          parameters={@Parameter(name="sequence_name", value="user_generator"),
+                                      @Parameter(name="initial_value", value="4"),
+                                      @Parameter(name="increment_size", value="1")})
         private long userId;
       }
       ```
     - GenerationType.TABLE: assign primary keys using an underlying database table to ensure uniqueness
+      ```
+      @Entity
+      public class Department{
+        @Id
+        @GeneratedValue(strategy=GenerationType.TABLE,
+                        generator="table-generator")
+        @TableGenerator(name="table-generator",
+                        table="dep_ids",
+                        pKColumnName="seq_id",
+                        valueColumnName="seq_value")
+        private long depId;
+      }
+      ```
 - **@Column**: @Column is optional. mapping column in database.
   - name: specifies the name of the column in the table. If not specified, column name is the same name as java field.
   - length: specifies its length
