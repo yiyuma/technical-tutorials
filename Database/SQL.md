@@ -10,7 +10,7 @@ SQL is database language for the relational database. With SQL can man access an
   ```
   // return all columns from the table tableName
   SELECT * FROM tableName;
-  // return colum1 and column2 from the table tableName
+  // return column1 and column2 from the table tableName
   SELECT columnq, column2 FROM tableName;
   // return only distinct (different) values
   SELECT DISTINCT columnName FROM databaseName;
