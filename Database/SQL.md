@@ -15,8 +15,16 @@ SQL is database language for the relational database. With SQL can man access an
     // return only distinct (different) values
     SELECT DISTINCT columnName FROM databaseName;
   ```
-- **UPDATE**: updates data in a database
-- **DELETE**: deletes data from a database
+- **UPDATE**: updates existing records in a table
+  ```
+  UPDATE tableName
+  SET column1=value1, column2=value2,...
+  WHERE condition;
+  ```
+- **DELETE**: deletes existing records in a table
+  ```
+  DELETE FROM tableName WHERE condition;
+  ```
 - **INSERT INTO**: inserts new data into a database
   ```
   INSERT INTO tableName(column1, column2, column3,...)
@@ -25,13 +33,22 @@ SQL is database language for the relational database. With SQL can man access an
   (value1a, value2a, value3a,...),
   (value1b, value2b, value3b,...);
   ```
-- **CREATE DATABASE**: creates a new database
+- **CREATE DATABASE**: is used to create a new database
   ```
     // Create a new SQL database with the name databasename
     CREATE DATABASE databasename;
   ```
+- **DROP DATABASE**: is used to drop an existing SQL database
+  ```
+  DROP DATABASE databasename;
+  ```
+- **BACKUP DATABASE**: is used in SQL SERVER to create a full back up of an existing SQL database
+  ```
+  BACKUP DATABASE databasename
+  TO DISK = 'filepath';
+  ```
 - **ALTER DATABASE**: modifies a database
-- **CREATE TABLE**: creates a new table
+- **CREATE TABLE**: is used to create a new table in a database.
   ```
    CREATE TABLE tablename(
       column1 datatype,
@@ -39,8 +56,24 @@ SQL is database language for the relational database. With SQL can man access an
       ...
     );
   ```
-- **ALTER TABLE**: modifies a table
-- **DROP TABLE**: deletes a table
+- **ALTER TABLE**: is used to add, delete or modify columns in an existing table.
+  ```
+  ALTER TABLE tableName
+  ADD columnName datatype
+  DROP COLUMN columnName
+  RENAME COLUMN oldName to newName
+  ALTER COLUMN columnName datatype // SQL SERVER, MS Access
+  MODIFY COLUMN columnName datatype // MySQL, Oracle
+  
+  ```
+- **DROP TABLE**: is used to drop an existing table completetly
+  ```
+  DROP TABLE tableName;
+  ```
+- **TRUNCATE TABLE**: is used to delete the data inside a table, but not the table itself.
+  ```
+  TRUNCATE TABLE tableName;
+  ```
 - **CREATE INDEX**: creates an index (search key)
 - **DROP INDEX**: deletes an index
 - **WHERE** clause: is used to filter records. SQL requires single quetos around text values.
@@ -60,4 +93,15 @@ SQL is database language for the relational database. With SQL can man access an
     SELECT column1, column2 FROM tableName WHERE condition1 AND (condition2 OR condition3);
   ```
 - **NO**: use it with **Operators** in the **WHERE** clause.
-- 
+- **IS NULL**: is used to test for empty values (NULL values).
+  ```
+  SELECT columnName
+  FROM tableName
+  WHERE columnName IS NULL;
+  ```
+- **IS NOT NULL**: is used to test for non-empty values (NOT NULL values).
+  ```
+  SELECT columnName
+  FROM tableName
+  WHERE columnName IS NOT NULL;
+  ```
