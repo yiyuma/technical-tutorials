@@ -8,12 +8,12 @@ SQL is database language for the relational database. With SQL can man access an
 ### SQL Statements (SQL keywords are not case sensitive, end with semicolon)
 - **SELECT**: extracts data from a database
   ```
-    // return all columns from the table tableName
-    SELECT * FROM tableName;
-    // return colum1 and column2 from the table tableName
-    SELECT columnq, column2 FROM tableName;
-    // return only distinct (different) values
-    SELECT DISTINCT columnName FROM databaseName;
+  // return all columns from the table tableName
+  SELECT * FROM tableName;
+  // return colum1 and column2 from the table tableName
+  SELECT columnq, column2 FROM tableName;
+  // return only distinct (different) values
+  SELECT DISTINCT columnName FROM databaseName;
   ```
 - **UPDATE**: updates existing records in a table
   ```
@@ -35,8 +35,8 @@ SQL is database language for the relational database. With SQL can man access an
   ```
 - **CREATE DATABASE**: is used to create a new database
   ```
-    // Create a new SQL database with the name databasename
-    CREATE DATABASE databasename;
+  // Create a new SQL database with the name databasename
+  CREATE DATABASE databasename;
   ```
 - **DROP DATABASE**: is used to drop an existing SQL database
   ```
@@ -64,7 +64,6 @@ SQL is database language for the relational database. With SQL can man access an
   RENAME COLUMN oldName to newName
   ALTER COLUMN columnName datatype // SQL SERVER, MS Access
   MODIFY COLUMN columnName datatype // MySQL, Oracle
-  
   ```
 - **DROP TABLE**: is used to drop an existing table completetly
   ```
@@ -78,19 +77,19 @@ SQL is database language for the relational database. With SQL can man access an
 - **DROP INDEX**: deletes an index
 - **WHERE** clause: is used to filter records. SQL requires single quetos around text values.
   ```
-    SELECT column1 FROM tableName WHERE condition;
+  SELECT column1 FROM tableName WHERE condition;
   ```
   ***Operator*** in the WHERE clause: =, >, <, >=, <=, <>, BETWEEN, LIKE, IN
 - **ORDER BY**: is used to sort the result in ascending or descending order. Default is ascending. Use **DESC** to sort the records in descending.
   ```
-    SELECT * FROM tableName
-    ORDER BY column1 ASC, column2 DESC;
+  SELECT * FROM tableName
+  ORDER BY column1 ASC, column2 DESC;
   ```
 - **AND**, **OR**: WHERE clause can contain one or many AND, OR operators.
   AND displays a record if all the conditions are TRUE.
   OR displays a record if any of the conditions are TRUE.
   ```
-    SELECT column1, column2 FROM tableName WHERE condition1 AND (condition2 OR condition3);
+  SELECT column1, column2 FROM tableName WHERE condition1 AND (condition2 OR condition3);
   ```
 - **NO**: use it with **Operators** in the **WHERE** clause.
 - **IS NULL**: is used to test for empty values (NULL values).
