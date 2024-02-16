@@ -104,3 +104,11 @@ SQL is database language for the relational database. With SQL can man access an
   FROM tableName
   WHERE columnName IS NOT NULL;
   ```
+- **SQL Constraints**: can be specified when the table is created with CREATE TABLE statements, or after the table is created with the ALTER TABLE statement.
+  - **NOT NULL**: Ensures that a column cannot have a NULL value
+  - **UNIQUE**: Ensures that all values in a column are different
+  - **PRIMARY KEY**: A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+  - **FOREIGN KEY**: Prevents actions that would destroy links between tables
+  - **CHECK**: Ensures that the values in a column satisfies a special condition.
+  - **DEFAULT**: Sets a default value for a column if no value is specified
+  - **CREATE INDEX**: Used to create and retrieve data from the database very quickly
