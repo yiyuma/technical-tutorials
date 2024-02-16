@@ -52,3 +52,5 @@ SQL is database language for the relational database. With SQL can man access an
   ```
     SELECT column1, column2 FROM tableName WHERE condition1 AND (condition2 OR condition3);
   ```
+- **NO**: use it with operators in the where clause.
+- 
