@@ -18,6 +18,13 @@ SQL is database language for the relational database. With SQL can man access an
 - **UPDATE**: updates data in a database
 - **DELETE**: deletes data from a database
 - **INSERT INTO**: inserts new data into a database
+  ```
+  INSERT INTO tableName(column1, column2, column3,...)
+  VALUES
+  (value1, value2, value3,...),
+  (value1a, value2a, value3a,...),
+  (value1b, value2b, value3b,...);
+  ```
 - **CREATE DATABASE**: creates a new database
   ```
     // Create a new SQL database with the name databasename
@@ -52,5 +59,5 @@ SQL is database language for the relational database. With SQL can man access an
   ```
     SELECT column1, column2 FROM tableName WHERE condition1 AND (condition2 OR condition3);
   ```
-- **NO**: use it with operators in the where clause.
+- **NO**: use it with **Operators** in the **WHERE** clause.
 - 
