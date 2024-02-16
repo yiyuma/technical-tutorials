@@ -1,5 +1,9 @@
 ## Database
-Database can store and manage data.
+Database can store and manage data.<br>
+
+## Database system
+- Database
+- Database Management System(DBMS): Software, which we can connect, query and manage the database.
 
 ## DBMS (Database Management System)
 - relational: RDBMS (Relational Database Management System)
