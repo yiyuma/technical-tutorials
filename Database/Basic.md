@@ -27,7 +27,6 @@ To use JDBC Driver, you have to do:
 
 ### MySQL in Spring
 For MySQL you have to
-
 Registering the Driver: 
 - Add MySQL Driver "mysql-connector-j" in pom.xml file.
 Creating the connection:
@@ -38,3 +37,15 @@ Creating the connection:
   spring.datasource.password=password
   ```
   DataSource is a factory for connections to a physical database.
+
+### PostgreSQL in Spring
+For PostgreSQL you have to
+Registering the Driver: 
+- Add PostgreSQL Driver "mysql-connector-j" in pom.xml file.
+Creating the connection:
+- Add PostgreSQL Connection in the application.properites file.
+  ```
+  spring.datasource.url=jdbc:postgresql://localhost:3306/DBMS_name
+  spring.datasource.username=user
+  spring.datasource.password=password
+  ```
