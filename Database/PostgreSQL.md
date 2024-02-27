@@ -16,7 +16,7 @@ Two ways to connect to the database:
 - pgAdmin4
 
 ## Note
-- Always end SQL statements with a semicolon ;. SQL Shrll waits for the semicolon and excutes all lines as one SQL statement.
+- Always end SQL statements with a semicolon ;. SQL Shell waits for the semicolon and excutes all lines as one SQL statement.
 
 
 ## SQL Statements
