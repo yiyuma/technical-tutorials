@@ -117,6 +117,11 @@ Two ways to connect to the database:
   INSERT INTO shoppingCategory(name)
   VALUES('Foods');
   ```
+- SELECT statements
+  ```
+  SELECT * FROM tableName;
+  SELECT columnName FROM tableName;
+  ```
 ## Datatype
 - INT
 - VARCHAR
@@ -142,3 +147,6 @@ Two ways to connect to the database:
 - uniquely identifies each row in a table
 - must be a unique value
 - cannot contain NULL values
+  
+## Mock data to test
+https://mockaroo.com/
