@@ -58,9 +58,26 @@ Two ways to connect to the database:
     ```
   - Changes password
     ```
-    ALTER ROLE newUser WITH LOGIN PASSWORD 'newPassword';
+    ALTER ROLE newUser WITH PASSWORD 'newPassword';
     ```
+- Check user list
+  ```
+  // in psql. du = describe user
+  \du
+  // in terminal
+  psql -c '\du'
 - Create a new database
+  ```
+  CREATE DATABASE newDBName;
+  ```
+- List all databases currently on the server
+  ```
+  // list all databases with details currently on the server
+  \l
+  // list all database name currently on the server
+  SELECT datname FROM pg_database;
+  ```
+
 
 ## Add MySQL in Spring project
 - Add dependency in Maven: MySQL Driver: mysql-connector-j
