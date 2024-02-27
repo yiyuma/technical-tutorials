@@ -24,6 +24,14 @@ Two ways to connect to the database:
   ```
   SELECT version();
   ```
+- Check current user
+  ```
+  SELECT current_user;
+  ```
+- Check current database
+  ```
+  SELECT current_database();
+  ```
 - Create User
   ```
   CREATE ROLE "newUser" WITH
