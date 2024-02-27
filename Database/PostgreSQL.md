@@ -85,8 +85,49 @@ Two ways to connect to the database:
   // list all database name currently on the server
   SELECT datname FROM pg_database;
   ```
+- Switch to another database
+  ```
+  // in psql. c = connect
+  \c newDatabase
+  ```
+- Create table
+  ```
+  CREATE TABLE table_name(
+    Column name + data type + constraints if any
+  )
+  // create table for the catagory
+  CREATE TABLE ShoppingCategory(
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    );
+  
+  ```
+- Check table
+  ```
+  \d // list all table and sequence
+  \dt // list all table
+  \d tableName // show the details of the table tableName
+  ```
+- Dorp table
+  ```
+  DROP TABLE tableName;
+  ```
+- Insert records
+  ```
+  INSERT INTO shoppingCategory(name)
+  VALUES('Foods');
+  ```
+## Datatype
+- INT
+- VARCHAR
+- DATE
+- TIMESTEMP
+- BIGSERIAL
 
-
+## Constraints
+- NOT NULL
+- PRIMARY KEY
+- 
 ## Add MySQL in Spring project
 - Add dependency in Maven: MySQL Driver: mysql-connector-j
 - Add database connection info in application.properties
@@ -96,12 +137,6 @@ Two ways to connect to the database:
   spring.datasource.username=springstudent
   spring.datasource.password=springstudent
   ```
-
-### SQL
-
-## Create User
-
-
 
 ### Primary key
 - uniquely identifies each row in a table
