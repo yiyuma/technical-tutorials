@@ -26,7 +26,7 @@ Two ways to connect to the database:
   ```
 - Create User
   ```
-  CREATE ROLE "SpringUser" WITH
+  CREATE ROLE "newUser" WITH
   	NOLOGIN
   	NOSUPERUSER
   	NOCREATEDB
@@ -37,11 +37,11 @@ Two ways to connect to the database:
   ```
   - Create a new basic user with password
     ```
-    CREATE ROLE springuser WITH LOGIN PASSWORD 'springuser';
+    CREATE ROLE newUser WITH LOGIN PASSWORD 'password';
     ```
   - Create a new superuser with password
     ```
-    CREATE ROLE newSuperuser WITH LOGIN PASSWORD 'newSuperuser' SUPERUSER;
+    CREATE ROLE newSuperuser WITH LOGIN PASSWORD 'password' SUPERUSER;
     ```
   - Create a new user with specific permission
     - CREATEDB: Allows the user to create databases
@@ -49,16 +49,16 @@ Two ways to connect to the database:
     - NOCREATEDB: Prevents the user to create databases
     - NOCREATEROLR: Prevents the user to create roles (or users)
     ```
-    CREATE ROLE springuser WITH LOGIN PASSWORD 'springuser' CREATEDB CREATEROLE;
+    CREATE ROLE newUser WITH LOGIN PASSWORD 'password' CREATEDB CREATEROLE;
     ```
   - INHERIT: Allows the user to inherit permissions from roles it is a member of. This is the default
   - VALID UTIL 'timestamp': The user's password will expire at the specified time.
      ```
-    CREATE ROLE springuser WITH LOGIN PASSWORD 'springuser' CREATEDB CREATEROLE VALID UNTIL '2025-01-01';
+    CREATE ROLE newUser WITH LOGIN PASSWORD 'password' CREATEDB CREATEROLE VALID UNTIL '2025-01-01';
     ```
   - Changes password
     ```
-    ALTER ROLE springuser WITH LOGIN PASSWORD 'newPassword';
+    ALTER ROLE newUser WITH LOGIN PASSWORD 'newPassword';
     ```
 - Create a new database
 
