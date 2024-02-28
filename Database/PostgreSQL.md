@@ -168,6 +168,36 @@ Two ways to connect to the database:
 - TIMESTEMP
 - BIGSERIAL
 
+## Operators in the WHERE clause
+- =: Equal to
+- <: Less than
+- \>: Greater than
+- <=: Less than or equal to
+- \>=: Greater than or equal to
+- <>: Not equal to
+- !=: Not equal to
+- LIKE: Check if a value matches a pattern (case sensitive). % presents zero, one or multiple characters. _ represents one single character.
+  ```
+  SELECT * FROM tableName
+  WHERE columnName LIKE 'M%';
+  ```
+- ILIKE: Check if a value matches a pattern (case insensitive)
+- AND: Logical AND
+- OR: Logical OR
+- IN: Check if a value is between a range of values
+  ```
+  SELECT * FROM tableName
+  WHERE columnName IN ('value1', 'value2', 'value3');
+  ```
+- BETWEEN: Check if a value is between a range of values
+  ```
+  SELECT * FROM tableName
+  WHERE columnName BETWEEN value1 AND value2;
+  ```
+- IS NULL: Check if a value is NULL
+- NOT: Makes a negative result, NOT LIKE, NOT IN, NOT BETWEEN, NOT NULL
+
+
 ## Constraints
 - NOT NULL
 - PRIMARY KEY
