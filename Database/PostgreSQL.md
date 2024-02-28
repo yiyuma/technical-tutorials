@@ -18,7 +18,6 @@ Two ways to connect to the database:
 ## Note
 - Always end SQL statements with a semicolon ;. SQL Shell waits for the semicolon and excutes all lines as one SQL statement.
 
-
 ## SQL Statements
 - Check database version
   ```
@@ -115,13 +114,53 @@ Two ways to connect to the database:
 - Insert records
   ```
   INSERT INTO shoppingCategory(name)
-  VALUES('Foods');
+  VALUES('Foods'),
+        ('Toys'),
+        ('Books');
   ```
-- SELECT statements
+- SELECT statements: to retrieve data from a database.
   ```
   SELECT * FROM tableName;
-  SELECT columnName FROM tableName;
+  SELECT column1, column2 FROM tableName;
   ```
+- ALTER TABLE: is used to add, delete, or modify columns in an existing table, add and drop various constraints on an existing table.
+  ```
+  // Add column
+  ALTER TABLE tableName
+  ADD newColumn VARCHAR(255);
+
+  // Alter column: change the type of COLUMN columnName auf INT. Some data types cannot be converted if the column has value. Numbers can always be converted to text. but text cannot always be converted to numbers.
+  ALTER TABLE tableName
+  ALTER COLUMN columnName TYPE INT;
+
+  // Drop column: remove an existing column
+  ALTER TABLE tableName
+  DROP COLUMN columnName;
+  ```
+- Update statement: is used to modify the value in existing records in a table.
+  ```
+  UPDATE tableName
+  SET columnName='newValue'
+  WHERE anotherColumnName='value';
+  ```
+- Delte statement: is used to delete existing records in a table
+  ```
+  // delete the records which the columnname is value
+  DELETE FROM tableName
+  WHERE columnName='value';
+
+  // delelte all records in the table
+  DELETE FROM tableName;
+  ```
+- TRUNCATE TABLE: delete all records in the table
+  ```
+  TRUNCATE TABLE tableName;
+  ```
+- DROP TABLE: is used to drop an existing table in a database
+  ```
+  DROP TABLE tableName;
+  ```
+  
 ## Datatype
 - INT
 - VARCHAR
