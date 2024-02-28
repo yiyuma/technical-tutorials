@@ -27,10 +27,12 @@ Two ways to connect to the database:
   ```
   SELECT current_user;
   ```
-- Check current database
+- Check user list
   ```
-  SELECT current_database();
-  ```
+  // in psql. du = describe user
+  \du
+  // in terminal
+  psql -c '\du'
 - Create User
   ```
   CREATE ROLE "newUser" WITH
@@ -67,16 +69,6 @@ Two ways to connect to the database:
     ```
     ALTER ROLE newUser WITH PASSWORD 'newPassword';
     ```
-- Check user list
-  ```
-  // in psql. du = describe user
-  \du
-  // in terminal
-  psql -c '\du'
-- Create a new database
-  ```
-  CREATE DATABASE newDBName;
-  ```
 - List all databases currently on the server
   ```
   // list all databases with details currently on the server
@@ -84,10 +76,18 @@ Two ways to connect to the database:
   // list all database name currently on the server
   SELECT datname FROM pg_database;
   ```
+- Check current database
+  ```
+  SELECT current_database();
+  ```
 - Switch to another database
   ```
   // in psql. c = connect
   \c newDatabase
+  ```
+- Create a new database
+  ```
+  CREATE DATABASE newDBName;
   ```
 - Create table
   ```
@@ -99,7 +99,6 @@ Two ways to connect to the database:
     id BIGSERIAL NOT NULL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     );
-  
   ```
 - Check table
   ```
@@ -120,8 +119,14 @@ Two ways to connect to the database:
   ```
 - SELECT statements: to retrieve data from a database.
   ```
+  // display all in the tableName
   SELECT * FROM tableName;
+  // display column1 and column2 in the tableName
   SELECT column1, column2 FROM tableName;
+  // display only different values
+  SELECT DISTINCT columnName FROM tableName;
+  // display the count of the column with different values
+  SELECT COUNT(DISTINCT columnName) FROM tableName;
   ```
 - ALTER TABLE: is used to add, delete, or modify columns in an existing table, add and drop various constraints on an existing table.
   ```
@@ -160,7 +165,12 @@ Two ways to connect to the database:
   ```
   DROP TABLE tableName;
   ```
-  
+- ORDER BY: is used to sort the result in ascending or descending order.
+  ```
+  SELECT * FROM tableName
+  ORDER BY columnName; // default is ascending
+  ORDER BY columnName DESC; // order by descending
+  ```  
 ## Datatype
 - INT
 - VARCHAR
@@ -168,7 +178,7 @@ Two ways to connect to the database:
 - TIMESTEMP
 - BIGSERIAL
 
-## Operators in the WHERE clause
+## Operators in the WHERE clause. WHERE clause is used to filter records.
 - =: Equal to
 - <: Less than
 - \>: Greater than
