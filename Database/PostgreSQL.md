@@ -23,16 +23,23 @@ Two ways to connect to the database:
   ```
   SELECT version();
   ```
+  
+- Check current database
+  ```
+  SELECT current_database();
+  ```
+  
+- List all databases currently on the server
+  ```
+  // list all database name currently on the server
+  SELECT datname FROM pg_database; // datname, pg_database will be fixed here
+  ```
+  
 - Check current user
   ```
   SELECT current_user;
   ```
-- Check user list
-  ```
-  // in psql. du = describe user
-  \du
-  // in terminal
-  psql -c '\du'
+  
 - Create User
   ```
   CREATE ROLE "newUser" WITH
@@ -46,11 +53,11 @@ Two ways to connect to the database:
   ```
   - Create a new basic user with password
     ```
-    CREATE ROLE newUser WITH LOGIN PASSWORD 'password';
+    CREATE ROLE newUsername WITH LOGIN PASSWORD 'password';
     ```
   - Create a new superuser with password
     ```
-    CREATE ROLE newSuperuser WITH LOGIN PASSWORD 'password' SUPERUSER;
+    CREATE ROLE newSuperusername WITH LOGIN PASSWORD 'password' SUPERUSER;
     ```
   - Create a new user with specific permission
     - CREATEDB: Allows the user to create databases
@@ -58,58 +65,68 @@ Two ways to connect to the database:
     - NOCREATEDB: Prevents the user to create databases
     - NOCREATEROLR: Prevents the user to create roles (or users)
     ```
-    CREATE ROLE newUser WITH LOGIN PASSWORD 'password' CREATEDB CREATEROLE;
+    CREATE ROLE newUsername WITH LOGIN PASSWORD 'password' CREATEDB CREATEROLE;
     ```
   - INHERIT: Allows the user to inherit permissions from roles it is a member of. This is the default
   - VALID UTIL 'timestamp': The user's password will expire at the specified time.
      ```
-    CREATE ROLE newUser WITH LOGIN PASSWORD 'password' CREATEDB CREATEROLE VALID UNTIL '2025-01-01';
+    CREATE ROLE newUsername WITH LOGIN PASSWORD 'password' CREATEDB CREATEROLE VALID UNTIL '2025-01-01';
     ```
   - Changes password
     ```
-    ALTER ROLE newUser WITH PASSWORD 'newPassword';
+    ALTER ROLE username WITH PASSWORD 'newPassword';
     ```
-- List all databases currently on the server
+
+
+- Check user list
   ```
-  // list all databases with details currently on the server
-  \l
-  // list all database name currently on the server
-  SELECT datname FROM pg_database;
+  // in psql. du = describe user
+  \du
+  // in terminal
+  psql -c '\du'
   ```
-- Check current database
-  ```
-  SELECT current_database();
-  ```
-- Switch to another database
-  ```
-  // in psql. c = connect
-  \c newDatabase
-  ```
-- Create a new database
-  ```
-  CREATE DATABASE newDBName;
-  ```
-- Create table
-  ```
-  CREATE TABLE table_name(
-    Column name + data type + constraints if any
-  )
-  // create table for the catagory
-  CREATE TABLE ShoppingCategory(
-    id BIGSERIAL NOT NULL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    );
-  ```
-- Check table
+  - Check table
   ```
   \d // list all table and sequence
   \dt // list all table
   \d tableName // show the details of the table tableName
   ```
-- Dorp table
+
+- List all databases currently on the server
+  ```
+  // list all databases with details currently on the server
+  \l
+  // list all database name currently on the server
+  SELECT datname FROM pg_database; // datname, pg_database will be fixed here
+  ```
+
+- Switch to another database
+  ```
+  // in psql. c = connect
+  \c newDatabase
+  ```
+- CREATE DATABASE: Create a new database
+  ```
+  CREATE DATABASE newDBName;
+  ```
+- Edit with table
+  - CREATE TABLE
+    ```
+    CREATE TABLE table_name(
+      Column name + data type + constraints if any
+    )
+    // create table for the catagory
+    CREATE TABLE ShoppingCategory(
+      id BIGSERIAL NOT NULL PRIMARY KEY,
+      name VARCHAR(255) NOT NULL,
+      );
+    ```
+  - DROP TABLE: Delete table. The records in the table will also be deleted.
   ```
   DROP TABLE tableName;
   ```
+
+
 - Insert records
   ```
   INSERT INTO shoppingCategory(name)
@@ -123,7 +140,7 @@ Two ways to connect to the database:
   SELECT * FROM tableName;
   // display column1 and column2 in the tableName
   SELECT column1, column2 FROM tableName;
-  // display only different values
+  // display only different values from the columnName
   SELECT DISTINCT columnName FROM tableName;
   // display the count of the column with different values
   SELECT COUNT(DISTINCT columnName) FROM tableName;
@@ -142,13 +159,13 @@ Two ways to connect to the database:
   ALTER TABLE tableName
   DROP COLUMN columnName;
   ```
-- Update statement: is used to modify the value in existing records in a table.
+- UPDATE statement: is used to modify the value in existing records in a table.
   ```
   UPDATE tableName
   SET columnName='newValue'
   WHERE anotherColumnName='value';
   ```
-- Delte statement: is used to delete existing records in a table
+- DELETE statement: is used to delete existing records in a table
   ```
   // delete the records which the columnname is value
   DELETE FROM tableName
