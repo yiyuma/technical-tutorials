@@ -16,8 +16,9 @@ Two ways to connect to the database:
 - pgAdmin4
 
 ## Note
-- Always end SQL statements with a semicolon ;. SQL Shell waits for the semicolon and excutes all lines as one SQL statement.
 - Relation means table in the database
+- Always end SQL statements with a semicolon ;. SQL Shell waits for the semicolon and excutes all lines as one SQL statement.
+- PostgreSQL requires quotes around text value. Numeric fields should without quotes.
 
 ## SQL Statements
 - Check database version
@@ -171,7 +172,7 @@ Two ways to connect to the database:
     TRUNCATE TABLE tableName;
     ```
 
-- **Query**
+- **Query** data
   - SELECT statements: to retrieve data from a database.
     ```
     // display all in the tableName
@@ -183,13 +184,18 @@ Two ways to connect to the database:
     // display the count of the column with different values
     SELECT COUNT(DISTINCT columnName) FROM tableName;
     ```
-- **Sort**
+- **Sort** data
   - ORDER BY: is used to sort the result in ascending or descending order.
     ```
     SELECT * FROM tableName
-    ORDER BY columnName; // default is ascending
-    ORDER BY columnName DESC; // order by descending
-    ```  
+    ORDER BY columnName; // ascending is default
+    ORDER BY columnName DESC; // DESC means descending
+    ```
+- LIMIT clause: is used to limit the maximum number of records to return
+- OFFSET Clause: is used to specify where to start selecting the records to return. The first record is number 0.
+- MIN() function returns the smallest value of the selected column
+- MAX() function returns the larest value of the selected column. When you use MIN() or MAX(), the returned column will be named min or max by default. To give the column a new name, use the AS keyword.
+   
 ## Datatype
 - INT
 - VARCHAR
