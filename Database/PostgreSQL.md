@@ -206,10 +206,10 @@ Two ways to connect to the database:
  
 - Aliases: are used to give a table, or a column in a table, a temporary name. An alias only exists for the duration of that query. An alias is created with the AS keyword. If you want your alias to contain one or more spaces, surround your alias with double quotes. Keyword AS is often used when two or more fields are concatenated into one.
 
--JOIN: is used to combine rows from two or more tables,  based on a related column between them.
-  - INNER JOIN: returns records that have matching values in both tables
-  - LEFT JOIN: returns all records from the left table, and the matched records from the right table
-  - RIGHT JOIN: returns all records from the right table, and the matched records from the left table
+- JOIN: is used to combine rows from two or more tables,  based on a related column between them. JOIN is used with ON
+  - INNER JOIN: returns records that have matching values in both tables. INNER JOIN and JOIN will gie the same result. INNER is the default join type.
+  - LEFT JOIN: returns all records from the left table, and the matched records from the right table. LEFT JOIN and LEFT OUTER JOIN will gie the same result. OUTER is the default join type.
+  - RIGHT JOIN: returns all records from the right table, and the matched records from the left table. RIGHT JOIN and RIGHT OUTER JOIN will gie the same result. OUTER is the default join type.
   - FULL JOIN: returns all records when there is a match in either left or right table
 
 ## Datatype
@@ -240,7 +240,7 @@ Two ways to connect to the database:
   SELECT * FROM tableName
   WHERE columnName IN ('value1', 'value2', 'value3');
   ```
-- BETWEEN: selects values within a given range. The values can be numbers, texts, or dates. The begin and end values are included.
+- BETWEEN AND: selects values within a given range. The values can be numbers, texts, or dates. The begin and end values are included.
   ```
   SELECT * FROM tableName
   WHERE columnName BETWEEN value1 AND value2;
