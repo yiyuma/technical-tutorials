@@ -85,13 +85,7 @@ Two ways to connect to the database:
   // in terminal
   psql -c '\du'
   ```
-  - Check table
-  ```
-  \d // list all table and sequence
-  \dt // list all table
-  \d tableName // show the details of the table tableName
-  ```
-
+  
 - List all databases currently on the server
   ```
   // list all databases with details currently on the server
@@ -99,12 +93,20 @@ Two ways to connect to the database:
   // list all database name currently on the server
   SELECT datname FROM pg_database; // datname, pg_database will be fixed here
   ```
-
+  
 - Switch to another database
   ```
   // in psql. c = connect
   \c newDatabase
   ```
+  
+- Check table
+  ```
+  \d // list all table and sequence
+  \dt // list all table
+  \d tableName // show the details of the table tableName
+  ```
+  
 - CREATE DATABASE: Create a new database
   ```
   CREATE DATABASE newDBName;
