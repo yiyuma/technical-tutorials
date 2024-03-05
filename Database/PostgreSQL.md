@@ -204,7 +204,13 @@ Two ways to connect to the database:
    - SUM() function returns the total sum of a numeric column. Null values are ignored.
    - AVG() function returns the average value of a numeric column. With ::NUMERIC operator to define the numner with decimal.
  
-- Aliases: are used
+- Aliases: are used to give a table, or a column in a table, a temporary name. An alias only exists for the duration of that query. An alias is created with the AS keyword. If you want your alias to contain one or more spaces, surround your alias with double quotes. Keyword AS is often used when two or more fields are concatenated into one.
+
+-JOIN: is used to combine rows from two or more tables,  based on a related column between them.
+  - INNER JOIN: returns records that have matching values in both tables
+  - LEFT JOIN: returns all records from the left table, and the matched records from the right table
+  - RIGHT JOIN: returns all records from the right table, and the matched records from the left table
+  - FULL JOIN: returns all records when there is a match in either left or right table
 
 ## Datatype
 - INT
