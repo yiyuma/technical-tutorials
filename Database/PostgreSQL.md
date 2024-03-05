@@ -210,7 +210,7 @@ Two ways to connect to the database:
   - INNER JOIN: returns records that have matching values in both tables. INNER JOIN and JOIN will gie the same result. INNER is the default join type.
   - LEFT JOIN: returns all records from the left table, and the matched records from the right table. LEFT JOIN and LEFT OUTER JOIN will gie the same result. OUTER is the default join type.
   - RIGHT JOIN: returns all records from the right table, and the matched records from the left table. RIGHT JOIN and RIGHT OUTER JOIN will gie the same result. OUTER is the default join type.
-  - FULL JOIN: returns all records when there is a match in either left or right table
+  - FULL JOIN: returns all records when there is a match in either left or right table. If there is not a match the empty fields will get the value NULL. FULL JOIN and FULL OUTER JOIN will gie the same result. OUTER is the default join type.
 
 ## Datatype
 - INT
