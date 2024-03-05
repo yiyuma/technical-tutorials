@@ -193,9 +193,19 @@ Two ways to connect to the database:
     ```
 - LIMIT clause: is used to limit the maximum number of records to return
 - OFFSET Clause: is used to specify where to start selecting the records to return. The first record is number 0.
-- MIN() function returns the smallest value of the selected column
-- MAX() function returns the larest value of the selected column. When you use MIN() or MAX(), the returned column will be named min or max by default. To give the column a new name, use the AS keyword.
-   
+  ```
+  SELECT * FROM tableName
+  LIMIT 20 OFFSET 40 // return 20 records, starting from the 41th record
+  ```
+- **Functions**
+  - MIN() function returns the smallest value of the selected column
+  - MAX() function returns the larest value of the selected column. When you use MIN() or MAX(), the returned column will be named min or max by default. To give the column a new name, use the AS keyword.
+   - COUNT() function returns the number of rows that matches a specified criterion. NULL values are not counted
+   - SUM() function returns the total sum of a numeric column. Null values are ignored.
+   - AVG() function returns the average value of a numeric column. With ::NUMERIC operator to define the numner with decimal.
+ 
+- Aliases: are used
+
 ## Datatype
 - INT
 - VARCHAR
@@ -219,12 +229,12 @@ Two ways to connect to the database:
 - ILIKE: Check if a value matches a pattern (case insensitive)
 - AND: Logical AND
 - OR: Logical OR
-- IN: Check if a value is between a range of values
+- IN: is used to specify a list of possible values in the WHERE clause. SELECT statement can inside of IN (IN(SELECT)).
   ```
   SELECT * FROM tableName
   WHERE columnName IN ('value1', 'value2', 'value3');
   ```
-- BETWEEN: Check if a value is between a range of values
+- BETWEEN: selects values within a given range. The values can be numbers, texts, or dates. The begin and end values are included.
   ```
   SELECT * FROM tableName
   WHERE columnName BETWEEN value1 AND value2;
