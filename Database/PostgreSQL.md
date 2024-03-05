@@ -17,6 +17,7 @@ Two ways to connect to the database:
 
 ## Note
 - Always end SQL statements with a semicolon ;. SQL Shell waits for the semicolon and excutes all lines as one SQL statement.
+- Relation means table in the database
 
 ## SQL Statements
 - Check database version
@@ -111,7 +112,7 @@ Two ways to connect to the database:
   ```
   CREATE DATABASE newDBName;
   ```
-- Edit with table
+- Edit with **TABLE**
   - CREATE TABLE
     ```
     CREATE TABLE table_name(
@@ -123,73 +124,72 @@ Two ways to connect to the database:
       name VARCHAR(255) NOT NULL,
       );
     ```
-  - DROP TABLE: Delete table. The records in the table will also be deleted.
-  ```
-  DROP TABLE tableName;
-  ```
+  - DROP TABLE: Delete table in a database. The records in the table will also be deleted.
+    ```
+    DROP TABLE tableName;
+    ```
+  - ALTER TABLE: is used to add, delete, or modify columns in an existing table, add and drop various   constraints on an existing table.
+    ```
+    // Add column
+    ALTER TABLE tableName
+    ADD newColumn VARCHAR(255);
 
+    // Alter column: change the type of COLUMN columnName auf INT. Some data types cannot be converted if the column has value. Numbers can always be converted to text. but text cannot always be converted to numbers.
+    ALTER TABLE tableName
+    ALTER COLUMN columnName TYPE INT;
 
-- Insert records
-  ```
-  INSERT INTO shoppingCategory(name)
-  VALUES('Foods'),
-        ('Toys'),
-        ('Books');
-  ```
-- SELECT statements: to retrieve data from a database.
-  ```
-  // display all in the tableName
-  SELECT * FROM tableName;
-  // display column1 and column2 in the tableName
-  SELECT column1, column2 FROM tableName;
-  // display only different values from the columnName
-  SELECT DISTINCT columnName FROM tableName;
-  // display the count of the column with different values
-  SELECT COUNT(DISTINCT columnName) FROM tableName;
-  ```
-- ALTER TABLE: is used to add, delete, or modify columns in an existing table, add and drop various constraints on an existing table.
-  ```
-  // Add column
-  ALTER TABLE tableName
-  ADD newColumn VARCHAR(255);
+    // Drop column: remove an existing column
+    ALTER TABLE tableName
+    DROP COLUMN columnName;
+    ```
 
-  // Alter column: change the type of COLUMN columnName auf INT. Some data types cannot be converted if the column has value. Numbers can always be converted to text. but text cannot always be converted to numbers.
-  ALTER TABLE tableName
-  ALTER COLUMN columnName TYPE INT;
+-Edit with **RECORD**
+  - INSERT INTO statement: Insert new record in a table
+    ```
+    INSERT INTO shoppingCategory(name)
+    VALUES('Foods'),
+          ('Toys'),
+          ('Books');
+    ```
+  - UPDATE statement: is used to modify the value in existing records in a table.
+    ```
+    UPDATE tableName
+    SET columnName='newValue'
+    WHERE anotherColumnName='value';
+    ```
+  - DELETE statement: is used to delete existing records in a table
+    ```
+    // delete the records which the columnname is value
+    DELETE FROM tableName
+    WHERE columnName='value';
 
-  // Drop column: remove an existing column
-  ALTER TABLE tableName
-  DROP COLUMN columnName;
-  ```
-- UPDATE statement: is used to modify the value in existing records in a table.
-  ```
-  UPDATE tableName
-  SET columnName='newValue'
-  WHERE anotherColumnName='value';
-  ```
-- DELETE statement: is used to delete existing records in a table
-  ```
-  // delete the records which the columnname is value
-  DELETE FROM tableName
-  WHERE columnName='value';
+    // delelte all records in the table
+    DELETE FROM tableName;
+    ```
+  - TRUNCATE TABLE: delete all records in the table
+    ```
+    TRUNCATE TABLE tableName;
+    ```
 
-  // delelte all records in the table
-  DELETE FROM tableName;
-  ```
-- TRUNCATE TABLE: delete all records in the table
-  ```
-  TRUNCATE TABLE tableName;
-  ```
-- DROP TABLE: is used to drop an existing table in a database
-  ```
-  DROP TABLE tableName;
-  ```
-- ORDER BY: is used to sort the result in ascending or descending order.
-  ```
-  SELECT * FROM tableName
-  ORDER BY columnName; // default is ascending
-  ORDER BY columnName DESC; // order by descending
-  ```  
+- **Query**
+  - SELECT statements: to retrieve data from a database.
+    ```
+    // display all in the tableName
+    SELECT * FROM tableName;
+    // display column1 and column2 in the tableName
+    SELECT column1, column2 FROM tableName;
+    // display only different values from the columnName
+    SELECT DISTINCT columnName FROM tableName;
+    // display the count of the column with different values
+    SELECT COUNT(DISTINCT columnName) FROM tableName;
+    ```
+- **Sort**
+  - ORDER BY: is used to sort the result in ascending or descending order.
+    ```
+    SELECT * FROM tableName
+    ORDER BY columnName; // default is ascending
+    ORDER BY columnName DESC; // order by descending
+    ```  
 ## Datatype
 - INT
 - VARCHAR
