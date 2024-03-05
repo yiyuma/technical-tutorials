@@ -211,6 +211,7 @@ Two ways to connect to the database:
   - LEFT JOIN: returns all records from the left table, and the matched records from the right table. LEFT JOIN and LEFT OUTER JOIN will gie the same result. OUTER is the default join type.
   - RIGHT JOIN: returns all records from the right table, and the matched records from the left table. RIGHT JOIN and RIGHT OUTER JOIN will gie the same result. OUTER is the default join type.
   - FULL JOIN: returns all records when there is a match in either left or right table. If there is not a match the empty fields will get the value NULL. FULL JOIN and FULL OUTER JOIN will gie the same result. OUTER is the default join type.
+  - CROSS JOIN: matches all records from the left table with each record from the right table.
 
 ## Datatype
 - INT
