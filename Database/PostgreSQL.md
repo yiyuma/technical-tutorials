@@ -143,7 +143,7 @@ Two ways to connect to the database:
     DROP COLUMN columnName;
     ```
 
--Edit with **RECORD**
+- Edit with **RECORD**
   - INSERT INTO statement: Insert new record in a table
     ```
     INSERT INTO shoppingCategory(name)
