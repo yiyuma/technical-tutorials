@@ -10,10 +10,19 @@ PostgreSQL is an free open-source database system that supports both relational 
   - pgAdmin4: client GUI for interacting with the database
   - SQL Shell (Command Line Tools): a terminal based program where you can write and execute SQL syntax in the commandline terminal.
 
-## Connect to the Database
-Two ways to connect to the database:
+## Connect to the PostgreSQL Database Server
+Different ways to connect to the database:
 - SQL Shell (psql)
 - pgAdmin4
+- JDBC Driver
+  - Add dependency in Maven: PostgreSQL Driver: postgresql
+  - Add database connection info in application.properties
+    ```
+    // Spring use JDBC for PostgreSQL database communication
+    spring.datasource.url=jdbc:postgresql://localhost:5432/student_tracker
+    spring.datasource.username=springstudent
+    spring.datasource.password=springstudent
+    ```
 
 ## Note
 - Relation means table in the database
@@ -35,6 +44,11 @@ Two ways to connect to the database:
   ```
   // list all database name currently on the server
   SELECT datname FROM pg_database; // datname, pg_database will be fixed here
+  ```
+  
+- Show the IP address and port of the current connection
+  ```
+  SELECT inet_server_addr(), inet_server_port();
   ```
   
 - Check current user
