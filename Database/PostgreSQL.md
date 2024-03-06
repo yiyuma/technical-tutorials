@@ -212,7 +212,26 @@ Two ways to connect to the database:
   - RIGHT JOIN: returns all records from the right table, and the matched records from the left table. RIGHT JOIN and RIGHT OUTER JOIN will gie the same result. OUTER is the default join type.
   - FULL JOIN: returns all records when there is a match in either left or right table. If there is not a match the empty fields will get the value NULL. FULL JOIN and FULL OUTER JOIN will gie the same result. OUTER is the default join type.
   - CROSS JOIN: matches all records from the left table with each record from the right table.
+    ```
+    SELECT column1, column2 FROM table1 (INNER|LEFT|RIGT|FULL) JOIN table2 ON table1.id=table2.id;
+    SELECT column1, column2 FROM table1 CROSS JOIN table2;
+    ```
 
+- UNION Operator: is used to combine the result-set of two or more queries. The queries in the union must follow rules:
+  - They must have the same number of columns
+  - The columns must have the same data types
+  - The columns must be in the same order
+  With the UNION operator, if some rows in the two queries returns the exact same result, only one row will be listed, because UNION selects only distinct values. Use UNION ALL to return duplicate values.
+  ```
+    SELECT column1 FROM table1
+    UNION
+    SELECT column2 FROM table2
+    ORDER BY column1;
+  ```
+- GROUP BY clause groups rows that have the same values into summary rows. The GROUP BY clause is often used with aggregate functions like COUNT(), MAX(), MIN(), SUM(), AVG() to group the result-set by one or more columns.
+
+- HAVING clause was added to SQL because the WHERE clause cannot be used with aggregate functions. Aggregate functions are often used with GROUP BY clausees, and by adding HAVING we can write condition like we do with WHERE clauses.
+- EXISTS operator is used to test for the existence of any record in a sub query.
 ## Datatype
 - INT
 - VARCHAR
