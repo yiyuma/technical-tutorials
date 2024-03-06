@@ -231,7 +231,10 @@ Two ways to connect to the database:
 - GROUP BY clause groups rows that have the same values into summary rows. The GROUP BY clause is often used with aggregate functions like COUNT(), MAX(), MIN(), SUM(), AVG() to group the result-set by one or more columns.
 
 - HAVING clause was added to SQL because the WHERE clause cannot be used with aggregate functions. Aggregate functions are often used with GROUP BY clausees, and by adding HAVING we can write condition like we do with WHERE clauses.
-- EXISTS operator is used to test for the existence of any record in a sub query.
+- EXISTS operator is used to test for the existence of any record in a sub query. The EXIST operator returns TRUE if the sub query returns one or more records. We can use NOT operator with the EXISTS operator to check which sub query does not return records.
+- ANY operator allows you to perform a comparison between a single column value and a range of other values. ANY operator returns a Boolean value as a result. It returns TRUE if ANY of the sub query values meet the condition.
+- ALL Operator returns a Boolean value as a result. It returns TRUE if ALL of the sub query values meet the condition. It is used with SELECT, WHERE and HAVING statements.
+- CASE expression goes through conditions and returns a value when the first condition is met. Once a condition is true, it will stop reading and return the result. If no conditions are true, ite returns the value in the ELSE clause. It there is no ELSE part and no conditions are true, it returns NULL.
 ## Datatype
 - INT
 - VARCHAR
