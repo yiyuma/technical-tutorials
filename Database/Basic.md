@@ -1,18 +1,15 @@
 ## Database
 Database can store and manage data.<br>
 
-## Database system
-- Database
-- Database Management System(DBMS): Software, which we can connect, query and manage the database.
-
 ## DBMS (Database Management System)
+Database Management System(DBMS): Software, which we can connect, query and manage the database.
 - relational: RDBMS (Relational Database Management System)
 - NoSQL
 
 ## RDBMS
 RDBMS (MySQL, PostegreSQL...) is the basis for SQL. 
 - database: Relational database is a collection of table. (table is relation)
-- table: The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.
+- table: A table is a collection of related data entries and it consists of columns and rows.
 - column: A field (attribut) is a column in a table that is designed to maintain specific information about the every record in the table.
 - row: A record called a row. It is each individual entry that exists in a table.
 
