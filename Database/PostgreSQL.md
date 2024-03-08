@@ -242,6 +242,10 @@ Different ways to connect to the database:
 - CASE expression goes through conditions and returns a value when the first condition is met. Once a condition is true, it will stop reading and return the result. If no conditions are true, ite returns the value in the ELSE clause. It there is no ELSE part and no conditions are true, it returns NULL.
   
 ## Datatype
+- BOOLEAN (BOOL): is used one byte for storing. It can have three values: true, false, NULL.
+  - for the "true" state: true, yes, on, 1
+  - for the "false" state: false, no, off, 0
+- Character types: CHAR, VARCHAR, TEXT
 - INT
 - VARCHAR
 - DATE
@@ -282,16 +286,6 @@ Different ways to connect to the database:
 - NOT NULL
 - PRIMARY KEY
 - 
-## Add MySQL in Spring project
-- Add dependency in Maven: MySQL Driver: mysql-connector-j
-- Add database connection info in application.properties
-  ```
-  // Spring use JDBC for mySQL database communication
-  spring.datasource.url=jdbc:mysql://localhost:5432/student_tracker
-  spring.datasource.username=springstudent
-  spring.datasource.password=springstudent
-  ```
-
 ### Primary key
 - uniquely identifies each row in a table
 - must be a unique value
