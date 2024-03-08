@@ -3,7 +3,7 @@ PostgreSQL is an free open-source database system that supports both relational 
 
 ## PostgreSQL Installation
 - Link: https://www.postgresql.org/download/
-- Dokumentation: https://www.postgresql.org/docs/
+- Documentation: https://www.postgresql.org/docs/
 - Default port: 5432
 - Components
   - PostgreSQL Server: main engine of the database
@@ -34,28 +34,23 @@ Different ways to connect to the database:
   ```
   SELECT version();
   ```
-  
 - Check current database
   ```
   SELECT current_database();
   ```
-  
 - List all databases currently on the server
   ```
   // list all database name currently on the server
   SELECT datname FROM pg_database; // datname, pg_database will be fixed here
   ```
-  
 - Show the IP address and port of the current connection
   ```
   SELECT inet_server_addr(), inet_server_port();
   ```
-  
 - Check current user
   ```
   SELECT current_user;
   ```
-  
 - Create User
   ```
   CREATE ROLE "newUser" WITH
@@ -93,7 +88,6 @@ Different ways to connect to the database:
     ALTER ROLE username WITH PASSWORD 'newPassword';
     ```
 
-
 - Check user list
   ```
   // in psql. du = describe user
@@ -101,7 +95,6 @@ Different ways to connect to the database:
   // in terminal
   psql -c '\du'
   ```
-  
 - List all databases currently on the server
   ```
   // list all databases with details currently on the server
@@ -109,13 +102,11 @@ Different ways to connect to the database:
   // list all database name currently on the server
   SELECT datname FROM pg_database; // datname, pg_database will be fixed here
   ```
-  
 - Switch to another database
   ```
   // in psql. c = connect
   \c newDatabase
   ```
-  
 - Check table
   ```
   \d // list all table and sequence
@@ -127,7 +118,7 @@ Different ways to connect to the database:
   ```
   CREATE DATABASE newDBName;
   ```
-- Edit with **TABLE**
+- Edit with **TABLE**: CREATE, DROP, ALTER
   - CREATE TABLE
     ```
     CREATE TABLE table_name(
@@ -158,7 +149,7 @@ Different ways to connect to the database:
     DROP COLUMN columnName;
     ```
 
-- Edit with **RECORD**
+- Edit with **RECORD**: INSERT INTO, UPDATE, DELETE, TRUNCATE
   - INSERT INTO statement: Insert new record in a table
     ```
     INSERT INTO shoppingCategory(name)
@@ -181,7 +172,7 @@ Different ways to connect to the database:
     // delelte all records in the table
     DELETE FROM tableName;
     ```
-  - TRUNCATE TABLE: delete all records in the table
+  - TRUNCATE TABLE statement: delete all records in the table
     ```
     TRUNCATE TABLE tableName;
     ```
@@ -249,6 +240,7 @@ Different ways to connect to the database:
 - ANY operator allows you to perform a comparison between a single column value and a range of other values. ANY operator returns a Boolean value as a result. It returns TRUE if ANY of the sub query values meet the condition.
 - ALL Operator returns a Boolean value as a result. It returns TRUE if ALL of the sub query values meet the condition. It is used with SELECT, WHERE and HAVING statements.
 - CASE expression goes through conditions and returns a value when the first condition is met. Once a condition is true, it will stop reading and return the result. If no conditions are true, ite returns the value in the ELSE clause. It there is no ELSE part and no conditions are true, it returns NULL.
+  
 ## Datatype
 - INT
 - VARCHAR
