@@ -30,7 +30,7 @@ Creating the connection:
 - Add MySQL Connection in the application.properites file.
   ```
   spring.datasource.url=jdbc:mysql://localhost:3306/DBMS_name
-  spring.datasource.username=user
+  spring.datasource.username=username
   spring.datasource.password=password
   ```
   DataSource is a factory for connections to a physical database.
@@ -38,11 +38,11 @@ Creating the connection:
 ### PostgreSQL in Spring
 For PostgreSQL you have to
 Registering the Driver: 
-- Add PostgreSQL Driver "mysql-connector-j" in pom.xml file.
-Creating the connection:
-- Add PostgreSQL Connection in the application.properites file.
+- Add dependency in Maven: PostgreSQL Driver: postgresql
+- Add database connection info in application.properties
   ```
-  spring.datasource.url=jdbc:postgresql://localhost:3306/DBMS_name
-  spring.datasource.username=user
+  // Spring use JDBC for PostgreSQL database communication
+  spring.datasource.url=jdbc:postgresql://localhost:5432/DBMS_name
+  spring.datasource.username=username
   spring.datasource.password=password
   ```
