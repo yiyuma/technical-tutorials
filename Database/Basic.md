@@ -13,6 +13,13 @@ RDBMS (MySQL, PostegreSQL...) is the basis for SQL.
 - column: A field (attribut) is a column in a table that is designed to maintain specific information about the every record in the table.
 - row: A record called a row. It is each individual entry that exists in a table.
 
+## SQL (Structured Query Language)
+SQL is database language for the relational database. With SQL can man access and manipulate database.
+
+### SQL Commands
+- DDL: Data Definition Language, which deals with database schemas and descriptions of how the data should reside in the database. CREATE, ALTER, DROP, TRUNCATE, COMMENT; RENAME
+- DML: Data Manipulation Language, which deals with data manipulation. SELECT, INSERT, UPDATE, DELETE, MERGE
+  
 ## JDBC (Java DataBase Connectivity)
 JDBC is an API for conncecting and executing queries on a database for Java. JDBC can work with any database as long as proper drivers are provided.
 
