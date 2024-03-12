@@ -12,7 +12,7 @@
     - Dock=Left, Right, Top, Botton
 
 ## Layout controls
-- Border
-- Popup
-- ScrollViewer
-- Viewbox
+- Border: Create a border, background, or bothe around an object. You can add only one object to a Border.
+- Popup: Show information or options to users in a window. You can add only one object to a Popup. By default, a Ppoup contains a Grid.
+- ScrollViewer: Enable users to scroll down a page or area of a page. You can add only one object to a ScrollViewer.
+- Viewbox: Scale objects much like you would with a zoom control.  You can add only one object to a ViewBox.
