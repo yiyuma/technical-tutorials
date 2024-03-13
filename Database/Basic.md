@@ -46,7 +46,7 @@ For MySQL you have to
 For PostgreSQL you have to
 - Registering the Driver: 
   Add PostgreSQL Driver in Maven: PostgreSQL Driver: **postgresql**
-- - Creating the connection:
+- Creating the connection:
   Add database connection info in application.properties
   ```
   // Spring use JDBC for PostgreSQL database communication
