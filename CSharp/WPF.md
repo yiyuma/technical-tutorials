@@ -10,7 +10,8 @@
 - DockPanel: Arrange objects so that they stay, or dock, to one edge of the panel.
   - Properties:
     - Dock=Left, Right, Top, Botton
-
+- Note: Stackpanel will not constrain its children to the available size, whereas a DockPael will size the last child to occupy all remaining space.
+  
 ## Layout controls
 - Border: Create a border, background, or bothe around an object. You can add only one object to a Border.
 - Popup: Show information or options to users in a window. You can add only one object to a Popup. By default, a Ppoup contains a Grid.
