@@ -31,10 +31,10 @@ To use JDBC Driver, you have to do:
 
 ### MySQL in Spring
 For MySQL you have to
-Registering the Driver: 
-- Add MySQL Driver "mysql-connector-j" in pom.xml file.
-Creating the connection:
-- Add MySQL Connection in the application.properites file.
+- Registering the Driver: 
+  Add MySQL Driver **mysql-connector-j** in pom.xml file.
+- Creating the connection:
+  Add MySQL Connection in the application.properites file.
   ```
   spring.datasource.url=jdbc:mysql://localhost:3306/DBMS_name
   spring.datasource.username=username
@@ -44,9 +44,10 @@ Creating the connection:
 
 ### PostgreSQL in Spring
 For PostgreSQL you have to
-Registering the Driver: 
-- Add dependency in Maven: PostgreSQL Driver: postgresql
-- Add database connection info in application.properties
+- Registering the Driver: 
+  Add PostgreSQL Driver in Maven: PostgreSQL Driver: **postgresql**
+- - Creating the connection:
+  Add database connection info in application.properties
   ```
   // Spring use JDBC for PostgreSQL database communication
   spring.datasource.url=jdbc:postgresql://localhost:5432/DBMS_name
