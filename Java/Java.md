@@ -11,12 +11,12 @@ mvn spring-boot:run
 ```
 
 ### Modifiers (Access modifiers and non-access modifiers)
-- Access modifiers (prvate, default, protected, public)
+- **Access modifiers** (prvate, default, protected, public): is used to set the access level for classes, attributes, methods and constructors. For classes (public, default), for attributes, mehtods and constructors (public, protected, default, private) 
   - private: only within the class
   - default: within the class and the package. If you do not specify any access level, it will be the default.
   - protected: within the class, the package, outside the package through child class.
   - public: everywhere
-- Non-access modifiers 
+- **Non-access modifiers** (final, abstract, static, transient, synchronized, volatile). for classes (final, abstract), for methods and attributes (final, static, abstract, transient, synchronized, volatile)
 
 ### StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
