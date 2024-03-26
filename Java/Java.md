@@ -6,6 +6,8 @@ javac projectname.java;
 java project;
 // run a jar file
 java -jar filename.jar
+// run spring-boot project with maven
+mvn spring-boot:run
 ```
 
 ### StringBuilder, StringBuffer, String
