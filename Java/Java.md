@@ -10,6 +10,14 @@ java -jar filename.jar
 mvn spring-boot:run
 ```
 
+### Modifiers (Access modifiers and non-access modifiers)
+- Access modifiers (prvate, default, protected, public)
+  - private: only within the class
+  - default: within the class and the package. If you do not specify any access level, it will be the default.
+  - protected: within the class, the package, outside the package through child class.
+  - public: everywhere
+- Non-access modifiers 
+
 ### StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
 **StringBuffer** in Java represents a mutable sequence of characters. StringBuilder Class provides guarantee of synchronization.<br>
