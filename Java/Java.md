@@ -17,6 +17,13 @@ mvn spring-boot:run
   - protected: within the class, the package, outside the package through child class.
   - public: everywhere
 - **Non-access modifiers** (final, abstract, static, transient, synchronized, volatile). for classes (final, abstract), for methods and attributes (final, static, abstract, transient, synchronized, volatile)
+  - final:
+    - for classes: The class cannot be inherited by other classes.
+    - for attributes and methods: Attributes and methods cannot be overriden or modified. Constructor cannot mark as final.
+  - abstract: The purpose of an abstract class is to function as a base for subclasses. Encapsulate some common functionality in one place and let sub classes implement differences.
+    - for classes: The class cannot be used to create objects. To access an abstract class, it must be inherited from another class. The abstract class can also be used to provide some implementation of the interface, In such case, the end user may not be forced to override all the methods of the interface.
+    - for attributes and methods:
+  - static: only for attributes and methods. 
 
 ### StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
