@@ -10,6 +10,33 @@ java -jar filename.jar
 mvn spring-boot:run
 ```
 
+### Data Types
+- **Primitive Data Types**: Primitive data types are predefined in Java. A primitive data type has always a value. A primitive data type begins with a lower case. Primitives data type has no attributes or behaviors.<br>
+  - Integer types: byte (8 bits), short(16 bits), int (32 bits), long (64 bits, should end the value with an "L")
+  - Floating point types: a number with a decimal
+    - float: 32 bits. It should be end the value with "f". The precision of float is only 6 or 7 decimal digits.
+    - double: 64 bits. It should be end the value with "d". The precision of double is about 15 digits.
+    - Scientific numbers: a floating point number can also be a scientific number with an "e" to indicate the power of 10.
+  - Others: boolean (1 bit), char (16 bits). <br>
+Char is with a single quotes. Java uses Unicode system. In Unicode, character holds 2 byte (16 bits), so java also uses 2 byte for char.
+  - Casting
+    - Widening Casting (automatically) converting a smaller type to a larger size type. <br>
+      byte -> short -> char -> int -> long -> float -> double
+    - Narrowing Casting (manually) converting a larger type to a smaller size type. <br>
+      double -> float -> long -> int -> char -> short -> byte
+    ```
+      // widening casting
+      int intValue = 3;
+      double doubleValue = intValue;
+      // narrowing casting
+      double doubleValue = 3,14d;
+      int intValue = (int) doubleValue;
+    ```
+- **Reference Data Types**: A reference data type refers to an object. It can be null. It begins with an upper case and has attributes or behaviors.<br>
+String, Arrays, Classes
+- **Wrapper classes**: Wrapper class provides the mechanism to convert primitive data type into object and object into primitive data type. Wrapper classes are immutable.
+
+
 ### Modifiers (Access modifiers and non-access modifiers)
 - **Access modifiers** (prvate, default, protected, public): is used to set the access level for classes, attributes, methods and constructors. For classes (public, default), for attributes, mehtods and constructors (public, protected, default, private) 
   - private: only within the class
@@ -24,6 +51,7 @@ mvn spring-boot:run
     - for classes: The class cannot be used to create objects. To access an abstract class, it must be inherited from another class. The abstract class can also be used to provide some implementation of the interface, In such case, the end user may not be forced to override all the methods of the interface.
     - for attributes and methods:
   - static: only for attributes and methods. 
+
 
 ### StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
