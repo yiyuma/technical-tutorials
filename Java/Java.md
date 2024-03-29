@@ -11,13 +11,13 @@ mvn spring-boot:run
 ```
 
 ### Data Types
-- **Primitive Data Types**: Primitive data types are predefined in Java. Primitive data types live in stack. A primitive data type has always a value. A primitive data type begins with a lower case. Primitives data type has no attributes or behaviors.<br>
+- **Primitive Data Types**: Primitive data types are predefined in Java. A primitive data type begins with a lower case. Primitive variables live in the stack memory. A primitive variable has always a value. Primitives variable has no attributes or behaviors.<br>
   - Integer types: byte (8 bits), short(16 bits), int (32 bits), long (64 bits, should end the value with an "L"). The default value is 0.
   - Floating point types: a number with a decimal
     - float: 32 bits. It should be end the value with "f". The precision of float is only 6 or 7 decimal digits. The default value is 0.0f.
     - double: 64 bits. It should be end the value with "d". The precision of double is about 15 digits. The default value is 0.0d.
     - Scientific numbers: a floating point number can also be a scientific number with an "e" to indicate the power of 10.
-  - Others: boolean (1 bit), Default value is false. char (16 bits) and default value is \u0000. <br>
+  - Others: boolean (1 bit), Default value is false. char (16 bits), default value is \u0000. <br>
 Char is with a single quotes. Java uses Unicode system. In Unicode, character holds 2 byte (16 bits), so java also uses 2 byte for char.
   - Casting
     - Widening Casting (automatically) converting a smaller type to a larger size type. <br>
@@ -32,7 +32,8 @@ Char is with a single quotes. Java uses Unicode system. In Unicode, character ho
       double doubleValue = 3,14d;
       int intValue = (int) doubleValue;
     ```
-- **Reference Data Types**: A reference data type refers to an object. It can be null. It begins with an upper case and has attributes or behaviors. The reference data types live in heap.<br>
+- **Reference Data Types**: A reference data type refers to an object. It begins with an upper case.
+ The reference variables live in the heap memory. The reference variable can be null. The reference variable has attributes or behaviors. <br>
 String, Arrays, Classes
 - **Wrapper classes**: Wrapper class provides the mechanism to convert primitive data type into object and object into primitive data type. The default value is null. Wrapper classes are immutable.
   - Boolean, Character, Byte, Short, Integer, Long, Float, Double
@@ -54,10 +55,12 @@ String, Arrays, Classes
       int a = i;
       ```
 
-
-### Call by Value vs. Call by reference
-
-
+### Call by value vs. Call by reference
+- Call by value: Parameters passed to the callee method will be clones of original parameters. Any changes to one variable donot modify the other.
+- Call by reference: The unique identifier of the object is sent to the method. Any changes to the parameter's instance members will result in that change being made to the original value.
+- Parameter passing in Java is always **call by value**.
+  - For primitive types, parameters are call by value. 
+  - For object types, the object reference is call by value. All objects are dynamically stored in Heap memory. In the stack memory are stored the addresses of the object.
 
 ### Modifiers (Access modifiers and non-access modifiers)
 - **Access modifiers** (prvate, default, protected, public): is used to set the access level for classes, attributes, methods and constructors. For classes (public, default), for attributes, mehtods and constructors (public, protected, default, private) 
