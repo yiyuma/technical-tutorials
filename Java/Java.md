@@ -11,13 +11,13 @@ mvn spring-boot:run
 ```
 
 ### Data Types
-- **Primitive Data Types**: Primitive data types are predefined in Java. A primitive data type has always a value. A primitive data type begins with a lower case. Primitives data type has no attributes or behaviors.<br>
-  - Integer types: byte (8 bits), short(16 bits), int (32 bits), long (64 bits, should end the value with an "L")
+- **Primitive Data Types**: Primitive data types are predefined in Java. Primitive data types live in stack. A primitive data type has always a value. A primitive data type begins with a lower case. Primitives data type has no attributes or behaviors.<br>
+  - Integer types: byte (8 bits), short(16 bits), int (32 bits), long (64 bits, should end the value with an "L"). The default value is 0.
   - Floating point types: a number with a decimal
-    - float: 32 bits. It should be end the value with "f". The precision of float is only 6 or 7 decimal digits.
-    - double: 64 bits. It should be end the value with "d". The precision of double is about 15 digits.
+    - float: 32 bits. It should be end the value with "f". The precision of float is only 6 or 7 decimal digits. The default value is 0.0f.
+    - double: 64 bits. It should be end the value with "d". The precision of double is about 15 digits. The default value is 0.0d.
     - Scientific numbers: a floating point number can also be a scientific number with an "e" to indicate the power of 10.
-  - Others: boolean (1 bit), char (16 bits). <br>
+  - Others: boolean (1 bit), Default value is false. char (16 bits) and default value is \u0000. <br>
 Char is with a single quotes. Java uses Unicode system. In Unicode, character holds 2 byte (16 bits), so java also uses 2 byte for char.
   - Casting
     - Widening Casting (automatically) converting a smaller type to a larger size type. <br>
@@ -32,9 +32,31 @@ Char is with a single quotes. Java uses Unicode system. In Unicode, character ho
       double doubleValue = 3,14d;
       int intValue = (int) doubleValue;
     ```
-- **Reference Data Types**: A reference data type refers to an object. It can be null. It begins with an upper case and has attributes or behaviors.<br>
+- **Reference Data Types**: A reference data type refers to an object. It can be null. It begins with an upper case and has attributes or behaviors. The reference data types live in heap.<br>
 String, Arrays, Classes
-- **Wrapper classes**: Wrapper class provides the mechanism to convert primitive data type into object and object into primitive data type. Wrapper classes are immutable.
+- **Wrapper classes**: Wrapper class provides the mechanism to convert primitive data type into object and object into primitive data type. The default value is null. Wrapper classes are immutable.
+  - Boolean, Character, Byte, Short, Integer, Long, Float, Double
+  - In the case we need to use wrapper classes:
+    - Change the value in method
+    - Serialization
+    - Synchronization: Java synchronization works with objects in Mutlithreading
+    - java.util.pachage
+    - Collection framework
+  - Autoboxing and Unboxing
+    - Autoboxing: primitive data type -> wrapper class
+    - Unboxing: wrapper class -> primitive data type
+      ```
+      // Autoboxing
+      int a = 20;
+      Integer i = a;
+      // Unboxing
+      Integer i = new Integer(20);
+      int a = i;
+      ```
+
+
+### Call by Value vs. Call by reference
+
 
 
 ### Modifiers (Access modifiers and non-access modifiers)
