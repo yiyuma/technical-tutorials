@@ -62,6 +62,11 @@ String, Arrays, Classes
   - For primitive types, parameters are call by value. 
   - For object types, the object reference is call by value. All objects are dynamically stored in Heap memory. In the stack memory are stored the addresses of the object.
 
+### Stack memory and Heap space
+- **Stack memory** in Java is used for static memory allocation and the execution of a thread. LIFO (Last In First Out). If this memory is full, Java throws **java.lang.StackOverFlowError**. <br>
+  **Frame**: A Stack frame contains all the data for one function call. The stack frame only exists during the execution time of a function including any references.
+- **Heap space** Heap space is used for the dynamic memory allocation of Java objects and JRE classes at runtime. New objects are always create in heap space. References to these objects are stored in stack memory. If heap space is full, Java throws **java.lang.OutOfMemoryError**. 
+
 ### Modifiers (Access modifiers and non-access modifiers)
 - **Access modifiers** (prvate, default, protected, public): is used to set the access level for classes, attributes, methods and constructors. For classes (public, default), for attributes, mehtods and constructors (public, protected, default, private) 
   - private: only within the class
