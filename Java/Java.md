@@ -77,10 +77,13 @@ String, Arrays, Classes
   - final:
     - for classes: The class cannot be inherited by other classes.
     - for attributes and methods: Attributes and methods cannot be overriden or modified. Constructor cannot mark as final.
-  - abstract: The purpose of an abstract class is to function as a base for subclasses. Encapsulate some common functionality in one place and let sub classes implement differences.
+  - abstract: The purpose of an abstract class is to function as a base for subclasses. Encapsulate some common functionality in one place and let sub classes implement differences. It can only be used in an abstract class, and can only be used on method.
     - for classes: The class cannot be used to create objects. To access an abstract class, it must be inherited from another class. The abstract class can also be used to provide some implementation of the interface, In such case, the end user may not be forced to override all the methods of the interface.
-    - for attributes and methods:
-  - static: only for attributes and methods. 
+    - for methods: The method does not have a body. The body is provided by the subclass.
+  - static: only for attributes and methods. Attributs and methods belongs to the class, rather than an object. A static method means that it can be accessed without creating an object of the class.
+  - transient: Attributes and methods are skipped when serializing the object containing them.
+  - synchronized: Methods can only be accessed by one thread at a time
+  - volatile: The value of an attributes is not cached thread-locally, and is always read from the "main memory"
 
 
 ### StringBuilder, StringBuffer, String
