@@ -1,3 +1,7 @@
+## Key words
+- **const**: this will declare the variable as "constant", which means unchangeable and read-only.
+
+
 ## Regular Expression (Regex)
 Regular expression is a sequence of characters that forms a search pattern. Regular expression can be used to perform all types of text search and text replace operations.
 Regular expression is in java.util.regex package. The package includes the following classes:
