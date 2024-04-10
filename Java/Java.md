@@ -18,8 +18,9 @@ mvn spring-boot:run
     - float: 32 bits. It should be end the value with "f". The precision of float is only 6 or 7 decimal digits. The default value is 0.0f.
     - double: 64 bits. It should be end the value with "d". The precision of double is about 15 digits. The default value is 0.0d.
     - Scientific numbers: a floating point number can also be a scientific number with an "e" to indicate the power of 10.
-  - Others: boolean (1 bit), Default value is false. char (16 bits), default value is \u0000. <br>
-Char is with a single quotes. Java uses Unicode system. In Unicode, character holds 2 byte (16 bits), so java also uses 2 byte for char.
+  - Others:
+    - boolean (1 bit), Default value is false. char (16 bits), default value is \u0000.
+    - Char is with a single quotes. Java uses Unicode system. In Unicode, character holds 2 byte (16 bits), so java also uses 2 byte for char.
   - Casting
     - Widening Casting (automatically) converting a smaller type to a larger size type. <br>
       byte -> short -> char -> int -> long -> float -> double
