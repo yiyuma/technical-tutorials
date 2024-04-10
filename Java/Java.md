@@ -11,7 +11,7 @@ java -jar filename.jar
 mvn spring-boot:run
 ```
 
-### Data Types
+## Data Types
 - **Primitive Data Types**: Primitive data types are predefined in Java. A primitive data type begins with a lower case. Primitive variables live in the stack memory. A primitive variable has always a value. Primitives variable has no attributes or behaviors.<br>
   - Integer types: byte (8 bits), short(16 bits), int (32 bits), long (64 bits, should end the value with an "L"). The default value is 0.
   - Floating point types: a number with a decimal
@@ -56,19 +56,19 @@ String, Arrays, Classes
       int a = i;
       ```
 
-### Call by value vs. Call by reference
+## Call by value vs. Call by reference
 - Call by value: Parameters passed to the callee method will be clones of original parameters. Any changes to one variable donot modify the other.
 - Call by reference: The unique identifier of the object is sent to the method. Any changes to the parameter's instance members will result in that change being made to the original value.
 - Parameter passing in Java is always **call by value**.
   - For primitive types, parameters are call by value. 
   - For object types, the object reference is call by value. All objects are dynamically stored in Heap memory. In the stack memory are stored the addresses of the object.
 
-### Stack memory and Heap space
+## Stack memory and Heap space
 - **Stack memory** in Java is used for static memory allocation and the execution of a thread. LIFO (Last In First Out). If this memory is full, Java throws **java.lang.StackOverFlowError**. <br>
   **Frame**: A Stack frame contains all the data for one function call. The stack frame only exists during the execution time of a function including any references.
 - **Heap space** Heap space is used for the dynamic memory allocation of Java objects and JRE classes at runtime. New objects are always create in heap space. References to these objects are stored in stack memory. If heap space is full, Java throws **java.lang.OutOfMemoryError**. 
 
-### Modifiers (Access modifiers and non-access modifiers)
+## Modifiers (Access modifiers and non-access modifiers)
 - **Access modifiers** (prvate, default, protected, public): is used to set the access level for classes, attributes, methods and constructors. For classes (public, default), for attributes, mehtods and constructors (public, protected, default, private) 
   - private: only within the class
   - default: within the class and the package. If you do not specify any access level, it will be the default.
@@ -87,13 +87,13 @@ String, Arrays, Classes
   - volatile: The value of an attributes is not cached thread-locally, and is always read from the "main memory"
 
 
-### StringBuilder, StringBuffer, String
+## StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
 **StringBuffer** in Java represents a mutable sequence of characters. StringBuilder Class provides guarantee of synchronization.<br>
 String Class in Java creates an immutable sequence of characters.
 
 
-### Java Date and Time
+## Java Date and Time
 - **LocalDate**: represents a date (year, month, day(yyyy-MM-dd))
 - **LocalTime**: represents a time (hour, minute,second and nanosecondes (HH-mm-ss-ns)
 - **LocalDateTime**: represents both a date and a time (yyyy-MM-dd-HH-mm-ss-ns)
