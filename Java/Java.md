@@ -1,4 +1,5 @@
-### Run java code in cmd
+## Run java code in cmd
+Run java in cmd or maven
 ```
 // compile java project
 javac projectname.java;
