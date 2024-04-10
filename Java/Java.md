@@ -112,3 +112,44 @@ DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:
 LocaDateTime dateTime = LocalDateTime.now();
 dateTime.format(timeFormatter);
 ```
+
+## Regular Expression (Regex)
+Regular expression is a sequence of characters that forms a search pattern. Regular expression can be used to perform all types of text search and text replace operations.<br>
+Regular expression is in **java.util.regex** package. The package includes the following classes:
+- **Pattern** class: Defines a pattern (to be used in a search): with method **compile(param1, param2)** create pattern.
+  - param1: indicates which pattern is being searched for.
+  - param2: the flag
+    - Pattern.CASE_INSENSITIVE: case insensitive
+    - Pattern.LITERAL: Special characters in the pattern will not have any special meaning and will be treated as ordinary characters when performing a search.
+    - Pattern.UNICODE_CASE: Use it together with the CASE_INSENSITIVE flag to also ingore the case of letters outside of the English alphabet.
+  ```
+  Pattern pattern = Pattern.compile("hello", Pattern.CASE_INSENSITIVE); 
+  ```
+- **Matcher** class: Used to search for the pattern: With method **matcher(param1)** can search for the pattern in a string. Param1 is the string to check.
+  ```
+  Matcher matcher = pattern.matcher("Hello World");
+  ```
+  With method **find()** can know if the pattern was found in the string.
+- **PatternSyntaxException** class: Indicates syntax error in a regular expression pattern. 
+  ```
+  boolean matchFound = matcher.find();
+  ```
+```
+^ - Starts with
+$ - Ends with
+[] - Range
+() - Group
+. - Single character
++ - one or more characters in a row
+? - optional preceding character match
+\ - escape character
+\n - new line
+\d - Digit
+\D - Non-digit
+\s - White space
+\S - Non-white space
+\w - alphanummeric / underscore character (word chars)
+{x,y} - Repeat low (x) to high (y) (no "y" means at lease x, no ",y" means
+(x|y) - Alternatice - x or y
+[^x] - Anything but x (where x is whatever character you want)
+```
