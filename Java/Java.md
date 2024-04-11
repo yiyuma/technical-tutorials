@@ -117,7 +117,7 @@ dateTime.format(timeFormatter);
 
 ## Regular Expression (Regex)
 Regular expression is a sequence of characters that forms a search pattern. Regular expression can be used to perform all types of text search and text replace operations.<br>
-Regular expression is in **java.util.regex** package. The package includes the following classes:
+Regular expression is in **java.util.regex** package. The package includes the following classes and interface:
 - **Pattern** class: Defines a pattern (to be used in a search): with method **compile(param1, param2)** create pattern.
   - param1: indicates which pattern is being searched for.
   - param2: the flag
@@ -127,30 +127,38 @@ Regular expression is in **java.util.regex** package. The package includes the f
   ```
   Pattern pattern = Pattern.compile("hello", Pattern.CASE_INSENSITIVE); 
   ```
-- **Matcher** class: Used to search for the pattern: With method **matcher(param1)** can search for the pattern in a string. Param1 is the string to check.
+- **Matcher** class: Used for performing match operations on text using patterns: With method **matcher(param1)** can search for the pattern in a string. Param1 is the string to check.
   ```
   Matcher matcher = pattern.matcher("Hello World");
   ```
   With method **find()** can know if the pattern was found in the string.
-- **PatternSyntaxException** class: Indicates syntax error in a regular expression pattern. 
+- **PatternSyntaxException** class: used for Indicating syntax error in a regular expression pattern. It is an uncheck exception.
   ```
   boolean matchFound = matcher.find();
   ```
+- **MatchResult** Interface: Used for representing the result of a match operation.
+
 ```
 ^ - Starts with
 $ - Ends with
 [] - Range
 () - Group
-. - Single character
+. - Any dingle character
 + - one or more characters in a row
-? - optional preceding character match
+? - once or not
+* - zero or not once
 \ - escape character
 \n - new line
-\d - Digit
-\D - Non-digit
-\s - White space
-\S - Non-white space
-\w - alphanummeric / underscore character (word chars)
+\d - Digit [0-9]
+\D - Non-digit [^0-9]
+\s - White space [\t\n\x0B\f\r]
+\S - Non-white space  [^\s]
+\w - alphanummeric / underscore character (word chars) [a-zA-Z_0-9]
+\W - Non-word character  [^\w]
+\b - Word boundary
+\B - Non-Word boundary
+{n} - appears n times
+{n,} - appears n times or more than n
 {x,y} - Repeat low (x) to high (y) (no "y" means at lease x, no ",y" means
 (x|y) - Alternatice - x or y
 [^x] - Anything but x (where x is whatever character you want)
