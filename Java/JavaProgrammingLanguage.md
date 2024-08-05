@@ -5,16 +5,18 @@ Java is Compiler and Interpreter.<br>
 - Process:
   - Compiler: .java file --> Java compiler --> .class file
     ```
-     Run in cmd:
+       // Compile java project in cmd. ABC.class file will be created.
        javac ABC.java
-     a ABC.class file will be created
     ```
   - Interpreter .class file --> JVM --> excutable file
     ```
      Java launcher tool interpretes the application with an instance of the JVM.
-       java projectname
-       java -jar project.jar
-       mvn spring-boot:run
+     // Interpret a java project
+     java projectName;
+     // run a jar file
+     java -jar projectName.jar
+     // run spring-boot project with maven
+     mvn spring-boot:run
     ```
 
 ### Java Compiler
