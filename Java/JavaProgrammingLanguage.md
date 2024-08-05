@@ -1,16 +1,17 @@
 ### Java Programming Language
-- source code: Java source code is written in ***plain text*** files. The extension of the file is ***.java***.
-- .class file: ***Java Compiler*** compiles the source file (.java file) into ***.class*** file. The .class file contains only bytecodes. <br> The bytecode is the machine language of the JVM.
+Java is Compiler and Interpreter.<br>
+- Source code: Java source code is written in ***plain text*** files. The extension of the file is ***.java***.
+- Bytecode: ***Java Compiler*** compiles the source file (.java file) into ***.class*** file. The .class file contains only bytecodes. <br> The bytecode is the machine language of the JVM.
 - Process:
-  - .java file --> Java compiler --> .class file
+  - Compiler: .java file --> Java compiler --> .class file
     ```
      Run in cmd:
        javac ABC.java
      a ABC.class file will be created
     ```
-  - .class file --> JVM --> excutable file
+  - Interpreter .class file --> JVM --> excutable file
     ```
-     Java launcher tool runs the application with an instance of the JVM.
+     Java launcher tool interpretes the application with an instance of the JVM.
        java projectname
        java -jar project.jar
        mvn spring-boot:run
