@@ -1,16 +1,3 @@
-## Run java code in cmd
-Run java in cmd or maven
-```
-// compile java project
-javac projectname.java;
-// run a java project
-java project;
-// run a jar file
-java -jar filename.jar
-// run spring-boot project with maven
-mvn spring-boot:run
-```
-
 ## Data Types
 - **Primitive Data Types**: Primitive data types are predefined in Java. A primitive data type begins with a lower case. Primitive variables live in the stack memory. A primitive variable has always a value. Primitives variable has no attributes or behaviors.<br>
   - Integer types: byte (8 bits), short(16 bits), int (32 bits), long (64 bits, should end the value with an "L"). The default value is 0.
