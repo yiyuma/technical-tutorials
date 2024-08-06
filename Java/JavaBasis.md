@@ -42,5 +42,13 @@ The libraries will be used by JVM at runtime
 - Eclipse
 - ...
 
-### Java doc: 
+### Java doc
 The comments in the source code. IDE can export comments in Java code as a document.
+
+### Classpath
+The path for the .class files. It is defined in the Variable Environment. JVM will find all the .class files by ***Class Path***.
+
+### .jar file, .war file and .ear file
+- .jar file: Java ARchive file
+- .war file: Web application file
+- .ear file: Enterprise application ERchive file
