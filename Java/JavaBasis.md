@@ -5,7 +5,7 @@ Java is Compiler and Interpreter.<br>
 - Process:
   - Compiler: .java file --> Java compiler --> .class file
     ```
-       // Java Compiler compiles java project in cmd. The ABC.class file will be created.
+       // Java Compiler (in JDK) compiles java project in cmd. The ABC.class file will be created.
        javac ABC.java
     ```
   - Interpreter .class file --> JVM --> excutable file
@@ -43,4 +43,4 @@ The libraries will be used by JVM at runtime
 - ...
 
 ### Java doc: 
-The comments in the source code.
+The comments in the source code. IDE can export comments in Java code as a document.
