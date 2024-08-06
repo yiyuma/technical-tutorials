@@ -5,7 +5,7 @@ Java is Compiler and Interpreter.<br>
 - Process:
   - Compiler: .java file --> Java compiler --> .class file
     ```
-       // Compile java project in cmd. ABC.class file will be created.
+       // Java Compiler compiles java project in cmd. The ABC.class file will be created.
        javac ABC.java
     ```
   - Interpreter .class file --> JVM --> excutable file
