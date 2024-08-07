@@ -77,8 +77,8 @@ String, Arrays, Classes
 ## Collections
 Collection is an object. It groups multiple elements into a single unit.<br>
 Collections are used to store, retrieve, manipulate, and communication aggregate data.
-- Interfaces
-  - interface Set extends Collection
+- Interfaces: Collection interfaces are generic.
+  - interface Set extends Collection: in package java.util.Set. It cannot contain duplicate elements.
   - interface SortedSet extends Set
   - interface List extends Collection
   - interface Queue extends Collection
