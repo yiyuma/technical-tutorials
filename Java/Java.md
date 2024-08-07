@@ -74,6 +74,8 @@ String, Arrays, Classes
   - synchronized: Methods can only be accessed by one thread at a time
   - volatile: The value of an attributes is not cached thread-locally, and is always read from the "main memory"
 
+## Collections
+
 
 ## StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
