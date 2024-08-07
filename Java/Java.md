@@ -75,7 +75,16 @@ String, Arrays, Classes
   - volatile: The value of an attributes is not cached thread-locally, and is always read from the "main memory"
 
 ## Collections
-
+Collection is an object. It groups multiple elements into a single unit.<br>
+Collections are used to store, retrieve, manipulate, and communication aggregate data.
+- Interfaces
+  - interface Set extends Collection
+  - interface SortedSet extends Set
+  - interface List extends Collection
+  - interface Queue extends Collection
+  - interface Deque extends Collection
+  - interface Map
+  - interface SortedMap
 
 ## StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
