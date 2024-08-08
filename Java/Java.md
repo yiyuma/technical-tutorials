@@ -80,9 +80,9 @@ Collections are used to store, retrieve, manipulate, and communication aggregate
 - Interfaces: Collection interfaces are generic.
   - interface Set extends Collection: in package java.util.Set. It cannot contain duplicate elements.
   - interface SortedSet extends Set
-  - interface List extends Collection
-  - interface Queue extends Collection
-  - interface Deque extends Collection
+  - interface List extends Collection: in package java.util.List. It is an ordered collection. List can contain duplicate elements. With index can man element insert or access.
+  - interface Queue extends Collection: A Queue provides additional insertion, extraction and inspection operations. Queues order elements in a FIFO manner.
+  - interface Deque extends Collection:  A Deque provides additional insertion, extraction and inspection operations. Deque can be used as FIFO and LIFO.
   - interface Map
   - interface SortedMap
 
