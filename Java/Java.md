@@ -79,12 +79,12 @@ Collection is an object. It groups multiple elements into a single unit.<br>
 Collections are used to store, retrieve, manipulate, and communication aggregate data.
 - Interfaces: Collection interfaces are generic.
   - interface Set extends Collection: in package java.util.Set. It cannot contain duplicate elements.
-  - interface SortedSet extends Set
+  - interface SortedSet extends Set: a Set that maintains its elements in ascending order.
   - interface List extends Collection: in package java.util.List. It is an ordered collection. List can contain duplicate elements. With index can man element insert or access.
   - interface Queue extends Collection: A Queue provides additional insertion, extraction and inspection operations. Queues order elements in a FIFO manner.
   - interface Deque extends Collection:  A Deque provides additional insertion, extraction and inspection operations. Deque can be used as FIFO and LIFO.
-  - interface Map
-  - interface SortedMap
+  - interface Map: an object that maps keys to values. A Map cannot contain duplicate keys. Each key can map to at most one value.
+  - interface SortedMap: a Map that maintains its mappings in ascending key order.
 
 ## StringBuilder, StringBuffer, String
 **StringBuilder** in Java represents a mutable sequence of characters. StringBuilder Class provides no guarantee of synchronization.<br>
