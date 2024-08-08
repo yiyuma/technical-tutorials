@@ -79,6 +79,16 @@ Collection is an object. It groups multiple elements into a single unit.<br>
 Collections are used to store, retrieve, manipulate, and communication aggregate data.
 - Interfaces: Collection interfaces are generic.
   - interface Set extends Collection: in package java.util.Set. It cannot contain duplicate elements.
+    ```
+    int size();
+    boolean isEmpty();
+    boolean contains(Object element);
+    boolean add(E element);
+    boolean remove(Object element);
+    Iterator<E> iterator();
+    boolean containsAll(Collection<?> c);
+    boolean addAll(Collection<?> c);
+    ```
   - interface SortedSet extends Set: a Set that maintains its elements in ascending order.
   - interface List extends Collection: in package java.util.List. It is an ordered collection. List can contain duplicate elements. With index can man element insert or access.
   - interface Queue extends Collection: A Queue provides additional insertion, extraction and inspection operations. Queues order elements in a FIFO manner.
