@@ -1,14 +1,14 @@
 ### Java Programming Language
-Java is Compiler and Interpreter.<br>
+Java is a compiled and interpreted language.<br>
 - Source code: Java source code is written in ***plain text*** files. The extension of the file is ***.java***.
 - Bytecode: ***Java Compiler*** compiles the source file (.java file) into ***.class*** file. The .class file contains only bytecodes. <br> The bytecode is the machine language of the JVM.
 - Process:
-  - Compiler: .java file --> Java compiler --> .class file
+  - java file --> Java compiler --> .class file
     ```
        // Java Compiler (in JDK) compiles java project in cmd. The ABC.class file will be created.
        javac ABC.java
     ```
-  - Interpreter .class file --> JVM --> excutable file
+  - .class file --> JVM --> excutable file
     ```
      Java launcher tool interpretes the application with an instance of the JVM.
      // Interpret a java project
@@ -18,6 +18,10 @@ Java is Compiler and Interpreter.<br>
      // run spring-boot project with maven
      mvn spring-boot:run
     ```
+- Compiler vs. Interpreter
+  - Compiler processes all statements of code. Interpreter reads each statement of code.
+  - Compiled: Code will be transformed into machine readable instructions (bytecode) and can be executed directed by computer's cpu.
+  - Interpreted: Code donot need to transform. Another program executes code.
 
 ### Java Compiler
 Java Compiler can compile Java ***source code*** into ***.class file***. It can able to detect errors in the code or errors when reading it. The cmd command is ***javac***.
