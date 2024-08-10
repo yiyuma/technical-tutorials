@@ -46,6 +46,12 @@ The libraries will be used by JVM at runtime
 - Eclipse
 - ...
 
+### Type checking
+Type checking is the process of verifying and enforcing the constraints of types.
+- static check: at compile time
+- dynamic check: at runtime
+
+  
 ### Java doc
 The comments in the source code. IDE can export comments in Java code as a document.
 
