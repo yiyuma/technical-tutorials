@@ -3,12 +3,12 @@ Java is a compiled and interpreted language.<br>
 - Source code: Java source code is written in ***plain text*** files. The extension of the file is ***.java***.
 - Bytecode: ***Java Compiler*** compiles the source file (.java file) into ***.class*** file. The .class file contains only bytecodes. <br> The bytecode is the machine language of the JVM.
 - Process:
-  - java file --> Java compiler --> .class file
+  - compiled: java file --> Java compiler --> .class file
     ```
        // Java Compiler (in JDK) compiles java project in cmd. The ABC.class file will be created.
        javac ABC.java
     ```
-  - .class file --> JVM --> excutable file
+  - interpreted: .class file --> JVM --> excutable file
     ```
      Java launcher tool interpretes the application with an instance of the JVM.
      // Interpret a java project
