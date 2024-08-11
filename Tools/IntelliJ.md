@@ -1,6 +1,11 @@
+## IntelliJ
+ein Java IDE
+
+
 ### IntelliJ Shortcuts
 - Show all recent opened files: Ctrl + E
 - go to implementation: ALT + STRG + B
+- jump to source F4
 - Find usage: Alt + F7
 - Find Action: Ctrl + Shift + A
 - Generate: Alt + Insert
