@@ -1,4 +1,11 @@
 ## Mockito
+Mockito is a open source framework for mocking objects in software test. <br>
+Link: https://site.mockito.org/ <br>
+Using Mockito simplifies the development of tests for classes with extenal dependencies. <br>
+
+a mock object is a dummy implementation for an interface or a class. It allows to define the output of certain method calls. They typically record the interaction with the system and tests can validate that.
+
+
 ### Structure:
 - Set Up: Set expectations with mock responses. (Grammar: when(doSomeWork()).thenThrow(aErrorMessage).thenReturn(aResponse);
 - Execute: Call the method you want to test
