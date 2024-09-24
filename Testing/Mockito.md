@@ -2,7 +2,7 @@
 Mockito is mocking framework for Java in software test. It is an open source framework.<br>
 Link: https://site.mockito.org/ <br>
 Using Mockito simplifies the development of tests for classes with extenal dependencies. <br>
-Spring boot has built-in support for Mockito. In maven if you add spring-boot-starter-test, it has reference for mockito.
+Spring boot has built-in support for Mockito. In maven if you add spring-boot-starter-test, it has reference of mockito.
 
 a mock object is a dummy implementation for an interface or a class. It allows to define the output of certain method calls. They typically record the interaction with the system and tests can validate that.
 
