@@ -41,8 +41,8 @@ String regexPatternVersion = "((?<major>[0-9]{1,2}).(?<minor>[0-9]{1,2}).(?<patc
 Pattern pattern = Pattern.compile(regexPatternVersion);
 Matcher matcher = pattern.matcher(version);
 if(matcher.matches()) {
-major = Integer.parseInt(matcher.group("major"));
-minor = Integer.parseInt(matcher.group("minor"));
-patch = Integer.parseInt(matcher.group("patch"));
+  major = Integer.parseInt(matcher.group("major"));
+  minor = Integer.parseInt(matcher.group("minor"));
+  patch = Integer.parseInt(matcher.group("patch"));
 }
 ```
