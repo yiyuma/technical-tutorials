@@ -109,7 +109,13 @@ String Class in Java creates an immutable sequence of characters.
 - **DateTimeFormatter**: formatter for displaying and parsing date-time objects (E: Thu)
 ```
 // display the current date from the system time zone
-LocalDate.now();
+LocalDate localDate = LocalDate.now();
+// get current year
+int year = localDate.getYear();
+// get current month
+int month = localDate.getMonthValue();
+// get cuuren day
+int day = localDate.getDayOfMonth();
 // display the current time from the system time zone
 LocalTime.now();
 // display the current date and time from the system time zone
