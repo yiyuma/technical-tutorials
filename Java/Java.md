@@ -114,7 +114,7 @@ LocalDate localDate = LocalDate.now();
 int year = localDate.getYear();
 // get current month
 int month = localDate.getMonthValue();
-// get cuuren day
+// get current day
 int day = localDate.getDayOfMonth();
 // display the current time from the system time zone
 LocalTime.now();
