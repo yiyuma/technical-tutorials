@@ -35,3 +35,14 @@ $ - Ends with
 (x|y) - Alternatice - x or y
 [^x] - Anything but x (where x is whatever character you want)
 ```
+
+```
+String regexPatternVersion = "((?<major>[0-9]{1,2}).(?<minor>[0-9]{1,2}).(?<patch>[0-9]{1}))";
+Pattern pattern = Pattern.compile(regexPatternVersion);
+Matcher matcher = pattern.matcher(version);
+if(matcher.matches()) {
+major = Integer.parseInt(matcher.group("major"));
+minor = Integer.parseInt(matcher.group("minor"));
+patch = Integer.parseInt(matcher.group("patch"));
+}
+```
