@@ -43,7 +43,10 @@ String, Arrays, Classes
       Integer i = new Integer(20);
       int a = i;
       ```
-
+## String
+- Convert String to int: int intValue = Integer.parseInt(stringValue);
+- Convert int to String: string stringValue = Integer.toString(intVallue);
+  
 ## Call by value vs. Call by reference
 - Call by value: Parameters passed to the callee method will be clones of original parameters. Any changes to one variable donot modify the other.
 - Call by reference: The unique identifier of the object is sent to the method. Any changes to the parameter's instance members will result in that change being made to the original value.
