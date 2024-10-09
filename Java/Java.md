@@ -107,29 +107,36 @@ String Class in Java creates an immutable sequence of characters.
 
 ## Java Date and Time
 - **LocalDate**: represents a date (year, month, day(yyyy-MM-dd))
+  ```
+    // display the current date from the system time zone
+    LocalDate localDate = LocalDate.now();
+    // get current year
+    int year = localDate.getYear();
+    // get current month
+    int month = localDate.getMonthValue();
+    // get current day
+    int day = localDate.getDayOfMonth();
+  ```
 - **LocalTime**: represents a time (hour, minute,second and nanosecondes (HH-mm-ss-ns)
 - **LocalDateTime**: represents both a date and a time (yyyy-MM-dd-HH-mm-ss-ns)
+  ```
+    // display the current date and time from the system time zone
+    LocalDateTime localDateTime = LocalDateTime.now();
+    var year = Integer.toString(localDateTime.getYear());
+    var month = Integer.toString(localDateTime.getMonthValue());
+    var day = Integer.toString(localDateTime.getDayOfMonth());
+    var hour = Integer.toString(localDateTime.getHour());
+    var minute = Integer.toString(localDateTime.getMinute());
+    // display the current date and time of the zone id
+    LocalDateTime.now(ZoneId.of("Asia/Shanghai"));
+  ```
 - **DateTimeFormatter**: formatter for displaying and parsing date-time objects (E: Thu)
 ```
-// display the current date from the system time zone
-LocalDate localDate = LocalDate.now();
-// get current year
-int year = localDate.getYear();
-// get current month
-int month = localDate.getMonthValue();
-// get current day
-int day = localDate.getDayOfMonth();
-// display the current time from the system time zone
-LocalTime.now();
-// display the current date and time from the system time zone
-LocalDateTime.now();
-// display the current date and time of the zone id
-LocalDateTime.now(ZoneId.of("Asia/Shanghai"));
-// define a time formatter
-DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss);
-// display the current date and time with the defined time formatter
-LocaDateTime dateTime = LocalDateTime.now();
-dateTime.format(timeFormatter);
+  // define a time formatter
+  DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss);
+  // display the current date and time with the defined time formatter
+  LocaDateTime dateTime = LocalDateTime.now();
+  dateTime.format(timeFormatter);
 ```
 
 ## Regular Expression (Regex)
