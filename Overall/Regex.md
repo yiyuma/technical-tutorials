@@ -1,18 +1,20 @@
-## Regular Expression (Regex)
-Regular expression is a sequence of characters that forms a search pattern. Regular expression can be used to perform all types of text search and text replace operations.
-Regular expression is in java.util.regex package. The package includes the following classes:
-- **Pattern** class: Defines a pattern (to be used in a search): with method compile() create pattern.
+# Regular Expression (Regex)
+**Regular expression** is a sequence of characters that forms a search pattern. Regular expression can be used to perform all types of text search and text replace operations.
+
+## Regular expression in java
+Regualr expression is in **java.util.regex** package. The package includes the following classes:
+- **Pattern** class: Defines a pattern (to be used in a search): with method **compile()** create pattern.
   ```
   Pattern pattern = Pattern.compile("hello", Pattern.CASE_INSENSITIVE);
   Pattern.CASE_INSENSITIVE:
   Pattern.LITERAL
   Pattern.UNICODE_CASE
   ```
-- **Matcher** class: Used to search for the pattern: With method matcher() can search for the pattern in a string.
+- **Matcher** class: Used to search for the pattern: With method **matcher()** can search for the pattern in a string.
   ```
   Matcher matcher = pattern.matcher("Hello World");
   ```
-- **PatternSyntaxException** class: Indicates syntax error in a regular expression pattern. With method find() can know if the pattern was found int the string.
+- **PatternSyntaxException** class: Indicates syntax error in a regular expression pattern. With method **find()** can know if the pattern was found int the string.
   ```
   boolean matchFound = matcher.find();
   ```
@@ -37,6 +39,7 @@ $ - Ends with
 ```
 
 ```
+String version = "1.19.9";
 String regexPatternVersion = "((?<major>[0-9]{1,2}).(?<minor>[0-9]{1,2}).(?<patch>[0-9]{1}))";
 Pattern pattern = Pattern.compile(regexPatternVersion);
 Matcher matcher = pattern.matcher(version);
