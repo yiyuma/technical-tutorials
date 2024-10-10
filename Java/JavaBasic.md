@@ -28,7 +28,7 @@ Java Compiler can compile Java ***source code*** into ***.class file***. It can 
 
 ### Java Virtual Machine (JVM): 
 JVM provides Runtime Enviroment in which Java bytecode can be executed. <br>
-It is platform dependent. For each software and hardware we have different JVM configuration.
+It is platform dependent. For each software and hardware we have different JVM configuration.<br>
 Task:
   - Loads code
   - Verifies code
