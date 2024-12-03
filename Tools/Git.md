@@ -1,5 +1,5 @@
 ## Git
-**Git** is a version control.<br>
+**Git** is a **distributed version control system (VCS)**.<br>
 Git has 4 workspaces: Working directory, index/Stage, local repository, remote repository.<br>
 The file in git has 4 states: untracked, modified, staged, unmodified.<br> 
 ```
