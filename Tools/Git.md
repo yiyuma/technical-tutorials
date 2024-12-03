@@ -1,7 +1,7 @@
 ## Git
 **Git** is a **distributed version control system (VCS)**.<br>
-Git has 4 workspaces: Working directory, index/Stage, local repository, remote repository.<br>
-The file in git has 4 states: untracked, modified, staged, unmodified.<br> 
+Git has 4 workspaces: Working directory, Index/Stage, Local repository, Remote repository.<br>
+The file in git has 4 states: untracked (in Working directory), modified (in Working directory), staged (in Stage), unmodified (in Local repository).<br> 
 ```
 untracked + git add [path] => staged (in stage/indexs)
 staged + git reset [path] => untracked (in working directory)
