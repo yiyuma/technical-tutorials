@@ -7,8 +7,9 @@ ISP(Internet Service Provider): Benutzer zahlt Geld zu ISP, um Internet zu surfe
 DNS Server sucht die IP Addresse für die Webseite aus, die Benutzer sucht.<br>
 NsLookup.io can convert website name to the IP address.<br>
 
-**HTML** is responsible for the content in the website. (text content, images, buttons, links)<br>
-**CSS** is responsible for styling the website. It decides how the website will look.<br>
-**Javascript** is responsible for the functionality of the website.<br>
+## Website:
+- **HTML** is responsible for the content in the website. (text content, images, buttons, links)<br>
+- **CSS** is responsible for styling the website. It decides how the website will look.<br>
+- **Javascript** is responsible for the functionality of the website.<br>
 
 
