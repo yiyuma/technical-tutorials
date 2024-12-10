@@ -1,6 +1,7 @@
 ## HTML (HyperText Markup Language)
 **HTML** defines the content and structure of the website.<br>
-**HTML Tags**
+
+### HTML Tags
 - **void element** (self closing tag): It is element without content
   ```
   - <hr /> or <hr>: horizontal rules, it defines a thematic break.
