@@ -1,6 +1,9 @@
 ## HTML (HyperText Markup Language)
 **HTML** defines the content and structure of the website.<br>
 
+## HTML Element
+HTML Tags with content are HTML element.
+
 ## HTML Tags
 - **void element** (self closing tag): It is element without content
   ```
