@@ -43,13 +43,13 @@
   - <pre></pre>: defines preformatted text. It is displayed in a fixed-width font, and it preservess both spaces and line breaks.
   ```
 
-HTML attribute
+## HTML attribute
 ```
 - style
   <tagname style="property:value;"> // property is a CSS property (background-color, color(text color), font-family, font-size, text-align), value is a CSS value.
   
 ```
-HTML Text Formatting
+## HTML Text Formatting
 ```
 - <b></b>: defines bold text
 - <strong></strong>: defines important text
