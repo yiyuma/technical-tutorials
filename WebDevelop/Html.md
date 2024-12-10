@@ -1,7 +1,7 @@
 ## HTML (HyperText Markup Language)
 **HTML** defines the content and structure of the website.<br>
 **HTML Tags**
-- void element (self closing tag): It is element without content
+- **void element** (self closing tag): It is element without content
   ```
   - <hr /> or <hr>: horizontal rules, it defines a thematic break.
   - <br /> or <br>: break element
@@ -15,7 +15,7 @@
     attribute:
     - charset: charset="utf-8"
   ```
-- no void element: it has content between opening tag and closing tag.
+- **no void element**: it has content between opening tag and closing tag.
   form: <tag attribute=value anotherattribute=value>Content</tag>
   ```
   - <h1></h1> to <h6></h6>: HTML section heading elements. They represent six levels of the sectin heading. h1 ist the highest section level and h6 is the lowest.
