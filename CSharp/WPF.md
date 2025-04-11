@@ -17,3 +17,12 @@
 - Popup: Show information or options to users in a window. You can add only one object to a Popup. By default, a Ppoup contains a Grid.
 - ScrollViewer: Enable users to scroll down a page or area of a page. You can add only one object to a ScrollViewer.
 - Viewbox: Scale objects much like you would with a zoom control.  You can add only one object to a ViewBox.
+
+
+##TextBox
+- CaretBrush="Black" Mouse caret
+
+
+## DevExpress
+- dxe:TextEdit
+  - ShowBorder="False"
