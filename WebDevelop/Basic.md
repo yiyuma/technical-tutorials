@@ -8,7 +8,7 @@ DNS Server ist ähnlich wie ein Wörterbuch und sucht die IP Addresse für die W
 NsLookup.io can convert website name to the IP address.<br>
 
 ## IPv4 und IPv6
-Internetprotokoll. Es geh;rt zur Netzwerkschicht des OSI-Modells. <br>
+Internetprotokoll. Es gehört zur Netzwerkschicht des OSI-Modells. <br>
 IPv4: Internet Protocol version 4. 32 Bit lang <br>
 IPv6: Internet Protocol version 6. 128 Bit lang
 
